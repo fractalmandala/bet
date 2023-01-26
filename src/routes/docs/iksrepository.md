@@ -5,7 +5,9 @@ tag: document
 
 The vast Indian knowledge repository includes fields as diverse as philosophy, architecture, grammar, mathematics, astronomy, metrics, sociology (dharmashastra), economy and polity (arthashastra), ethics (nitishastra), geography, logic, military science, weaponry, agriculture, mining, trade and commerce, metallurgy, mining, shipbuilding, medicine, poetics, biology and veterinary science. Even with the colonialism of Islamic and European type and destruction that these texts saw they have sustained all these years.
 
-Further the tradition discusses 18 major vidyas theoretical disciplines and 64 kalas vocational sciences. These are classified as follows:  Four Vedas, the four subsidiary Vedas {Ayurveda, medicine, Dhanurveda, weaponry, Gandharvaveda, music and Silpa, architecture), Purana, Nyaya, Milmamsa, DharmaSastra and Vedanga, the six auxiliary sciences, phonetics, grammar, metre, astronomy, ritual and philology.
+Further the tradition discusses 18 major vidyas theoretical disciplines and 64 kalas vocational sciences. These are classified as follows:  Four Vedas, the four subsidiary Vedas (Ayurveda, medicine, Dhanurveda, weaponry, Gandharvaveda, music and Silpa, architecture), Purana, Nyaya, Milmamsa, DharmaSastra and Vedanga, the six auxiliary sciences, phonetics, grammar, metre, astronomy, ritual and philology.
+
+<img src="/images/vv5.png" alt="iks repository" />
 
 We have to make use of this vast repository for an “epistemological imagination aimed at refounding the political imagination… to strengthen the social struggles against domination” (Santos, 2018). The task should be to transform Indian Knowledge Systems (IKS) from absent subjects into present subjects as a primary condition for identifying and validatingvaliating knowledges capable of reinventing themselves. The IKS-based knowledge should be directed towards eliminating the epistemic violence towards Indic studies, expressed by Cesaire in the context of Caribbean: “millions of men torn from theirthier gods, their lands, their habits, their life, from life, from the dance, from wisdom” (1995). 
 
