@@ -18,8 +18,6 @@ Also, knowledge conceptualized within the IKS should necessarily have ethical an
 
 <img src="/images/vv2.png" alt="structure of iks"/>
 
-अनुभवसहितं साक्षात्कात्मकं ज्ञानं दर्शनम।
-
 Once established as such, the task of any śāstra within the knowledge system would be to identify the properties of objects being studied, explain their relationships, test them, and establish them in an organized manner. (शास्त्रेण कार्यकारणभाव: (साध्य-साधनभाव: प्रदश्यर्ते।) 
 
 Hence, within the IKS framework, various disciplines have to perform the following tasks; (i) abstraction of canon properties in diverse objects, (ii) classification by grasping special features in common objects 
@@ -28,5 +26,5 @@ Everywhere, IKS-inspired disciplines need to follow the logic inherent in our Ve
 
 “Always logic is considered to be (like) the light for all the vidyās, a means for (efficient performance) of all actions, (and) as supporters of all dharmas.”
 
-प्रदीप सर्वविद्यानाम उपाय सर्वकर्मणाम।
-आश्रय सर्वधर्माणमां शश्वद आन्वीक्षिकी मता।।
+<h5 class="hindi">प्रदीप सर्वविद्यानाम उपाय सर्वकर्मणाम।
+आश्रय सर्वधर्माणमां शश्वद आन्वीक्षिकी मता।।</h5>

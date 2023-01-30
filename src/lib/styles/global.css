@@ -1,5 +1,6 @@
 @import url('https://fonts.googleapis.com/css2?family=Noto+Serif+Devanagari:wght@100;200;300;400;500;600;700;800;900&family=STIX+Two+Text:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500;1,600;1,700&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Mukta:wght@200;300;400;500;600;700;800&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Halant:wght@300;400;500;600;700&display=swap');
 
 body, html {
 	margin: 0;
@@ -12,6 +13,7 @@ body, html {
 .bdr { border: 1px solid red;}
 .blue { color: #F06449;}
 .bold { font-weight: 900;}
+.hindi { font-family: 'Halant', sans-serif;}
 
 p, h4, h5 { font-family: 'Mukta', sans-serif;}
 .caps { text-transform: uppercase;}
