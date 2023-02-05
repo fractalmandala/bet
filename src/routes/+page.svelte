@@ -1,10 +1,9 @@
 <div class="imagecontainer-hero">
-	<iframe width="100%" height="100%" src="https://www.youtube.com/embed/VSekDayc5r8" title="Strategic Context of IKS" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
 </div>
 <div class="primecontainer-col">
 	<h1>The Vision</h1>
 	<h2 data-aos="fade-up">
-		<span class="colorange">Within the next 15 years</span>, no Hindu child should finish education without being familiarized to Nāṭyaśastra, Tarkaśāstra, Yogasūtra and Aṣṭadhyāyī. And no Hindu passes on without having <span class="colorange">accessed Itihāsa-Purāṇa.</span>
+		<span class="colorange">Within the next 15 years</span>, no child should finish education without being familiarized to Nāṭyaśastra, Tarkaśāstra, Yogasūtra and Aṣṭadhyāyī; and without having <span class="colorange">accessed Itihāsa-Purāṇa.</span>
 	</h2>
 </div>
 <div class="primecontainer-col">
@@ -37,16 +36,16 @@
 				Curriculum Building
 			</h5>
 			<small>
-				Bṛhat offers support for curriculum development. The principles of curriculum building in the Indianin Indian Knowledge System work differently as there is no separation or hierarchy of subjects or topics.  This is equallyThis equally true for pedagogies that are to be followed for IKS-based curriculum.
+				Bṛhat offers support for curriculum development. The principles of curriculum building in the in the Indian Knowledge Systems work differently as there is no separation or hierarchy of subjects or topics.  This is equally true for pedagogies that are to be followed for IKS-based curriculum.
 			</small>
 		</div>
 		<div class="base-col type1 w50">
 			<img src="/images/icon-nep.png" alt="icon" />
 			<h5>
-				NEP Implementation
+				NEP-IKS Implementation
 			</h5>
 			<small>
-				One of the objectives of the National Education Policy is to use and integrate the Indianintegrate Indian KnowledgeKnowlede Ssystems in curriculum and pedagogies across higher education institutions. Also, NEP implementation is not just about creating new courses but also to makealso make students, faculty, staff and parents informed about the potential that IKS holds. 
+				One of the objectives of the National Education Policy is to use and integrate the Indian Knowledge Systems in curriculum and pedagogies across higher education institutions. Also, NEP implementation is not just about creating new courses but also to make students, faculty, staff and parents informed about the potential that IKS holds. 
 			</small>
 		</div>
 	</div>
@@ -57,13 +56,13 @@
 				Competency Building
 			</h5>
 			<small>
-				Any task of IKS integration and implementation would be insufficient if human resources in the respective areas are not created. Bṛhat has been partnering with AICTE on its various initiatives. Bṛhat intends to conduct capacity building workshop for faculties in higher educational institutions, and create a critical network of likeminded individuals, who further contribute to mainstreaming of IKS curriculum and pedagogies. 
+				Any task of IKS integration and implementation would be insufficient if human resources in the respective areas are not created. Bṛhat has been partnering with AICTE on its various initiatives. Bṛhat intends to conduct capacity building workshop for faculties in higher educational institutions, and create a critical network of like-minded individuals, who further contribute to mainstreaming of IKS curriculum and pedagogies. 
 			</small>
 		</div>
 		<div class="base-col type1 w50">
 			<img src="/images/icon-ld.png" alt="icon" />
 			<h5>
-				Learning design 
+				Learning Design 
 			</h5>
 			<small>
 				Bṛhat envisages itself as a nodal agency, helping institutions digitize their curriculum and pedagogies, and also introducing learning designs that are compatible with IKS thinking. In addition to assisting institutions and organizations with the incorporation of IKS into their daily operations, Bṛhat wants to create in-house expertise in education, psychology, political-comparative philosophy and public policy. These three topics are central to Bṛhat's work and are therefore given priority for IKS redesign. 
@@ -109,7 +108,7 @@
 </div>
 
 <style>
-.imagecontainer-hero { z-index: 999;}
+.imagecontainer-hero { z-index: 999; background-image: url('/images/about-parambika.png')}
 .w50 img { object-fit: contain; width: 80px; height: 80px; margin-left: auto; margin-right: auto;}
 .primecontainer-col, .base-col { text-align: center;}
 .primecontainer-col h2 { text-align: center;}
