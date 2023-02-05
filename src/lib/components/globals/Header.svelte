@@ -8,9 +8,8 @@
 	<div class="navarea">
 		<nav>
 			<a href="/docs/introduction">about</a>
-			<a href="/brhataspartner">our work</a>
-			<a href="/brhataspartner">articles</a>
-			<a href="/">team</a>
+			<a href="/work">our work</a>
+			<a href="/articles">articles</a>
 			<a href="/">events</a>
 		</nav>
 	</div>
