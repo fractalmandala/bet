@@ -2,6 +2,12 @@
 	<iframe width="100%" height="100%" src="https://www.youtube.com/embed/VSekDayc5r8" title="Strategic Context of IKS" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
 </div>
 <div class="primecontainer-col">
+	<h1>The Vision</h1>
+	<h2>
+		<span class="colorange">Within the next 15 years</span>, no Hindu child should finish education without being familiarized to Nāṭyaśastra, Tarkaśāstra, Yogasūtra and Aṣṭadhyāyī. And no Hindu passes on without having <span class="colorange">accessed Itihāsa-Purāṇa.</span>
+	</h2>
+</div>
+<div class="primecontainer-col">
 	<h3>
 		At Bṛhat, we conceptualize IKS as a <span class="blue bold">universal episteme,</span> which is rooted in and derived from our millennia-long civilizational <span class="blue bold">knowledge and values</span>.
 	</h3>
@@ -106,7 +112,7 @@
 .imagecontainer-hero { z-index: 999;}
 .w50 img { object-fit: contain; width: 80px; height: 80px; margin-left: auto; margin-right: auto;}
 .primecontainer-col, .base-col { text-align: center;}
-
+.primecontainer-col h2 { text-align: center;}
 .w33 { text-align: center;}
 .w50 { text-align: center;}
 </style>
