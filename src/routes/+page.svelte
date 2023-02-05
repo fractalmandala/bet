@@ -1,4 +1,6 @@
-<div class="imagecontainer-hero"></div>
+<div class="imagecontainer-hero">
+	<iframe width="100%" height="100%" src="https://www.youtube.com/embed/VSekDayc5r8" title="Strategic Context of IKS" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+</div>
 <div class="primecontainer-col">
 	<h3>
 		At Bṛhat, we conceptualize IKS as a <span class="blue bold">universal episteme,</span> which is rooted in and derived from our millennia-long civilizational <span class="blue bold">knowledge and values</span>.
@@ -101,7 +103,7 @@
 </div>
 
 <style>
-.imagecontainer-hero { background-image: url('/images/hero.webp'); z-index: 999;}
+.imagecontainer-hero { z-index: 999;}
 .w50 img { object-fit: contain; width: 80px; height: 80px; margin-left: auto; margin-right: auto;}
 .primecontainer-col, .base-col { text-align: center;}
 .img64 img { object-fit: contain; border-radius: 8px; margin-left: auto; margin-right: auto;}
