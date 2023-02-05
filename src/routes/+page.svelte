@@ -7,15 +7,15 @@
 	</h3>
 	<div class="base-row">
 		<div class="base-col w33 img64">
-			<img src="/images/placeholder.png" alt="placeholder" />
+			
 			<h5 class="caps"><a href="/docs/vastuandvaastu/">Vastu and Vāstu</a></h5>
 		</div>
 		<div class="base-col w33 img64">
-			<img src="/images/placeholder.png" alt="placeholder" />
+			
 			<h5 class="caps"><a href="/docs/shastrikaframework">Śāstrika Framework</a></h5>
 		</div>
 		<div class="base-col w33 img64">
-			<img src="/images/placeholder.png" alt="placeholder" />
+			
 			<h5 class="caps"><a href="/docs/iksrepository">Indian Knowledge Repository</a></h5>
 		</div>
 	</div>
@@ -106,7 +106,7 @@
 .imagecontainer-hero { z-index: 999;}
 .w50 img { object-fit: contain; width: 80px; height: 80px; margin-left: auto; margin-right: auto;}
 .primecontainer-col, .base-col { text-align: center;}
-.img64 img { object-fit: contain; border-radius: 8px; margin-left: auto; margin-right: auto;}
+
 .w33 { text-align: center;}
 .w50 { text-align: center;}
 </style>
