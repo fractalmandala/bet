@@ -2,7 +2,7 @@
 <div class="header">
 	<div class="logoarea">
 		<a href="/">
-			<p>Bṛhat Education Trust</p>
+			<p>Bṛhat Education</p>
 		</a>
 	</div>
 	<div class="navarea">

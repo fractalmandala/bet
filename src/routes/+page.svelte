@@ -1,10 +1,10 @@
 <div class="imagecontainer-hero">
 </div>
 <div class="primecontainer-col">
-	<h1>The Vision</h1>
-	<h2 data-aos="fade-up">
+	<h2>The Vision</h2>
+	<h3 data-aos="fade-up">
 		<span class="colorange">Within the next 15 years</span>, no child should finish education without being familiarized to Nāṭyaśastra, Tarkaśāstra, Yogasūtra and Aṣṭadhyāyī; and without having <span class="colorange">accessed Itihāsa-Purāṇa.</span>
-	</h2>
+	</h3>
 </div>
 <div class="primecontainer-col">
 	<h3 data-aos="fade-up">
@@ -111,7 +111,7 @@
 .imagecontainer-hero { z-index: 999; background-image: url('/images/about-parambika.png')}
 .w50 img { object-fit: contain; width: 80px; height: 80px; margin-left: auto; margin-right: auto;}
 .primecontainer-col, .base-col { text-align: center;}
-.primecontainer-col h2 { text-align: center;}
+.primecontainer-col h3, .primecontainer-col h2 { text-align: center; margin-left: 0; margin-right: 0; padding: 0;}
 .w33 { text-align: center;}
 .w50 { text-align: center;}
 </style>
