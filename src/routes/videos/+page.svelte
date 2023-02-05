@@ -5,7 +5,7 @@ export async function getArticles() {
 	const { data, error } =  await supabase
 	.from('brhat-bet')
 	.select()
-	.eq('type','Article')
+	.eq('type','Video')
 	.order('id')
 	if (error) throw new Error(error.message)
 	return data
@@ -18,8 +18,7 @@ export async function getArticles() {
 <div class="primecontainer-row">
 	{#each data as item}
 	<div class="c-c-c-c">
-		<h5><a href={item.link}>{item.name}</a></h5>
-		<p>By {item.author}</p>
+		<iframe class="video-container" width="100%" src="https://www.youtube.com/embed/{item.videoid}" title={item.name} frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
 	</div>
 	{/each}
 </div>
@@ -33,9 +32,6 @@ export async function getArticles() {
 	flex-direction: column;
 }
 
-.c-c-c-c p {
-	margin-bottom: 0;
-}
 
 .primecontainer-row {
 	padding-top: 120px;
@@ -75,18 +71,11 @@ export async function getArticles() {
 		height: max-content;
 	}
 
-	.c-c-c-c h5 {
-		margin-bottom: 0;
-	}
-
-	.c-c-c-c p {
-		font-size: 14px;
-	}
-
 	.primecontainer-row {
 		flex-wrap: wrap;
 		padding-left: 4vw;
 		padding-right: 4vw;
+		gap: 16px;
 	}
 }
 </style>
