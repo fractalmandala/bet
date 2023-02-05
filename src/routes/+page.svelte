@@ -3,24 +3,24 @@
 </div>
 <div class="primecontainer-col">
 	<h1>The Vision</h1>
-	<h2>
+	<h2 data-aos="fade-up">
 		<span class="colorange">Within the next 15 years</span>, no Hindu child should finish education without being familiarized to Nāṭyaśastra, Tarkaśāstra, Yogasūtra and Aṣṭadhyāyī. And no Hindu passes on without having <span class="colorange">accessed Itihāsa-Purāṇa.</span>
 	</h2>
 </div>
 <div class="primecontainer-col">
-	<h3>
+	<h3 data-aos="fade-up">
 		At Bṛhat, we conceptualize IKS as a <span class="blue bold">universal episteme,</span> which is rooted in and derived from our millennia-long civilizational <span class="blue bold">knowledge and values</span>.
 	</h3>
 	<div class="base-row">
-		<div class="base-col w33 img64">
+		<div class="base-col w33 img64" data-aos="fade-up">
 			
 			<h5 class="caps"><a href="/docs/vastuandvaastu/">Vastu and Vāstu</a></h5>
 		</div>
-		<div class="base-col w33 img64">
+		<div class="base-col w33 img64" data-aos="fade-up">
 			
 			<h5 class="caps"><a href="/docs/shastrikaframework">Śāstrika Framework</a></h5>
 		</div>
-		<div class="base-col w33 img64">
+		<div class="base-col w33 img64" data-aos="fade-up">
 			
 			<h5 class="caps"><a href="/docs/iksrepository">Indian Knowledge Repository</a></h5>
 		</div>
