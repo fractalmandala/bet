@@ -75,7 +75,7 @@ function toggleMenu() {
 }
 
 .fs-menu a {
-	color: white;
+	color: #474747;
 	font-size: 20px;
 	text-transform: capitalize;
 }
