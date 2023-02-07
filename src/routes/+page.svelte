@@ -3,13 +3,13 @@ import Footer from '$lib/components/globals/Footer.svelte'
 
 </script>
 
-	<div class="imagecontainer-hero">
+	<div class="imagecontainer-hero" data-scroll-section>
 	</div>
-	<div class="primecontainer-row">
+	<div class="primecontainer-row" data-scroll-section>
 		<div class="c-c-c-c a1cl">
-			<img src="/images/visionimage.webp" alt="vision" />
+			<img src="/images/visionimage.webp" alt="vision" data-scroll data-scroll-speed="3"/>
 		</div>
-		<div class="c-c-c-c a1cr">
+		<div class="c-c-c-c a1cr" data-scroll data-scroll-speed="2" data-scroll-direction="horizontal">
 		<h3>The Vision</h3>
 		<h4>
 			<span class="colorange">Within the next 15 years</span>, no child should finish education without being familiarized to Nāṭyaśastra, Tarkaśāstra, Yogasūtra and Aṣṭadhyāyī; and without having <span class="colorange">accessed Itihāsa-Purāṇa.</span>
@@ -17,7 +17,7 @@ import Footer from '$lib/components/globals/Footer.svelte'
 		</div>
 	</div>
 
-	<div class="primecontainer-col schemawall">
+	<div class="primecontainer-col schemawall" data-scroll-section>
 		<div class="c-c-c-c a2cr">
 		<h3>Framework</h3>
 		<h4>
@@ -31,7 +31,7 @@ import Footer from '$lib/components/globals/Footer.svelte'
 		</div>
 	</div>	
 
-	<div class="primecontainer-col">
+	<div class="primecontainer-col" data-scroll-section>
 		<h3>
 			Bṛhat as a <span class="blue bold">Key Implementing Partner on IKS-NEP
 		</h3>
@@ -79,7 +79,7 @@ import Footer from '$lib/components/globals/Footer.svelte'
 
 
 
-	<div class="primecontainer-col">
+	<div class="primecontainer-col" data-scroll-section>
 		<h3>
 			Detail to our <span class="blue bold">Vision</span>
 		</h3>
