@@ -46,8 +46,8 @@ function toggleMenu() {
 	margin-bottom: 0;
 	margin-top: 0;
 	text-transform: uppercase;
-	font-size: 16px;
 	font-weight: bold;
+	color: white;
 }
 
 .min-row {
@@ -75,7 +75,7 @@ function toggleMenu() {
 }
 
 .fs-menu a {
-	color: #474747;
+	color: white;
 	font-size: 20px;
 	text-transform: capitalize;
 }
@@ -83,15 +83,22 @@ function toggleMenu() {
 .navarea a {
 	font-weight: 400;
 	font-size: 1.44em;
+	color: white;
 }
 
 @media screen and (min-width: 768px) {
+	.logoarea p {
+		font-size: 24px;
+	}
 	.navmobile {
 		display: none;
 	}
 	}
 
 @media screen and (max-width: 767px) {
+	.logoarea p {
+		font-size: 20px;
+	}
 		.navarea {
 			display: none;
 		}
