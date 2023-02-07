@@ -2,15 +2,18 @@
 import { onMount } from 'svelte';
 import LocomotiveScroll from 'locomotive-scroll';
 let scroll
+
 onMount(() => {
-  const container = document.querySelector('[data-scroll-container]');
-  if (container) {
-  scroll = new LocomotiveScroll({
-    el: container as HTMLElement,
-    smooth: true,
-		reloadOnContextChange: true,
-		repeat: true
-  });
+  const el = document.querySelector('[data-scroll-container]') as HTMLElement;
+  if (el) {
+    const scroll = new LocomotiveScroll({
+      el,
+      smooth: true,
+      reloadOnContextChange: true,
+      repeat: true
+    });
+  } else {
+    console.error('Element with data-scroll-container not found');
   }
 });
 </script>
