@@ -20,7 +20,6 @@ function toggleMenu() {
 			<a href="/docs/brhataspartner">our work</a>
 			<a href="/articles">articles</a>
 			<a href="/videos">videos</a>
-
 		</nav>
 	</div>
 	<div class="navmobile">
@@ -81,6 +80,11 @@ function toggleMenu() {
 	text-transform: capitalize;
 }
 
+.navarea a {
+	font-weight: 400;
+	font-size: 1.44em;
+}
+
 @media screen and (min-width: 768px) {
 	.navmobile {
 		display: none;
@@ -94,6 +98,12 @@ function toggleMenu() {
 	.navmobile {
 		display: flex;
 		flex-direction: column;
+	}
+	.navmobile a {
+		font-size: 3em;
+		font-weight: bold;
+		letter-spacing: -1px;
+		text-transform: uppercase;
 	}
 	}
 </style>

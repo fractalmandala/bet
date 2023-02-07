@@ -2,10 +2,11 @@
 @import url('https://fonts.googleapis.com/css2?family=Mukta:wght@200;300;400;500;600;700;800&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Halant:wght@300;400;500;600;700&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Readex+Pro:wght@200;300;400;500;600;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Source+Sans+Pro:ital,wght@0,200;0,300;0,400;0,600;0,700;0,900;1,200;1,300;1,400;1,600;1,700;1,900&display=swap');
 
 body, html {
 	margin: 0;
-	font-family: 'Readex Pro', sans-serif;
+	font-family: 'Source Sans Pro', sans-serif;
 	box-sizing: border-box;
 	background-color: #ffffff;
 	color: #474747;
@@ -17,12 +18,12 @@ body, html {
 .bold { font-weight: 900;}
 .hindi { font-family: 'Halant', sans-serif;}
 
-p, h4, h5 { font-family: 'Readex Pro', sans-serif;}
+p, h4, h5 { font-family: 'Source Sans Pro', sans-serif;}
 .caps { text-transform: uppercase;}
 
 *, :root { 
 	box-sizing: border-box;
-	font-family: 'Readex Pro', sans-serif;
+	font-family: 'Source Sans Pro', sans-serif;
  	--cube1: cubic-bezier(0.995, 0.225, 0.750, 0.750);
  	--cube2: cubic-bezier(0.995, 0.225, 0.000, 0.965);
  	--cube3: cubic-bezier(0.320, 0.760, 0.875, 0.490);
@@ -84,12 +85,12 @@ a:hover { color: #f06449;}
 .videoframe { margin-top: 8px;}
 h1, h2 { font-weight: 600; line-height: 1em; letter-spacing: -1px;}
 h3 { font-weight: bold; margin-top: 0; margin-bottom: 0.5em; line-height: 1.12em; letter-spacing: -1px;}
-h4 { font-weight: 500; letter-spacing: -1px; margin-top: 0;}
+h4 { font-weight: 700; letter-spacing: -1px; margin-top: 0; line-height: 1.2em;}
 h5 { font-weight: bold; margin-top: 1em; margin-bottom: 12px; letter-spacing: -0.5px; line-height: 1.12em;}
 p { margin-top: 4px; margin-bottom: 1em; line-height: 1.2em;}
 small { line-height: 1.2em;}
 .navarea a { text-decoration: none; font-variant: small-caps; font-weight: bold; color: #474747;}
-
+.the-blue { color: #1C5D99;}
 
 .c-c-c-c {
 	display: flex;
@@ -101,9 +102,13 @@ small { line-height: 1.2em;}
 	flex-direction: row;
 }
 
+.r-r-c-c {
+	display: flex;
+}
+
 @media screen and (min-width: 900px) {
 	.logoarea img { height: 56px;}
-	.header { padding-left: 32px; padding-right: 32px; justify-content: space-between; width: calc(100% - 16px); align-items: center; box-shadow: 4px 0px 6px #c1c1c1;}
+	.header { padding-left: 32px; padding-right: 32px; justify-content: space-between; width: calc(100% - 16px); align-items: center;}
 	.navarea a { margin-left: 20px;}
 	.imagecontainer-hero { height: 100vh;}
 	.primecontainer-col { padding: 0 8vw; justify-content: center; min-height: 100vh;}
@@ -127,11 +132,12 @@ small { line-height: 1.2em;}
 	p, .blog li { font-size: 1.28em;}
 	.navarea a { font-size: 20px;}
 	.img64 img {width: 64%; }
+	.r-r-c-c { flex-direction: row;}
 }
 
 @media screen and (max-width: 899px) and (min-width: 768px) {
 	.logoarea img { height: 56px;}
-	.header { padding-left: 32px; padding-right: 32px; justify-content: space-between; width: calc(100% - 16px); align-items: center; box-shadow: 4px 0px 6px #c1c1c1;}
+	.header { padding-left: 32px; padding-right: 32px; justify-content: space-between; width: calc(100% - 16px); align-items: center;}
 	.navarea a { margin-left: 20px;}
 	.imagecontainer-hero { height: 100vh;}
 	.primecontainer-col { padding: 0 5vw; justify-content: center; min-height: 100vh;}
@@ -154,11 +160,12 @@ small { line-height: 1.2em;}
 	.list-item h5 { font-size: 1.12em;}
 	p, .blog li { font-size: 1.28em;}
 	.img64 img {width: 64%; }
+.r-r-c-c { flex-direction: row;}
 }
 
 @media screen and (max-width: 767px) and (min-width: 576px) {
 	.logoarea img { height: 48px;}
-	.header { padding-left: 32px; padding-right: 32px; justify-content: space-between; width: calc(100% - 16px); align-items: center; box-shadow: 4px 0px 6px #c1c1c1;}
+	.header { padding-left: 32px; padding-right: 32px; justify-content: space-between; width: calc(100% - 16px); align-items: center; }
 	.navarea a { margin-left: 20px;}
 	.navarea a { font-size: 18px;}
 	.imagecontainer-hero { height: 100vh; }
@@ -175,16 +182,17 @@ small { line-height: 1.2em;}
 	.video { height: 120px;}
 	.type1 { padding: 1em 0.4em;}
 	h2 { font-size: 3em; }
-	h3 { font-size: 1.6em;}
-	h4 { font-size: 1.4em;}
+	h3 { font-size: 2em;}
+	h4 { font-size: 1.6em;}
 	h5 { font-size: 1.1em;}
 	p, .blog li { font-size: 1.28em;}
 	.img64 img {width: 64%; }
+.r-r-c-c { flex-direction: column;}
 }
 
 @media screen and (max-width: 575px) {
 	.logoarea img { height: 40px;}
-	.header { padding-left: 16px; padding-right: 16px; justify-content: space-between; width: calc(100% - 16px); align-items: center; box-shadow: 4px 0px 6px #c1c1c1;}
+	.header { padding-left: 16px; padding-right: 16px; justify-content: space-between; width: calc(100% - 16px); align-items: center;}
 	.navarea { display: none;}
 	.imagecontainer-hero { height: 100vh;}
 	.primecontainer-col { padding: 0 3vw; justify-content: center; height: 100%;}
@@ -199,9 +207,10 @@ small { line-height: 1.2em;}
 	.video { height: 240px;}
 	.type1 { padding: 0 1em 1em 1em;}
 	h2 { font-size: 2.4em; }
-	h3 { font-size: 1.4em; padding-top: 1em;}
-	h4 { font-size: 1.4em;}
+	h3 { font-size: 1.8em; padding-top: 1em;}
+	h4 { font-size: 1.6em;}
 	h5 { font-size: 1.1em;}
 	p, .blog li { font-size: 1.28em;}
 	.img64 img {width: 32%; }
+.r-r-c-c { flex-direction: column;}
 }		
