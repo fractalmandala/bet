@@ -3,7 +3,6 @@ import Footer from '$lib/components/globals/Footer.svelte'
 
 </script>
 
-<div class="lococont" data-scroll-container>
 	<div class="imagecontainer-hero" data-scroll-section>
 	</div>
 	<div class="primecontainer-row" data-scroll-section>
@@ -117,7 +116,7 @@ import Footer from '$lib/components/globals/Footer.svelte'
 		</div>	
 	</div>
 	<Footer></Footer>
-</div>
+
 
 <style>
 .imagecontainer-hero { z-index: 999; background-image: url('/images/about-parambika.png')}
