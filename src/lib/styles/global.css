@@ -52,13 +52,11 @@ a:hover { color: #f06449;}
 	display: flex;
 	flex-direction: column;
 	width: 100%;
-	min-height: 100vh;
 }
 .primecontainer-row {
 	display: flex;
 	flex-direction: row;
 	width: 100%;
-	min-height: 100vh;
 }
 .blog { 
 	display: flex;
@@ -108,8 +106,8 @@ small { line-height: 1.2em;}
 	.header { padding-left: 32px; padding-right: 32px; justify-content: space-between; width: calc(100% - 16px); align-items: center; box-shadow: 4px 0px 6px #c1c1c1;}
 	.navarea a { margin-left: 20px;}
 	.imagecontainer-hero { height: 100vh;}
-	.primecontainer-col { padding: 0 8vw; justify-content: center;}
-	.primecontainer-row { flex-wrap: nowrap;}
+	.primecontainer-col { padding: 0 8vw; justify-content: center; min-height: 100vh;}
+	.primecontainer-row { flex-wrap: nowrap; min-height: 100vh;}
 	.blog { width: 70vw; padding: 120px 6vw 80px 96px;}
 	.side-blog { width: 30vw; border-left: 1px solid #d7d7d7; padding: 120px 32px 90px 32px;}
 	.side-blog { top: 0; right: 0; position: sticky; position: -webkit-sticky;}
@@ -136,8 +134,8 @@ small { line-height: 1.2em;}
 	.header { padding-left: 32px; padding-right: 32px; justify-content: space-between; width: calc(100% - 16px); align-items: center; box-shadow: 4px 0px 6px #c1c1c1;}
 	.navarea a { margin-left: 20px;}
 	.imagecontainer-hero { height: 100vh;}
-	.primecontainer-col { padding: 0 5vw; justify-content: center;}
-	.primecontainer-row { flex-wrap: nowrap;}
+	.primecontainer-col { padding: 0 5vw; justify-content: center; min-height: 100vh;}
+	.primecontainer-row { flex-wrap: nowrap; min-height: 100vh;}
 	.blog { width: 68vw; padding: 120px 6vw 80px 40px;}
 	.side-blog { width: 32vw; border-left: 1px solid #d7d7d7; padding: 120px 32px 90px 32px;}
 	.side-blog { top: 0; right: 0; position: sticky; position: -webkit-sticky;}
@@ -151,6 +149,7 @@ small { line-height: 1.2em;}
 	.navarea a { font-size: 18px;}
 	h2 { font-size: 3.5em; }
 	h3 { font-size: 2em;}
+	h4 { font-size: 1.8em;}
 	h5 { font-size: 1.2em;}
 	.list-item h5 { font-size: 1.12em;}
 	p, .blog li { font-size: 1.28em;}
@@ -163,8 +162,8 @@ small { line-height: 1.2em;}
 	.navarea a { margin-left: 20px;}
 	.navarea a { font-size: 18px;}
 	.imagecontainer-hero { height: 100vh; }
-	.primecontainer-col { padding: 0 5vw; justify-content: center;}
-	.primecontainer-row { flex-wrap: wrap;}
+	.primecontainer-col { padding: 0 5vw; justify-content: center; height: 100%;}
+	.primecontainer-row { flex-wrap: wrap; height: 100%;}
 	.base-row { flex-wrap: wrap; gap: 32px;}
 	.blog, .side-blog { width: 100%; }
 	.blog { padding: 96px 32px 32px 32px;}
@@ -177,6 +176,7 @@ small { line-height: 1.2em;}
 	.type1 { padding: 1em 0.4em;}
 	h2 { font-size: 3em; }
 	h3 { font-size: 1.6em;}
+	h4 { font-size: 1.4em;}
 	h5 { font-size: 1.1em;}
 	p, .blog li { font-size: 1.28em;}
 	.img64 img {width: 64%; }
@@ -187,8 +187,8 @@ small { line-height: 1.2em;}
 	.header { padding-left: 16px; padding-right: 16px; justify-content: space-between; width: calc(100% - 16px); align-items: center; box-shadow: 4px 0px 6px #c1c1c1;}
 	.navarea { display: none;}
 	.imagecontainer-hero { height: 100vh;}
-	.primecontainer-col { padding: 0 3vw; justify-content: center;}
-	.primecontainer-row { flex-wrap: wrap;}
+	.primecontainer-col { padding: 0 3vw; justify-content: center; height: 100%;}
+	.primecontainer-row { flex-wrap: wrap; height: 100%;}
 	.base-row { flex-wrap: wrap;}
 	.blog, .side-blog { width: 100%; }
 	.blog { padding: 96px 32px 32px 32px;}
@@ -200,6 +200,7 @@ small { line-height: 1.2em;}
 	.type1 { padding: 0 1em 1em 1em;}
 	h2 { font-size: 2.4em; }
 	h3 { font-size: 1.4em; padding-top: 1em;}
+	h4 { font-size: 1.4em;}
 	h5 { font-size: 1.1em;}
 	p, .blog li { font-size: 1.28em;}
 	.img64 img {width: 32%; }

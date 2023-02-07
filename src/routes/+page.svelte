@@ -93,12 +93,8 @@ onMount(() => {
 		</div>
 	</div>
 
-	<div class="primecontainer-col" data-scroll-section>
 
-	</div>
-	<div class="r-r-r-r">
-		
-	</div>
+
 	<div class="primecontainer-col" data-scroll-section>
 		<h3>
 			Detail to our <span class="blue bold">Vision</span>
@@ -231,5 +227,120 @@ onMount(() => {
 		justify-content: center;
 	}
 
+}
+
+@media screen and (max-width: 899px) and (min-width: 768px) {
+	.a1cl {
+		width: 100%;
+		justify-content: center;
+	}
+
+	.a1cl img {
+		object-fit: contain;
+
+		height: 100%;
+	}
+
+	.a1cr {
+		width: 100%;
+		margin-left: -80%;
+		text-align: center;
+		background-color: white;
+		height: max-content;
+		align-self: flex-end;
+		margin-bottom: 6em;
+		padding-left: 2em;
+		padding-top: 1em;
+	}
+
+	.a2cr {
+		padding: 0 4vw;
+		text-align: center;
+	}
+
+	.a2cr img {
+		object-fit: contain;
+		width: 600px;
+		margin-left: auto;
+		margin-right: auto;
+	}
+
+	.schemawall {
+		background-size: 800px 400px;
+	}
+
+	.off-button button {
+		padding: 8px 1em;
+	}
+
+	.w50 {
+		padding: 0;
+		width: 40%;
+	}
+
+	.base-row {
+		margin-top: 1em;
+		margin-bottom: 1em;
+		gap: 4em;
+		justify-content: center;
+	}
+
+}
+
+@media screen and (max-width: 767px) {
+
+	.primecontainer-col, .primecontainer-row {
+		padding-top: 2em;
+	}
+.a1cl {
+		width: 100%;
+		justify-content: center;
+	}
+
+	.a1cl img {
+		object-fit: cover;
+		height: 100%;
+	}
+
+	.a1cr {
+		width: 100%;
+		text-align: left;
+		background-color: white;
+		height: max-content;
+		align-self: flex-start;
+		margin-top: -12em;
+		margin-bottom: 6em;
+		padding-left: 2em;
+		padding-top: 1em;
+	}
+
+	.a2cr {
+		padding: 0 4vw;
+		text-align: center;
+	}
+
+	.a2cr img {
+		object-fit: contain;
+		width: 80%;
+		margin-left: auto;
+		margin-right: auto;
+	}
+
+	.off-button button {
+		padding: 8px 1em;
+	}
+
+	.w50 {
+		padding: 4vw;
+		width: 100%;
+	}
+
+	.base-row {
+		margin-top: 1em;
+		margin-bottom: 1em;
+		gap: 4em;
+		justify-content: center;
+	}
+	
 }
 </style>
