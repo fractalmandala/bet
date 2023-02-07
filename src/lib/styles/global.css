@@ -1,12 +1,13 @@
 @import url('https://fonts.googleapis.com/css2?family=Noto+Serif+Devanagari:wght@100;200;300;400;500;600;700;800;900&family=STIX+Two+Text:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500;1,600;1,700&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Mukta:wght@200;300;400;500;600;700;800&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Halant:wght@300;400;500;600;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Readex+Pro:wght@200;300;400;500;600;700&display=swap');
 
 body, html {
 	margin: 0;
-	font-family: 'Mukta', sans-serif;
+	font-family: 'Readex Pro', sans-serif;
 	box-sizing: border-box;
-	background-color: #fcfcfc;
+	background-color: #ffffff;
 	color: #474747;
 }
 
@@ -16,12 +17,12 @@ body, html {
 .bold { font-weight: 900;}
 .hindi { font-family: 'Halant', sans-serif;}
 
-p, h4, h5 { font-family: 'Mukta', sans-serif;}
+p, h4, h5 { font-family: 'Readex Pro', sans-serif;}
 .caps { text-transform: uppercase;}
 
 *, :root { 
 	box-sizing: border-box;
-	font-family: 'Mukta', sans-serif;
+	font-family: 'Readex Pro', sans-serif;
  	--cube1: cubic-bezier(0.995, 0.225, 0.750, 0.750);
  	--cube2: cubic-bezier(0.995, 0.225, 0.000, 0.965);
  	--cube3: cubic-bezier(0.320, 0.760, 0.875, 0.490);
@@ -83,14 +84,24 @@ a:hover { color: #f06449;}
 .blog li { line-height: 1.2em; color: #676767; margin-top: 0; margin-bottom: 8px;}
 .list-item h5 { text-transform: capitalize; margin-top: 0.2em; color: #878787; margin-bottom: 2px;}
 .videoframe { margin-top: 8px;}
-h1, h2 { font-weight: bold; line-height: 1em;}
-h3 { font-weight: bold; margin-top: 0; margin-bottom: 1em; line-height: 1.12em; letter-spacing: -1px;}
-h4 { font-weight: 600; letter-spacing: -1px;}
+h1, h2 { font-weight: 600; line-height: 1em; letter-spacing: -1px;}
+h3 { font-weight: bold; margin-top: 0; margin-bottom: 0.5em; line-height: 1.12em; letter-spacing: -1px;}
+h4 { font-weight: 500; letter-spacing: -1px; margin-top: 0;}
 h5 { font-weight: bold; margin-top: 1em; margin-bottom: 12px; letter-spacing: -0.5px; line-height: 1.12em;}
 p { margin-top: 4px; margin-bottom: 1em; line-height: 1.2em;}
 small { line-height: 1.2em;}
 .navarea a { text-decoration: none; font-variant: small-caps; font-weight: bold; color: #474747;}
 
+
+.c-c-c-c {
+	display: flex;
+	flex-direction: column;
+}
+
+.r-r-r-r {
+	display: flex;
+	flex-direction: row;
+}
 
 @media screen and (min-width: 900px) {
 	.logoarea img { height: 56px;}

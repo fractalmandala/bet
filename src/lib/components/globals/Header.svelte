@@ -20,7 +20,7 @@ function toggleMenu() {
 			<a href="/docs/brhataspartner">our work</a>
 			<a href="/articles">articles</a>
 			<a href="/videos">videos</a>
-			<a href="/">events</a>
+
 		</nav>
 	</div>
 	<div class="navmobile">
@@ -28,7 +28,7 @@ function toggleMenu() {
 			<img src="/images/hamburger-black.png" alt="icon" />
 		</div>
 		{#if isToggle}
-		<div class="fs-menu">
+		<div class="fs-menu" on:click={toggleMenu} on:keydown={toggleMenu}>
 			<div class="min-row" on:click={toggleMenu} on:keydown={toggleMenu}>
 				<img src="/images/hamburger-close.png" alt="icon" />
 			</div>
@@ -36,7 +36,6 @@ function toggleMenu() {
 			<a href="/docs/brhataspartner">our work</a>
 			<a href="/articles">articles</a>
 			<a href="/videos">videos</a>
-			<a href="/">events</a>
 		</div>
 		{/if}
 	</div>

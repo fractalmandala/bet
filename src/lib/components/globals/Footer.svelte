@@ -1,4 +1,4 @@
-<div class="footer">
+<div class="footer" data-scroll-section>
 	<div class="footer-col">
 		<small>
 			All rights reserved 2023. Bṛhat Education Trust.<br><a href="https://brhat.in" target="_blank" rel="noreferrer">Bṛhat.</a> ©
