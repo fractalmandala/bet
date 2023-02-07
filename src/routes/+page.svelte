@@ -1,10 +1,10 @@
 <script lang="ts">
-import Footer from '$lib/components/globals/Footer.svelte'
+import LocomotiveContainer from '$lib/components/globals/LocomotiveContainer.svelte'
 
 </script>
 
 
-
+<LocomotiveContainer>
 	<div class="imagecontainer-hero" data-scroll-section>
 	</div>
 	<div class="primecontainer-row" data-scroll-section>
@@ -12,10 +12,10 @@ import Footer from '$lib/components/globals/Footer.svelte'
 			<img src="/images/visionimage.webp" alt="vision" data-scroll data-scroll-speed="3"/>
 		</div>
 		<div class="c-c-c-c a1cr" data-scroll data-scroll-speed="2" data-scroll-direction="horizontal">
-		<h3>The Vision</h3>
-		<h4>
-			<span class="colorange">Within the next 15 years</span>, no child should finish education without being familiarized to Nāṭyaśastra, Tarkaśāstra, Yogasūtra and Aṣṭadhyāyī; and without having <span class="colorange">accessed Itihāsa-Purāṇa.</span>
-		</h4>
+			<h3>The Vision</h3>
+			<h4>
+				<span class="colorange">Within the next 15 years</span>, no child should finish education without being familiarized to Nāṭyaśastra, Tarkaśāstra, Yogasūtra and Aṣṭadhyāyī; and without having <span class="colorange">accessed Itihāsa-Purāṇa.</span>
+			</h4>
 		</div>
 	</div>
 	<div class="primecontainer-col schemawall" data-scroll-section>
@@ -112,7 +112,8 @@ import Footer from '$lib/components/globals/Footer.svelte'
 			</div>
 		</div>	
 	</div>
-	<Footer></Footer>
+</LocomotiveContainer>
+
 
 
 

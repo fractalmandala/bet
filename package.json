@@ -33,7 +33,9 @@
 	"type": "module",
 	"dependencies": {
 		"@supabase/supabase-js": "^2.7.1",
+		"@sveltejs/svelte-scroller": "^2.0.7",
 		"aos": "^3.0.0-beta.6",
-		"locomotive-scroll": "^4.1.4"
+		"locomotive-scroll": "^4.1.4",
+		"svelte-inview": "^3.0.2"
 	}
 }
