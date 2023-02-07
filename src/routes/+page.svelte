@@ -1,8 +1,45 @@
 <script lang="ts">
 import Footer from '$lib/components/globals/Footer.svelte'
+import { onMount } from 'svelte'
+import { onDestroy } from 'svelte'
+import '$lib/styles/locomotive-scroll.css'
+import LocomotiveScroll from 'locomotive-scroll';
+
+
+let scroll: LocomotiveScroll | null = null;
+
+const initScroll = () => {
+  scroll = new LocomotiveScroll({
+    el: document.querySelector('[data-scroll-container]') as HTMLElement,
+    smooth: true,
+    repeat: true,
+    reloadOnContextChange: true,
+  });
+};
+
+onMount(() => {
+  initScroll();
+  if (process.browser) {
+    window.addEventListener('resize', () => {
+      if (scroll) {
+        scroll.destroy();
+      }
+      initScroll();
+    });
+  }
+});
+
+onDestroy(() => {
+  if (scroll) {
+    scroll.destroy();
+  }
+  scroll = null;
+});
 
 </script>
 
+
+<div class="black-beauty" data-scroll-container>
 	<div class="imagecontainer-hero" data-scroll-section>
 	</div>
 	<div class="primecontainer-row" data-scroll-section>
@@ -116,6 +153,7 @@ import Footer from '$lib/components/globals/Footer.svelte'
 		</div>	
 	</div>
 	<Footer></Footer>
+</div>
 
 
 <style>
