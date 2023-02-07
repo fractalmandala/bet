@@ -11,7 +11,7 @@
 	display: flex;
 	flex-direction: row;
 	color: white;
-	background-color: #1C5D99;
+	background: var(--background);
 	border-top: 1px solid #676767;
 	padding: 8px 16px;
 }

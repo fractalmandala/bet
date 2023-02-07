@@ -19,22 +19,22 @@ export async function getVideos(){
 	return data
 }
 </script>
-	<div class="imagecontainer-hero" data-scroll-section>
+	<div class="imagecontainer-hero">
 	</div>
-	<div class="primecontainer-row" data-scroll-section>
-		<div class="c-c-c-c a1cl" data-aos="slide-up" data-aos-duration="1000" data-aos-easing="ease-in" data-aos-mirror="true">
-			<img src="/images/visionimage.webp" alt="vision" data-scroll data-scroll-speed="3"/>
+	<div class="primecontainer-row">
+		<div class="c-c-c-c a1cl">
+			<img src="/images/visionimage.webp" alt="vision"/>
 		</div>
-		<div class="c-c-c-c a1cr" data-scroll data-scroll-speed="2" data-scroll-direction="horizontal">
+		<div class="c-c-c-c a1cr">
 			<h3 class="the-blue">The Vision</h3>
-			<h4 data-aos="zoom-in-left" data-aos-duration="1000">
+			<p class="big-guy">
 				<span class="the-blue">Within the next 15 years</span>, no child should finish education without being familiarized to Nāṭyaśastra, Tarkaśāstra, Yogasūtra and Aṣṭadhyāyī; and without having <span class="the-blue">accessed Itihāsa-Purāṇa.</span>
-			</h4>
+			</p>
 		</div>
 	</div>
 	<div class="r-r-c-c stickercol">
 		<div class="c-c-c-c headingcol">
-			<h3 data-aos="zoom-in-right" data-aos-duration="800" class="the-blue">Framework</h3>
+			<h3 class="the-blue">Framework</h3>
 		</div>
 		<div class="c-c-c-c textcol">
 			<p>
@@ -45,7 +45,7 @@ export async function getVideos(){
 	</div>
 	<div class="r-r-c-c stickercol">
 		<div class="c-c-c-c headingcol">
-			<h4 data-aos="zoom-in-right" data-aos-duration="800" class="the-blue">Bṛhat as Implementation Partner</h4>
+			<h4 class="the-blue">Bṛhat as Implementation Partner</h4>
 		</div>
 		<div class="c-c-c-c textcol">
 			<p>
@@ -58,58 +58,58 @@ export async function getVideos(){
 	</div>
 	<div class="r-r-c-c stickercol2 sticktypeA">
 		<div class="c-c-c-c textcol">
-			<p data-aos="fade-up" data-aos-duration="1000">
+			<p>
 				Bṛhat offers support for curriculum development. The principles of curriculum building in the in the Indian Knowledge Systems work differently as there is no separation or hierarchy of subjects or topics.  This is equally true for pedagogies that are to be followed for IKS-based curriculum.
 			</p>
 		</div>
 		<div class="c-c-c-c headingcol">
-			<h5 data-aos="zoom-in-left" data-aos-duration="800" class="specialtext the-blue">Curriculum Building</h5>
-			<img class="icon" src="/images/icon-curr.png" alt="icon" data-aos="zoom-in-up" data-aos-duration="1200"/> 
+			<h5 class="specialtext the-blue">Curriculum Building</h5>
+			<img class="icon" src="/images/icon-curr.png" alt="icon" /> 
 		</div>
 	</div>
 	<div class="r-r-c-c stickercol2">
 		<div class="c-c-c-c headingcol">
-			<h5 data-aos="zoom-in-right" data-aos-duration="800" class="the-blue">NEP-IKS Implementation</h5>
-			<img class="icon2" src="/images/icon-nep.png" alt="icon" data-aos="zoom-in-up" data-aos-duration="1200" /> 
+			<h5 class="the-blue">NEP-IKS Implementation</h5>
+			<img class="icon2" src="/images/icon-nep.png" alt="icon" /> 
 		</div>
 		<div class="c-c-c-c textcol">
-			<p data-aos="fade-up" data-aos-duration="1000">
+			<p>
 				One of the objectives of the National Education Policy is to use and integrate the Indian Knowledge Systems in curriculum and pedagogies across higher education institutions. Also, NEP implementation is not just about creating new courses but also to make students, faculty, staff and parents informed about the potential that IKS holds. 
 			</p>
 		</div>
 	</div>
 	<div class="r-r-c-c stickercol2 sticktypeA">
 		<div class="c-c-c-c textcol">
-			<p data-aos="fade-up" data-aos-duration="1000">
+			<p>
 				Any task of IKS integration and implementation would be insufficient if human resources in the respective areas are not created. Bṛhat has been partnering with the Ministry of Education's IKS Center of Excellence (CoE) at AICTE on its various initiatives. Bṛhat intends to conduct capacity building workshop for faculties in higher educational institutions, and create a critical network of like-minded individuals, who further contribute to mainstreaming of IKS curriculum and pedagogies. 
 			</p>
 		</div>
 		<div class="c-c-c-c headingcol">
-			<h5 data-aos="zoom-in-left" data-aos-duration="800" class="specialtext the-blue">Competency Building</h5>
-			<img class="icon" src="/images/icon-comp.png" alt="icon" data-aos="zoom-in-up" data-aos-duration="1200" /> 
+			<h5 class="specialtext the-blue">Competency Building</h5>
+			<img class="icon" src="/images/icon-comp.png" alt="icon" /> 
 		</div>
 	</div>
 	<div class="r-r-c-c stickercol2">
 		<div class="c-c-c-c headingcol">
-			<h5 data-aos="zoom-in-right" data-aos-duration="800" class="the-blue">Learning Design</h5>
-			<img class="icon2" src="/images/icon-ld.png" alt="icon" data-aos="zoom-in-up" data-aos-duration="1200" /> 
+			<h5 class="the-blue">Learning Design</h5>
+			<img class="icon2" src="/images/icon-ld.png" alt="icon" /> 
 		</div>
 		<div class="c-c-c-c textcol">
-			<p data-aos="fade-up" data-aos-duration="1000">
+			<p>
 				Bṛhat envisages itself as a nodal agency, helping institutions digitize their curriculum and pedagogies, and also introducing learning designs that are compatible with IKS thinking. In addition to assisting institutions and organizations with the incorporation of IKS into their daily operations, Bṛhat wants to create in-house expertise in education, psychology, political-comparative philosophy and public policy. These three topics are central to Bṛhat's work and are therefore given priority for IKS redesign. 
 			</p>
 		</div>
 	</div>
 	<div class="r-r-c-c stickercol formargin">
 		<div class="c-c-c-c headingcol">
-			<h3 data-aos="zoom-in-right" data-aos-duration="800" class="the-blue">Articles and Videos</h3>
+			<h3 class="the-blue">Articles and Videos</h3>
 		</div>
 		{#await getArticles()}
 		<small>...</small>
 		{:then data}
 		<div class="r-r-c-c textcol item-row">
 			{#each data as item}
-			<div class="c-c-c-c item-box" data-aos="flip-up" data-aos-duration="500">
+			<div class="c-c-c-c item-box">
 				<p><b><a href={item.link}>{item.name}</a></b></p>
 				<small>{item.author}</small>
 			</div>
@@ -126,7 +126,7 @@ export async function getVideos(){
 		{:then data}
 		<div class="r-r-c-c textcol item-row">
 			{#each data as item}
-			<div class="c-c-c-c item-box" data-aos="flip-up" data-aos-duration="100">
+			<div class="c-c-c-c item-box">
 				<iframe width="100%" height="100%" src="https://www.youtube.com/embed/{item.videoid}" title={item.name} frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
 			</div>
 			{/each}
@@ -195,6 +195,8 @@ export async function getVideos(){
 	.item-box { width: calc(33.33% - 1em);}
 	.formargin { margin-top: 4em;}
 	.specialtext { text-align: right;}
+	.big-guy { font-size: 2em; font-weight: 300; margin-top: 0;}
+	h3 { font-weight: 800; margin-bottom: 0.25em;}
 
 }
 
