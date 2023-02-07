@@ -3,13 +3,13 @@ import Footer from '$lib/components/globals/Footer.svelte'
 
 </script>
 
-	<div class="imagecontainer-hero" data-scroll-section>
+	<div class="imagecontainer-hero">
 	</div>
-	<div class="primecontainer-row" data-scroll-section>
+	<div class="primecontainer-row">
 		<div class="c-c-c-c a1cl">
-			<img src="/images/visionimage.webp" alt="vision" data-scroll data-scroll-speed="2" />
+			<img src="/images/visionimage.webp" alt="vision" />
 		</div>
-		<div class="c-c-c-c a1cr" data-scroll data-scroll-speed="6" data-scroll-direction="horizontal">
+		<div class="c-c-c-c a1cr">
 		<h3>The Vision</h3>
 		<h4>
 			<span class="colorange">Within the next 15 years</span>, no child should finish education without being familiarized to Nāṭyaśastra, Tarkaśāstra, Yogasūtra and Aṣṭadhyāyī; and without having <span class="colorange">accessed Itihāsa-Purāṇa.</span>
@@ -17,26 +17,26 @@ import Footer from '$lib/components/globals/Footer.svelte'
 		</div>
 	</div>
 
-	<div class="primecontainer-col schemawall" data-scroll-section>
-		<div class="c-c-c-c a2cr" data-scroll data-scroll-speed="6">
+	<div class="primecontainer-col schemawall">
+		<div class="c-c-c-c a2cr">
 		<h3>Framework</h3>
 		<h4>
 			At Bṛhat, we conceptualize IKS as a <span class="blue bold">universal episteme,</span> which is rooted in and derived from our millennia-long civilizational <span class="blue bold">knowledge and values</span>.
 		</h4>
 		<img src="/images/schemafinal.png" alt="schemamain" />
 		</div>
-		<div class="r-r-c-c off-button" data-scroll data-scroll-speed="4">
+		<div class="r-r-c-c off-button">
 			<button><a href="/docs/vastuandvaastu">Vastu and Vāstu</a></button>
 			<button><a href="/docs/shastrikaframework">Śāstrika Framework</a></button>
 		</div>
 	</div>	
 
-	<div class="primecontainer-col" data-scroll-section>
-		<h3 data-scroll data-scroll-speed="2">
+	<div class="primecontainer-col">
+		<h3>
 			Bṛhat as a <span class="blue bold">Key Implementing Partner on IKS-NEP
 		</h3>
 		<div class="base-row">
-			<div class="base-col type1 w50" data-scroll data-scroll-speed="-1" data-scroll-direction="horizontal">
+			<div class="base-col type1 w50">
 				<img src="/images/icon-curr.png" alt="icon" />
 				<h5>
 					Curriculum Building
@@ -45,7 +45,7 @@ import Footer from '$lib/components/globals/Footer.svelte'
 					Bṛhat offers support for curriculum development. The principles of curriculum building in the in the Indian Knowledge Systems work differently as there is no separation or hierarchy of subjects or topics.  This is equally true for pedagogies that are to be followed for IKS-based curriculum.
 				</small>
 			</div>
-			<div class="base-col type1 w50" data-scroll data-scroll-speed="1" data-scroll-direction="horizontal">
+			<div class="base-col type1 w50">
 				<img src="/images/icon-nep.png" alt="icon" />
 				<h5>
 					NEP-IKS Implementation
@@ -56,7 +56,7 @@ import Footer from '$lib/components/globals/Footer.svelte'
 			</div>
 		</div>
 		<div class="base-row">
-			<div class="base-col type1 w50" data-scroll data-scroll-speed="-1" data-scroll-direction="horizontal">
+			<div class="base-col type1 w50">
 				<img src="/images/icon-comp.png" alt="icon" />
 				<h5>
 					Competency Building
@@ -65,7 +65,7 @@ import Footer from '$lib/components/globals/Footer.svelte'
 					Any task of IKS integration and implementation would be insufficient if human resources in the respective areas are not created. Bṛhat has been partnering with the Ministry of Education's IKS Center of Excellence (CoE) at AICTE on its various initiatives. Bṛhat intends to conduct capacity building workshop for faculties in higher educational institutions, and create a critical network of like-minded individuals, who further contribute to mainstreaming of IKS curriculum and pedagogies. 
 				</small>
 			</div>
-			<div class="base-col type1 w50" data-scroll data-scroll-speed="1" data-scroll-direction="horizontal">
+			<div class="base-col type1 w50">
 				<img src="/images/icon-ld.png" alt="icon" />
 				<h5>
 					Learning Design 
@@ -79,7 +79,7 @@ import Footer from '$lib/components/globals/Footer.svelte'
 
 
 
-	<div class="primecontainer-col" data-scroll-section>
+	<div class="primecontainer-col">
 		<h3>
 			Detail to our <span class="blue bold">Vision</span>
 		</h3>
