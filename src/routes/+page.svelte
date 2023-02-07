@@ -5,7 +5,6 @@ import { onDestroy } from 'svelte'
 import '$lib/styles/locomotive-scroll.css'
 import LocomotiveScroll from 'locomotive-scroll';
 
-
 let scroll: LocomotiveScroll | null = null;
 
 const initScroll = () => {
@@ -19,7 +18,7 @@ const initScroll = () => {
 
 onMount(() => {
   initScroll();
-  if (process.browser) {
+  if (typeof window !== 'undefined') {
     window.addEventListener('resize', () => {
       if (scroll) {
         scroll.destroy();
@@ -35,7 +34,6 @@ onDestroy(() => {
   }
   scroll = null;
 });
-
 </script>
 
 
@@ -53,7 +51,6 @@ onDestroy(() => {
 		</h4>
 		</div>
 	</div>
-
 	<div class="primecontainer-col schemawall" data-scroll-section>
 		<div class="c-c-c-c a2cr">
 		<h3>Framework</h3>
@@ -67,7 +64,6 @@ onDestroy(() => {
 			<button><a href="/docs/shastrikaframework">Śāstrika Framework</a></button>
 		</div>
 	</div>	
-
 	<div class="primecontainer-col" data-scroll-section>
 		<h3>
 			Bṛhat as a <span class="blue bold">Key Implementing Partner on IKS-NEP
@@ -113,9 +109,6 @@ onDestroy(() => {
 			</div>				
 		</div>
 	</div>
-
-
-
 	<div class="primecontainer-col" data-scroll-section>
 		<h3>
 			Detail to our <span class="blue bold">Vision</span>
