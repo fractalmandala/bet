@@ -17,7 +17,7 @@ const initScroll = () => {
 
 onMount(() => {
   initScroll();
-  if (process.browser) {
+  if (typeof window !== 'undefined') {
     window.addEventListener('resize', () => {
       if (scroll) {
         scroll.destroy();

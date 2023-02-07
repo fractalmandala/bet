@@ -4,7 +4,7 @@ import LocomotiveContainer from '$lib/components/globals/LocomotiveContainer.sve
 </script>
 
 
-<LocomotiveContainer>
+
 	<div class="imagecontainer-hero" data-scroll-section>
 	</div>
 	<div class="primecontainer-row" data-scroll-section>
@@ -112,7 +112,7 @@ import LocomotiveContainer from '$lib/components/globals/LocomotiveContainer.sve
 			</div>
 		</div>	
 	</div>
-</LocomotiveContainer>
+
 
 
 
