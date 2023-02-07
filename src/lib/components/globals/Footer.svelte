@@ -13,7 +13,7 @@
 	color: white;
 	background: var(--background);
 	border-top: 1px solid #676767;
-	padding: 8px 16px;
+	padding: 8px 32px;
 }
 
 .footer-col {

@@ -1,4 +1,6 @@
 <script>
+import { fly } from 'svelte/transition'
+import { quintIn } from 'svelte/easing'
 let isToggle = false
 
 function toggleMenu() {
@@ -22,22 +24,25 @@ function toggleMenu() {
 			<a href="/videos">videos</a>
 		</nav>
 	</div>
-	<div class="navmobile">
-		<div class="icon" on:click={toggleMenu} on:keydown={toggleMenu}>
-			<img src="/images/hamburger-black.png" alt="icon" />
-		</div>
-		{#if isToggle}
-		<div class="fs-menu" on:click={toggleMenu} on:keydown={toggleMenu}>
-			<div class="min-row" on:click={toggleMenu} on:keydown={toggleMenu}>
-				<img src="/images/hamburger-close.png" alt="icon" />
-			</div>
-			<a href="/docs/introduction">about</a>
-			<a href="/docs/brhataspartner">our work</a>
-			<a href="/articles">articles</a>
-			<a href="/videos">videos</a>
-		</div>
-		{/if}
+<div class="navmobile">
+	<div class="icon" on:click={toggleMenu} on:keydown={toggleMenu}>
+		<img src="/images/hamburger-white.png" alt="icon" />
 	</div>
+	{#if isToggle}
+	<div class="fs-menu"
+		in:fly="{{duration: 200, y: -800, x:0, easing: quintIn}}"
+		out:fly="{{duration: 300, y: -800, x: 0, easing: quintIn}}"
+	>
+		<div class="min-row" on:click={toggleMenu} on:keydown={toggleMenu}>
+			<img src="/images/hamburger-close.png" alt="icon" />
+		</div>
+		<a href="/docs/introduction" on:click={toggleMenu}>about</a>
+		<a href="/docs/brhataspartner" on:click={toggleMenu}>our work</a>
+		<a href="/articles" on:click={toggleMenu}>articles</a>
+		<a href="/videos" on:click={toggleMenu}>videos</a>
+	</div>
+	{/if}
+</div>
 </div>
 </div>
 

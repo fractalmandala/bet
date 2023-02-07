@@ -84,7 +84,8 @@ a:hover { color: #f06449;}
 .blog li { line-height: 1.2em; color: #676767; margin-top: 0; margin-bottom: 8px;}
 .list-item h5 { text-transform: capitalize; margin-top: 0.2em; color: #878787; margin-bottom: 2px;}
 .videoframe { margin-top: 8px;}
-h1, h2 { font-weight: 600; line-height: 1em; letter-spacing: -1px;}
+h2 { font-weight: 600; line-height: 1em; letter-spacing: -1px;}
+h1 { font-weight: 700; line-height: 1em; letter-spacing: -2px; margin-top: 0; margin-bottom: 0.25em;}
 h3 { font-weight: bold; margin-top: 0; margin-bottom: 0.5em; line-height: 1.12em; letter-spacing: -1px;}
 h4 { font-weight: 700; letter-spacing: -1px; margin-top: 0; line-height: 1.2em;}
 h5 { font-weight: bold; margin-top: 1em; margin-bottom: 12px; letter-spacing: -0.5px; line-height: 1.12em;}
@@ -154,6 +155,7 @@ small { line-height: 1.2em;}
 	.video { height: 160px;}
 	.type1 { padding: 1em;}
 	.navarea a { font-size: 18px;}
+	h1  { font-size: 4.6em;}
 	h2 { font-size: 3.5em; }
 	h3 { font-size: 2em;}
 	h4 { font-size: 1.8em;}
@@ -182,6 +184,7 @@ small { line-height: 1.2em;}
 	.w25 { width: 100%;}
 	.video { height: 120px;}
 	.type1 { padding: 1em 0.4em;}
+	h1 { font-size: 3.6em;}
 	h2 { font-size: 3em; }
 	h3 { font-size: 2em;}
 	h4 { font-size: 1.6em;}
@@ -210,7 +213,7 @@ small { line-height: 1.2em;}
 	h2 { font-size: 2.4em; }
 	h3 { font-size: 1.8em; padding-top: 1em;}
 	h4 { font-size: 1.6em;}
-	h5 { font-size: 1.1em;}
+	h5 { font-size: 1.4em;}
 	p, .blog li { font-size: 1.28em;}
 	.img64 img {width: 32%; }
 .r-r-c-c { flex-direction: column;}
