@@ -4,6 +4,24 @@
 		<meta charset="utf-8" />
 		<link rel="icon" href="%sveltekit.assets%/favicon.png" />
 		<meta name="viewport" content="width=device-width" />
+		<script>
+			import { onMount } from 'svelte';
+			import LocomotiveScroll from 'locomotive-scroll';
+			
+			let scroll;
+
+			onMount(() => {
+    		const container = document.querySelector('[data-scroll-container]');
+    		if (container) {
+        scroll = new LocomotiveScroll({
+            el: container,
+            smooth: true,
+						reloadOnContextChange: true,
+						repeat: true
+        });
+    		}
+			});
+		</script>
 		%sveltekit.head%
 	</head>
 	<body data-sveltekit-preload-data="hover">

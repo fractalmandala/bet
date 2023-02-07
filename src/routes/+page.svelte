@@ -1,21 +1,6 @@
 <script lang="ts">
-import { onMount } from 'svelte';
-import LocomotiveScroll from 'locomotive-scroll';
 import Footer from '$lib/components/globals/Footer.svelte'
 
-let scroll;
-
-onMount(() => {
-    const container = document.querySelector('[data-scroll-container]');
-    if (container) {
-        scroll = new LocomotiveScroll({
-            el: container as HTMLElement,
-            smooth: true,
-						reloadOnContextChange: true,
-						repeat: true
-        });
-    }
-});
 </script>
 
 <div class="lococont" data-scroll-container>
