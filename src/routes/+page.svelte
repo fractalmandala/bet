@@ -35,13 +35,12 @@ export async function getVideos(){
 
 	<div class="r-r-r-r layer2">
 		<div class="c-c-c-c primero1">
-			<h1 class="the-blue">Framework</h1>
-			<p class="big-guy">
+			<h3 class="big-guy">
 				At Bṛhat, we conceptualize IKS as a <span class="the-blue bold">universal episteme,</span> which is rooted in and derived from our millennia-long civilizational <span class="the-blue bold">knowledge and values</span>.
-			</p>
+			</h3>
 		</div>
 		<div class="c-c-c-c primero2">
-			<p><a href="/docs/iksprepository">Indian Knowledge Repository</a></p>
+			<p><a href="/docs/iksrepository">Indian Knowledge Repository</a></p>
 			<p><a href="/docs/shastrikaframework">The Śāstrika Framework</a></p>
 			<p><a href="/docs/vastuandvaastu">Vastu and Vāstu</a></p>
 		</div>
@@ -148,7 +147,7 @@ export async function getVideos(){
 	.big-guy { font-size: 2em; font-weight: 300; margin-top: 0;}
 	.primero2 { width: 40%; padding-left: 2em; padding-right: 2em;}
 	.primero1 { width: 60%; padding-left: 4vw; z-index:2; padding-right: 4vw; }
-	.primero1 p { font-size: 1.12em;}
+
 	.primero2 p { font-size: 1.6em; font-weight: 300; text-align: right; padding-right: 4vw; margin-top: 0.05em; margin-bottom: 0.5em; border-bottom: 1px solid #d7d7d7; padding-bottom: 0.5em;}
 	.layer2 { height: max-content;}
 	.layer3, .layer4, .layer5 { padding-left: 4vw; padding-right: 4vw; margin-top: 4em;}
