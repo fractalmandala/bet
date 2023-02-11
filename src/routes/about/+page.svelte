@@ -117,8 +117,6 @@ export async function getVideos(){
 	.l1 h5 { font-weight: 300;}
 	.adj { padding-left: 4vw; margin-bottom: 64px; font-size: 64px;	}
 
-
-
 	.the-ites { width: calc(50% - 4em);align-items: flex-start;}
 	.the-ites img { margin-left: 0;}
 	.the-ites p {
@@ -137,7 +135,7 @@ export async function getVideos(){
 
 	.the-vidboy { flex-wrap: wrap; margin-top: 1em; gap: 1em; padding-top: 4em;}
 	.item-box { height: 240px;}
-	.l1{ height: 100vh; justify-content: center; padding-right: 40%;}
+	.l1{ justify-content: center;}
 	.l2 { width: 100%; flex-wrap: wrap; gap: 4em;}
 }
 

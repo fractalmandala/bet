@@ -215,7 +215,7 @@ export async function getVideos(){
 	.read-box p { margin-bottom: 0; font-weight: 300; font-size: 1.12em; margin-top: 0;}
 	.read-box h5 { margin-bottom: 12px;}
 
-	.r-r-r-r.l2 { flex-wrap: wrap;}
+	.l2 { flex-wrap: wrap;}
 
 }
 </style>

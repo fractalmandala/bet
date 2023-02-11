@@ -3,7 +3,7 @@ import Sidebar from '$lib/components/globals/Sidebar.svelte'
 </script>
 
 <div class="doc-container">
-	<div class="c-c-c-c other">
+	<div class="c-c-c-c other istop isbot">
 		<slot></slot>
 	</div>
 <Sidebar></Sidebar>
@@ -21,6 +21,8 @@ import Sidebar from '$lib/components/globals/Sidebar.svelte'
 		flex-direction: column;
 		width: 76vw;
 		padding-bottom: 8em;
+		padding-left: 4vw;
+		padding-right: 4vw;
 	}
 
 }
@@ -28,10 +30,13 @@ import Sidebar from '$lib/components/globals/Sidebar.svelte'
 @media screen and (max-width: 767px) {
 	.other {
 		width: 100%;
+		padding-left: 4vw;
+		padding-right: 4vw;
 	}
 	.doc-container {
 	display: flex;
 	flex-direction: column;
+	height: 100%;
 	}
 }
 </style>

@@ -40,10 +40,10 @@
 
 @media screen and (max-width: 767px) {
 	.sidebr {
-		display: flex;
+		display: none;
 		flex-direction: column;
 		width: 100vw;
-		height:96px;
+		height: 100%;
 	}
 }
 </style>

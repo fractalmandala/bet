@@ -76,15 +76,15 @@ small, .text_small {font-size: 0.75rem;}
 @media screen and (max-width: 767px) {
 
 	h1{
-		font-size: 60px;
+		font-size: 40px;
 	}
 	h2 {
-		font-size: 2em;
+		font-size: 38px;
 	}
 
 	h4 { font-size: 1.28em;}
 
-	.h2type { font-size: 48px;}
+	.h2type { font-size: 32px;}
 
 	h3 { font-size: 1.4em;}
 
