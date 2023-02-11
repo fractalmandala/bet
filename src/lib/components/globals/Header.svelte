@@ -13,15 +13,14 @@ function toggleMenu() {
 <div class="header">
 	<div class="logoarea">
 		<a href="/">
-			<p>Bṛhat Education</p>
+			<p>B<span class="isred">ṛ</span>hat Education</p>
 		</a>
 	</div>
 	<div class="navarea">
 		<nav>
-			<a href="/docs/introduction">about</a>
-			<a href="/docs/brhataspartner">our work</a>
-			<a href="/articles">articles</a>
-			<a href="/videos">videos</a>
+			<a href="/about">about</a>
+			<a href="/vision">vision</a>
+			<a href="/events">events</a>
 		</nav>
 	</div>
 <div class="navmobile">
@@ -36,10 +35,9 @@ function toggleMenu() {
 		<div class="min-row" on:click={toggleMenu} on:keydown={toggleMenu}>
 			<img src="/images/hamburger-close.png" alt="icon" />
 		</div>
-		<a href="/docs/introduction" on:click={toggleMenu}>about</a>
-		<a href="/docs/brhataspartner" on:click={toggleMenu}>our work</a>
-		<a href="/articles" on:click={toggleMenu}>articles</a>
-		<a href="/videos" on:click={toggleMenu}>videos</a>
+		<a href="/about" on:click={toggleMenu}>about</a>
+		<a href="/vision" on:click={toggleMenu}>vision</a>
+		<a href="/events" on:click={toggleMenu}>events</a>
 	</div>
 	{/if}
 </div>
@@ -50,9 +48,11 @@ function toggleMenu() {
 .logoarea p {
 	margin-bottom: 0;
 	margin-top: 0;
-	text-transform: uppercase;
-	font-weight: bold;
+	text-transform: capitalize;
+	font-weight: 700;
 	color: white;
+	font-size: 40px;
+	font-family: 'Source Serif Pro',serif;
 }
 
 .min-row {
@@ -86,14 +86,21 @@ function toggleMenu() {
 }
 
 .navarea a {
-	font-weight: 400;
-	font-size: 1.44em;
+	font-weight: 300;
+	font-size: 1.4em;
 	color: white;
+	padding-left: 32px;	
+	padding-right: 32px;
 }
+
+.navarea a:hover {
+	padding-left: 32px; padding-right: 32px; justify-content: space-between; width: 100%; align-items: center;
+}
+
 
 @media screen and (min-width: 768px) {
 	.logoarea p {
-		font-size: 24px;
+		font-size: 32px;
 	}
 	.navmobile {
 		display: none;
@@ -102,7 +109,7 @@ function toggleMenu() {
 
 @media screen and (max-width: 767px) {
 	.logoarea p {
-		font-size: 20px;
+		font-size: 32px;
 	}
 		.navarea {
 			display: none;

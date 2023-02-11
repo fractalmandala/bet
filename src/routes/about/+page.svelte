@@ -110,6 +110,8 @@ export async function getVideos(){
 
 .h2type { color: #f06449;}
 .adj { color: var(--red); margin-left: 2vw;}
+
+
 @media screen and (min-width: 900px) {
 	.icon {object-fit: contain; width: 64px; height: 64px; margin-left: auto; }
 	.l1 h5 { font-weight: 300;}
@@ -153,7 +155,7 @@ export async function getVideos(){
 
 @media screen and (max-width: 767px) {
 .icon {object-fit: contain; width: 90px; height: 64px; margin-left: auto; margin-right: auto; }
-	.layer5 { padding-bottom: 4em;}
+	.l5 { padding-bottom: 4em;}
 	.the-vidboy { flex-wrap: wrap;}
 	.the-ites { width: 100%;}
 	.the-ites h5 { text-align: left;}	
@@ -162,7 +164,11 @@ export async function getVideos(){
 	.item-row { flex-wrap: wrap; gap: 2em;}
 	.item-box { width: 100%; margin-bottom: 1em; height: 240px;}
 	.specialtext { text-align: center; font-size: 1.6em;}
-	.read-box p { margin-bottom: 0; font-weight: 600; font-size: 1.4em;}
-	.l2 { flex-wrap: wrap;}
+	.read-box p { margin-bottom: 0; margin-top: 0;font-size: 1em;}
+	.read-box h5 { margin-bottom: 8px;}
+	.l2 { flex-wrap: wrap; padding-left: 4vw; padding-right: 4vw;}
+	.l4, .l5 { padding-left: 4vw; padding-right: 4vw; padding-bottom: 6em;}
+	.adj { margin-left: 4vw;}
+	.l1{ height: 100vh; padding: 12em 4vw 8em 4vw; justify-content: center;}
 }
 </style>

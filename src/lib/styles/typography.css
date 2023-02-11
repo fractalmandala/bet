@@ -1,0 +1,89 @@
+@import url('https://fonts.googleapis.com/css2?family=STIX+Two+Text:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500;1,600;1,700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Cinzel+Decorative:wght@400;700;900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,500;0,600;0,700;0,800;0,900;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+
+html {font-size: 100%;} /*16px*/
+
+body {
+  background: white;
+  font-family: 'Playfair Display', serif;
+  font-weight: 400;
+  line-height: 1.35;
+  color: #171717;
+}
+
+*, :root {
+	--red: #f06449;
+	--teal: #1B998B;
+	--blue: #004e98;
+}
+
+p {margin-bottom: 1rem; font-weight: 300; font-family: 'Playfair Display', serif; font-size: 1.12em;}
+
+h1, h2, h3, h4 {
+  margin: 3rem 0 1rem;
+  line-height: 1.15;
+	font-family: 'Playfair Display', serif;
+}
+
+
+h1 {
+  margin-top: 0;
+  font-size: 7em;
+	font-weight: 800;
+	letter-spacing: -3.2px;
+	font-family: 'Playfair Display', serif;
+	text-transform: uppercase;
+
+}
+
+h2 {
+	margin-top: 1em;
+	font-size: 3.2em;
+	font-weight: 700;
+	letter-spacing: -1px;
+	font-family: 'Playfair Display', serif;
+}
+
+.h2type {
+	font-size: 80px;
+}
+
+h3 {font-size: 2.369rem; font-weight: 800;}
+
+h4 {font-size: 1.777rem; font-weight: 500;}
+
+h5 {font-size: 1.333rem;font-weight: 700; margin-top: 12px; margin-bottom: 16px;}
+
+small, .text_small {font-size: 0.75rem;}
+
+.theblue {
+	color: #004E98;
+}
+
+.thered {
+	color: #5F1A37;
+}
+
+.theteal {
+	color: #1B998B;
+}
+
+@media screen and (max-width: 767px) {
+
+	h1{
+		font-size: 60px;
+	}
+	h2 {
+		font-size: 2em;
+	}
+
+	h4 { font-size: 1.28em;}
+
+	.h2type { font-size: 48px;}
+
+	h3 { font-size: 1.4em;}
+
+	p { font-size: 1.12em;}
+}
