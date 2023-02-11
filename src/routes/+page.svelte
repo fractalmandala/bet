@@ -19,9 +19,9 @@ export async function getVideos(){
 	return data
 }
 </script>
-	<div class="imagecontainer-hero">
+	<div class="c-c-c-c ff img1">
 	</div>
-	<div class="primecontainer-col l1">
+	<div class="container-col l1 istop">
 		<h3 data-textify>OUR VISION</h3>
 		<h1 data-textify class="ish1">
 			Within the next 15 years,
@@ -30,7 +30,7 @@ export async function getVideos(){
 			no child should finish education without being familiarized to Nāṭyaśastra, Tarkaśāstra, Yogasūtra and Aṣṭadhyāyī; and without having accessed Itihāsa-Purāṇa.
 		</h2>
 	</div>
-	<div class="r-r-r-r l2">
+	<div class="container-row l2">
 		<div class="c-c-c-c col-l">
 			<img src="/images/imageforkey.webp" alt="indian students studying" />
 		</div>
@@ -42,7 +42,7 @@ export async function getVideos(){
 			<h4><a href="/docs/vastuandvaastu" data-textify>Vastu and Vāstu</a></h4>
 		</div>
 	</div>
-	<div class="c-c-c-c l3">
+	<div class="container-col l3">
 		<h2 class="theteal">Focus Areas</h2>
 		<div class="r-r-r-r the-gridboy" data-textify>
 			<div class="c-c-c-c the-ites">
@@ -75,7 +75,7 @@ export async function getVideos(){
 			</div>
 		</div>
 	</div>
-	<div class="c-c-c-c l4">
+	<div class="container-col l4">
 		<h2 class="theteal">IKS Primers</h2>
 			{#await getArticles()}
 			<small>...</small>
@@ -92,7 +92,7 @@ export async function getVideos(){
 			<pre>{error}</pre>
 			{/await}
 		</div>
-		<div class="c-c-c-c l5">
+		<div class="container-col l5 isbot">
 		{#await getVideos()}
 		<small>...</small>
 		{:then data}
@@ -111,7 +111,7 @@ export async function getVideos(){
 
 
 <style>
-.imagecontainer-hero { z-index: 999; background-image: url('/images/about-parambika.png')}
+.img1 { z-index: 999; background-image: url('/images/about-parambika.png')}
 .l1 h3 { color: #979797;}
 .ish1 { margin-bottom: 0;}
 .isp { margin-top: 12px;}
@@ -136,6 +136,7 @@ export async function getVideos(){
 	border-bottom: 1px solid #d7d7d7;
 	transform-origin: center left;
 	transition: all 0.17s var(--cube3);
+	color: #474747;
 }
 .l2 a {
 	transform-origin: center left;
@@ -150,24 +151,21 @@ export async function getVideos(){
 	margin-bottom: 32px;
 }
 
-	.ish1 {
-		color: var(--red);
-	}
+.ish1 {
+	color: var(--red);
+}
 
 
 @media screen and (min-width: 900px) {
 	.l2 .col-r h4 { font-size: 32px;}
 	.icon {object-fit: contain; width: 64px; height: 64px; margin-left: auto; }
 	.l2 .col-l { width: 40%;}
-	.l2 .col-r { width: 50%; height: 100%;}
+	.l2 .col-r { width: 60%; height: 100%;}
 	.l2 .col-r {
 		padding-left: 4vw;
 		padding-right: 4vw;
 	}
-	.l3, .l4 {
-		padding-left: 4vw;
-		padding-right: 4vw;
-	}
+	.l2 { padding-top: 2em;}
  .l3 .theteal, .l4 .theteal {
 		font-size: 80px;
 		margin-bottom: 32px;
@@ -187,11 +185,9 @@ export async function getVideos(){
 	.item-box { width: calc(33.33% - 1em);}
 	.specialtext { text-align: right;}
 
-	.l5 { padding-bottom: 4em;}
 	.the-gridboy { width: 100%; flex-wrap: wrap; margin-top: 1em;}
 	.the-vidboy { flex-wrap: wrap; margin-top: 1em; gap: 1em; padding-left: 4vw; padding-right: 4vw; padding-top: 4em;}
 	.item-box { height: 240px;}
-	.l1{ padding-top: 4em;}
 }
 
 @media screen and (max-width: 899px) and (min-width: 768px) {
@@ -220,9 +216,6 @@ export async function getVideos(){
 	.read-box h5 { margin-bottom: 12px;}
 
 	.r-r-r-r.l2 { flex-wrap: wrap;}
-	.l3, .l4, .l2, .l5 {
-		padding-left: 4vw;
-		padding-right: 4vw;
-	}
+
 }
 </style>

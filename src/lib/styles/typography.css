@@ -19,6 +19,9 @@ body {
 	--blue: #004e98;
 }
 
+a { text-decoration: none; transition: all 0.12s var(--cube4); color: inherit;}
+a:hover { color: var(--red);}
+
 p {margin-bottom: 1rem; font-weight: 300; font-family: 'Playfair Display', serif; font-size: 1.12em;}
 
 h1, h2, h3, h4 {
@@ -30,7 +33,7 @@ h1, h2, h3, h4 {
 
 h1 {
   margin-top: 0;
-  font-size: 7em;
+  font-size: 4.8em;
 	font-weight: 800;
 	letter-spacing: -3.2px;
 	font-family: 'Playfair Display', serif;
@@ -40,14 +43,14 @@ h1 {
 
 h2 {
 	margin-top: 1em;
-	font-size: 3.2em;
-	font-weight: 700;
+	font-size: 2.4em;
+	font-weight: 600;
 	letter-spacing: -1px;
 	font-family: 'Playfair Display', serif;
 }
 
 .h2type {
-	font-size: 80px;
+	font-size: 48px;
 }
 
 h3 {font-size: 2.369rem; font-weight: 800;}

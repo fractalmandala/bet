@@ -1,4 +1,4 @@
-<div class="c-c-c-c l1">
+<div class="container-col istop l1">
 <h2>
 Knowledge has always been primal to Indian civilization. But there are fundamental differences between Western episteme and Indian civilizational knowledge. 
 </h2>
@@ -8,7 +8,7 @@ Knowledge has always been primal to Indian civilization. But there are fundament
 To establish IKS as a universal episteme, we have to use models of thoughts that are derived from our śāstras. Both वस्तु (content) and वास्तु (form) need to emerge from there. 
 </p>
 </div>
-<div class="c-c-c-c l2">
+<div class="container-col isbot l2">
 	<h2 class="theteal">Our Vision</h2>
 	<div class="r-r-r-r l2a">
 		<div class="c-c-c-c l2aleft" data-textify>
@@ -32,15 +32,15 @@ To establish IKS as a universal episteme, we have to use models of thoughts that
 
 
 @media screen and (min-width: 900px) {
-	.l1 p { width: 60%;}
+	.l1 p { width: 90%;}
 	.l2 { justify-content: flex-start;}
 	.l2 h3 { margin-bottom: 32px; margin-top: 0;}
 	.l2a { gap: 20em; margin-top: -2em;}
 	.l2a p { font-weight: 400; font-size: 1.6em; margin-top: 0; border-bottom: 1px solid #d7d7d7; padding-bottom: 12px;}
 
-
-	.l1{ height: 100vh; padding: 0 6vw; justify-content: center;}
-	.l2 { padding: 0 6vw 8em 6vw; width: 100%; flex-wrap: wrap; gap: 4em;}
+	.l1 { padding-right: 30%;}
+	.l1{ height: 100vh; justify-content: center;}
+	.l2 { width: 100%; flex-wrap: wrap; gap: 4em;}
 }
 
 @media screen and (max-width: 899px) and (min-width: 768px) {
@@ -51,17 +51,16 @@ To establish IKS as a universal episteme, we have to use models of thoughts that
 	.l2a p { font-weight: 400; font-size: 1.6em; margin-top: 0; border-bottom: 1px solid #d7d7d7; padding-bottom: 12px;}
 
 
-	.l1{ height: 100vh; padding: 0 6vw; justify-content: center;}
-	.l2 { padding: 0 6vw 8em 6vw; width: 100%; flex-wrap: wrap; gap: 4em;}
+	.l1{ height: 100vh; justify-content: center;}
+	.l2 { width: 100%; flex-wrap: wrap; gap: 4em;}
 
 }
 
 @media screen and (max-width: 767px) {
-	.l1, .l2 {padding-left: 4vw; padding-right: 4vw;}
+
 	.l2a { flex-wrap: wrap;}
 	.l2 { flex-wrap: wrap;}
 	.l1, .l2 { height: 100%;}
-	.l1 {padding-top: 8em;}
-	.l2 { padding-bottom: 4em;}
+
 }
 </style>

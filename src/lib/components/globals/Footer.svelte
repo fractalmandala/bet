@@ -8,6 +8,9 @@
 
 <style>
 
+a { text-decoration: none;}
+a { color: white;}
+
 @media screen and (min-width: 768px) {
 .footer {
 	display: flex;
@@ -15,10 +18,11 @@
 	color: white;
 	background: linear-gradient(90deg, rgba(6,9,7,0.9) 0%, rgba(39,39,39,1) 100%); 
 	border-top: 1px solid #676767;
-	padding: 8px 32px;
+	padding: 8px 40px;
 	height: 96px;
 	align-items: center;
 }
+	.footer small { font-size: 14px;}
 
 .footer-col {
 	display: flex;

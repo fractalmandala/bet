@@ -5,19 +5,31 @@
    export let data;
 </script>
 
-<div class="primecontainer-row">
-<div class="blog">
+
+
 <h2>{ data.title }</h2>
+<div class="c-c-c-c">
 <svelte:component this={data.content} />
 </div>
-<div class="side-blog">
 
-</div>
-</div>
+
 
 <style>
-	p {
-		color: #878787;
-		font-size: 1.2em;
+
+
+	@media screen and (min-width: 768px) {
+
+		h2 {
+			margin-top: 4em;
+			margin-left: 6vw;
+			margin-bottom: 0;
+			color: var(--red);
+		}
+		.c-c-c-c {
+			padding-right: 16vw;
+			padding-left: 6vw;
+			padding-top: 2em;
+		}
 	}
+
 </style>

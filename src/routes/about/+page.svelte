@@ -22,7 +22,7 @@ export async function getVideos(){
 </script>
 
 
-<div class="c-c-c-c l1">
+<div class="container-col istop l1">
 	<h2 class="h2type" data-textify>
 		The application of IKS throughout curricula is essential to the preservation of our civilizational memory.
 	</h2>	
@@ -31,7 +31,7 @@ export async function getVideos(){
 	</h5>
 </div>
 <h2 class="adj">Focus Areas</h2>
-<div class="r-r-r-r l2" data-textify>
+<div class="container-row l2" data-textify>
 			<div class="c-c-c-c the-ites ite1">
 				<img class="icon" src="/images/icon-curr.png" alt="icon" />
 				<h5 class="specialtext">Curriculum Building</h5>
@@ -62,7 +62,7 @@ export async function getVideos(){
 			</div>
 </div>
 <h2 class="adj">IKS Primers</h2>
-	<div class="c-c-c-c l4">
+	<div class="container-row l4">
 			{#await getArticles()}
 			<small>...</small>
 			{:then data}
@@ -78,7 +78,7 @@ export async function getVideos(){
 			<pre>{error}</pre>
 			{/await}
 		</div>
-		<div class="c-c-c-c l5">
+		<div class="c-c-c-c container-col isbot l5">
 		{#await getVideos()}
 		<small>...</small>
 		{:then data}
@@ -116,10 +116,7 @@ export async function getVideos(){
 	.icon {object-fit: contain; width: 64px; height: 64px; margin-left: auto; }
 	.l1 h5 { font-weight: 300;}
 	.adj { padding-left: 4vw; margin-bottom: 64px; font-size: 64px;	}
-	.l4, .l5 {
-		padding-left: 6vw;
-		padding-right: 	6vw;
-	}
+
 
 
 	.the-ites { width: calc(50% - 4em);align-items: flex-start;}
@@ -140,8 +137,8 @@ export async function getVideos(){
 
 	.the-vidboy { flex-wrap: wrap; margin-top: 1em; gap: 1em; padding-top: 4em;}
 	.item-box { height: 240px;}
-	.l1{ height: 100vh; padding: 0 6vw; justify-content: center;}
-	.l2 { padding: 0 6vw; width: 100%; flex-wrap: wrap; gap: 4em;}
+	.l1{ height: 100vh; justify-content: center; padding-right: 40%;}
+	.l2 { width: 100%; flex-wrap: wrap; gap: 4em;}
 }
 
 @media screen and (max-width: 899px) and (min-width: 768px) {
