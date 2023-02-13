@@ -44,7 +44,7 @@ export async function getVideos(){
 	</div>
 	<div class="container-col l3">
 		<h2 class="theteal">Focus Areas</h2>
-		<div class="r-r-r-r the-gridboy" data-textify>
+		<div class="r-r-r-r the-gridboy">
 			<div class="c-c-c-c the-ites">
 				<img class="icon" src="/images/icon-curr.png" alt="icon" />
 				<h5 class="specialtext the-blue">Curriculum Building</h5>
