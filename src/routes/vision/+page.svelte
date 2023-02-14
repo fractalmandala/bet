@@ -14,7 +14,7 @@ To establish IKS as a universal episteme, we have to use models of thoughts that
 		<div class="c-c-c-c l2aleft" data-textify>
 			<h3 data-textify>The IKS Framework</h3>
 			<p><a href="/docs/vastuandvaastu">Vastu and Vāstu</a></p>
-			<p><a href="/docs/shatrikaframework">The Śāstrika Framework</a></p>
+			<p><a href="/docs/shastrikaframework">The Śāstrika Framework</a></p>
 			<p><a href="/docs/iksrepository">The Indian Knowledge Repository</a></p>
 			<p><a href="/docs/reversingthegaze">Reversing the Gaze</a></p>
 		</div>
