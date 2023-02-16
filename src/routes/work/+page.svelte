@@ -11,9 +11,9 @@ export async function getArticles(){
 }
 export async function getVideos(){
 	const { data, error } = await supabase
-	.from('brhat-bet')
+	.from('brhat-youtube')
 	.select()
-	.eq('type','Video')
+	.eq('type','iks')
 	.limit(6)
 	if (error) throw new Error(error.message)
 	return data
