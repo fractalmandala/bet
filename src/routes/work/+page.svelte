@@ -78,20 +78,8 @@ export async function getVideos(){
 			<pre>{error}</pre>
 			{/await}
 	</div>
-		<div class="container-col isbot l5">
-		{#await getVideos()}
-		<small>...</small>
-		{:then data}
-		<div class="r-r-r-r the-vidboy">
-			{#each data as item}
-			<div class="c-c-c-c item-box">
-				<iframe width="100%" height="100%" src="https://www.youtube.com/embed/{item.videoid}" title={item.name} frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
-			</div>
-			{/each}
-		</div>
-		{:catch error}
-		<pre>{error}</pre>
-		{/await}
+	<div class="container-col isbot l5">
+
 	</div>
 
 <style>
@@ -123,12 +111,10 @@ export async function getVideos(){
 	.read-box h5 { font-weight: 700; margin-bottom: 8px; margin-top: 0; transform-origin: center left; transition: all 0.12s var(--cube1);}
 	.read-box h5:hover { transform: scale(0.95);}
 	.read-box p { color: #878787; margin-top: 8px;}
-	.item-box { width: calc(33.33% - 1em);}
+
 	.specialtext { text-align: right;}
 	.ite2 { margin-left: 2em;}
 
-	.the-vidboy { flex-wrap: wrap; margin-top: 1em; gap: 1em; padding-top: 4em;}
-	.item-box { height: 240px;}
 	.l1{ height: 100vh; justify-content: center;}
 	.l2 { width: 100%; flex-wrap: wrap; gap: 4em;}
 }
@@ -137,20 +123,20 @@ export async function getVideos(){
 	.icon {object-fit: contain; width: 64px; height: 64px; margin-left: auto; }
 	.stickercol .textcol p { font-size: 1.4em;}
 	.item-row { flex-wrap: wrap; gap: 1em;}
-	.item-box { width: calc(33.33% - 1em);}
+
 	.specialtext { text-align: right;}
 
 }
 
 @media screen and (max-width: 767px) {
 .icon {object-fit: contain; width: 90px; height: 64px; margin-left: auto; margin-right: auto; }
-	.the-vidboy { flex-wrap: wrap;}
+
 	.the-ites { width: 100%;}
 	.the-ites h5 { text-align: left;}	
 	.the-ites img { margin-left: 0;}
 	.stickercol .textcol p { font-size: 1.4em;}
 	.item-row { flex-wrap: wrap; gap: 2em;}
-	.item-box { width: 100%; margin-bottom: 1em; height: 240px;}
+
 	.specialtext { text-align: center; font-size: 1.6em;}
 	.read-box p { margin-bottom: 0; font-weight: 600; font-size: 1.4em;}
 	.l2 { flex-wrap: wrap;}
