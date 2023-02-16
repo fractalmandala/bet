@@ -9,11 +9,19 @@ export async function getArticles(){
 	if (error) throw new Error(error.message)
 	return data
 }
+export async function getArticle(){
+	const { data, error } = await supabase
+	.from('brhat-iks')
+	.select()
+	.order('seq',{ascending: false})
+	if (error) throw new Error(error.message)
+	return data
+}
 export async function getVideos(){
 	const { data, error } = await supabase
-	.from('brhat-bet')
+	.from('brhat-youtube')
 	.select()
-	.eq('type','Video')
+	.eq('type','iks')
 	.limit(6)
 	if (error) throw new Error(error.message)
 	return data
@@ -22,7 +30,7 @@ export async function getVideos(){
 </script>
 
 
-<div class="container-col istop l1">
+<div class="c-c-c-c container-col istop l1">
 	<h2 class="h2type" data-textify>
 		The application of IKS throughout curricula is essential to the preservation of our civilizational memory.
 	</h2>	
@@ -62,7 +70,7 @@ export async function getVideos(){
 			</div>
 </div>
 <h2 class="adj">IKS Primers</h2>
-	<div class="container-row l4">
+	<div class="container-col l4">
 			{#await getArticles()}
 			<small>...</small>
 			{:then data}
@@ -77,9 +85,9 @@ export async function getVideos(){
 			{:catch error}
 			<pre>{error}</pre>
 			{/await}
-		</div>
-		<div class="c-c-c-c container-col isbot l5">
-		{#await getVideos()}
+	</div>
+	<div class="container-col vidsbids">
+	{#await getVideos()}
 		<small>...</small>
 		{:then data}
 		<div class="r-r-r-r the-vidboy">
@@ -93,8 +101,30 @@ export async function getVideos(){
 		<pre>{error}</pre>
 		{/await}
 	</div>
+<div class="container-col isbot l5">
+	{#await getArticle()}
+	<small>...</small>
+	{:then data}
+	<h2 class="theteal adj theh">Events We Have Partnered On</h2>
+	<div class="container-row l22">
+	{#each data as item}
+		<div class="c-c-c-c l22a">
+		<h4>{item.name}</h4>
+		<div class="r-r-r-r l22arow">
+		<p>{item.dates}</p>
+		<p>{item.venues}</p>
+		<p>{item.themes}</p>
+		</div>
+		</div>
+	{/each}
+	</div>
+	{:catch error}
+	<pre>{error}</pre>
+	{/await}
+	</div>
 
 <style>
+	.l22arow p { text-transform: capitalize;}
 
 .l2 .col-l img {
 	object-fit: cover;
@@ -109,37 +139,49 @@ export async function getVideos(){
 }
 
 .h2type { color: #f06449;}
-.adj { color: var(--red); margin-left: 2vw;}
-
 
 @media screen and (min-width: 900px) {
+	.theh { margin-top: 120px; margin-left: 6vw; margin-bottom: 42px;}
+	.vidsbids { justify-content: center; align-items: center;}
+	.l22 { justify-content: space-between; flex-wrap: wrap;}
+	.l22a { width: 49%; height: auto; margin-bottom: 1em; justify-content: space-between; align-items: space-between;}
+	.l22a h4 {margin-top: 0; margin-bottom: 8px;}
+	.l22arow { gap: 24px;}
+	.l22arow p { font-weight: 400; font-size: 1em; margin-top: 0; color: #878787;}
+	.l1{ height: 80vh; padding: 0 6vw; justify-content: center;}
+	.l2 { padding: 0 6vw 8em 6vw; width: 100%; flex-wrap: wrap; }
 	.icon {object-fit: contain; width: 64px; height: 64px; margin-left: auto; }
 	.l1 h5 { font-weight: 300;}
-	.adj { padding-left: 4vw; margin-bottom: 64px; font-size: 64px;	}
-
 	.the-ites { width: calc(50% - 4em);align-items: flex-start;}
 	.the-ites img { margin-left: 0;}
 	.the-ites p {
 		margin-top: 0;
 	}
-
 	.item-row { flex-wrap: wrap; gap: 2em; width: 100%;}
 	.read-box { width: calc(50% - 3em); border-bottom: 1px solid #d7d7d7; padding-bottom: 4px;}
 	.read-box h5 { font-weight: 700; margin-bottom: 8px; margin-top: 0; transform-origin: center left; transition: all 0.12s var(--cube1);}
 	.read-box h5:hover { transform: scale(0.95);}
 	.read-box p { color: #878787; margin-top: 8px;}
-	.item-box { width: calc(33.33% - 1em);}
+	.isbot { padding-bottom: 80px !important; }
 	.specialtext { text-align: right;}
 	.ite2 { margin-left: 2em;}
-	.l5 { padding-bottom: 4em;}
-
 	.the-vidboy { flex-wrap: wrap; margin-top: 1em; gap: 1em; padding-top: 4em;}
 	.item-box { height: 240px;}
-	.l1{ justify-content: center;}
+	.l1{ height: 100vh; justify-content: center;}
 	.l2 { width: 100%; flex-wrap: wrap; gap: 4em;}
+	.l5 { width: 100%; align-items: space-between; padding-left: 0 !important; padding-right: 0 !important;}
 }
 
 @media screen and (max-width: 899px) and (min-width: 768px) {
+
+	.l22 { justify-content: flex-start;}
+
+	.l22a { gap: 20em; margin-top: -2em;}
+	.l22a p { font-weight: 400; font-size: 1.6em; margin-top: 0; border-bottom: 1px solid #d7d7d7; padding-bottom: 12px;}
+
+
+	.l1{ height: 100vh; justify-content: center;}
+	.l2 { width: 100%; flex-wrap: wrap; gap: 4em;}
 	.icon {object-fit: contain; width: 64px; height: 64px; margin-left: auto; }
 	.stickercol .textcol p { font-size: 1.4em;}
 	.item-row { flex-wrap: wrap; gap: 1em;}
@@ -149,8 +191,11 @@ export async function getVideos(){
 }
 
 @media screen and (max-width: 767px) {
+	.adj { margin-bottom: 0; margin-top: 32px;}
+	.l22 { flex-wrap: wrap;}
+	.l22arow { flex-wrap: wrap;}
+	.l22arow p { width: 100%; margin-top: 0; margin-bottom: 8px;}
 .icon {object-fit: contain; width: 90px; height: 64px; margin-left: auto; margin-right: auto; }
-	.l5 { padding-bottom: 4em;}
 	.the-vidboy { flex-wrap: wrap;}
 	.the-ites { width: 100%;}
 	.the-ites h5 { text-align: left;}	
@@ -159,11 +204,17 @@ export async function getVideos(){
 	.item-row { flex-wrap: wrap; gap: 2em;}
 	.item-box { width: 100%; margin-bottom: 1em; height: 240px;}
 	.specialtext { text-align: center; font-size: 1.6em;}
-	.read-box p { margin-bottom: 0; margin-top: 0;font-size: 1em;}
-	.read-box h5 { margin-bottom: 8px;}
-	.l2 { flex-wrap: wrap; padding-left: 4vw; padding-right: 4vw;}
-	.l4, .l5 { padding-left: 4vw; padding-right: 4vw; padding-bottom: 6em;}
-	.adj { margin-left: 4vw;}
-	.l1{ height: 100vh; padding: 12em 4vw 8em 4vw; justify-content: center;}
+	.l2 { flex-wrap: wrap;}
+	.l5 { padding-left: 0; padding-right: 0;}
+	.l4 { padding-bottom: 4em;}
+	.read-box p { 
+		font-size: 16px;
+		font-weight: 300;
+		margin-top: 0px;
+		}
+	.read-box h5 {
+		margin-top: 8px;}
+	.l22a h4 { font-size: 24px;}
+	.l22a p { font-size: 16px;}
 }
 </style>

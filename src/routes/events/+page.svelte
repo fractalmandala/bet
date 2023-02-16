@@ -1,6 +1,6 @@
 <script>
 import supabase from '$lib/db'
-export async function getArticles(){
+export async function getArticle(){
 	const { data, error } = await supabase
 	.from('brhat-iks')
 	.select()
@@ -19,11 +19,11 @@ Any task of IKS integration and implementation would be insufficient if human re
 Bṛhat has been partnering with AICTE on its various initiatives. Bṛhat intends to conduct capacity building workshop for faculties in higher educational institutions, and create a critical network of likeminded individuals, who further contribute to mainstreaming of IKS curriculum and pedagogies. 
 </p>
 </div>
-	{#await getArticles()}
+	{#await getArticle()}
 	<small>...</small>
 	{:then data}
-<h2 class="theteal adj theh">Events We Have Partnered On</h2>
-<div class="container-row isbot l2">
+	<h2 class="theteal adj theh">Events We Have Partnered On</h2>
+	<div class="container-row isbot l2">
 	{#each data as item}
 	<div class="c-c-c-c l2a">
 		<h4>{item.name}</h4>
