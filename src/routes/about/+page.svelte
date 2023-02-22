@@ -1,5 +1,16 @@
 <script>
 import supabase from '$lib/db'
+
+export async function getCourses(){
+	const { data, error } = await supabase
+	.from('brhat-drashta2')
+	.select()
+	.eq('type','overview')
+	.order('id')
+	.limit(3)
+	if (error) throw new Error(error.message)
+	return data
+}
 export async function getArticles(){
 	const { data, error } = await supabase
 	.from('brhat-bet')
@@ -69,6 +80,27 @@ export async function getVideos(){
 				</p>
 			</div>
 </div>
+<h2 class="adj">Bṛhat Draṣṭā</h2>
+<div class="container-col l6">
+<h5>
+	Bṛhat Draṣṭā is an offering in deep learning on some of the greatest ancient and contemporary philosophers (draṣṭās) and schools of thoughts (darśana). It imparts the ways of looking and seeing, darśana, so that the learners can proceed on the path of being draṣṭās.
+</h5>
+	{#await getCourses()}
+	<small>...</small>
+	{:then data}
+	<div class="r-r-r-r courses-row">
+		{#each data as item}
+		<div class="c-c-c-c course-box">
+			<img src={item.image} alt={item.id} />
+			<h5>{item.name}</h5>
+			<p>{item.content.slice(0,250)}...</p>
+		</div>
+		{/each}
+	</div>
+	{:catch error}
+	<pre>{error}</pre>
+	{/await}
+</div>
 <h2 class="adj">IKS Primers</h2>
 	<div class="container-col l4">
 			{#await getArticles()}
@@ -121,11 +153,13 @@ export async function getVideos(){
 	{:catch error}
 	<pre>{error}</pre>
 	{/await}
-	</div>
+</div>
+
+
 
 <style>
 	.l22arow p { text-transform: capitalize;}
-
+.course-box h5 { text-transform: capitalize;}
 .l2 .col-l img {
 	object-fit: cover;
 	width: 100%;
@@ -140,6 +174,11 @@ export async function getVideos(){
 
 .h2type { color: #f06449;}
 
+.course-box img {
+	object-fit: cover;
+	width: 100%;
+	height: 200px;
+}
 @media screen and (min-width: 900px) {
 	.theh { margin-top: 120px; margin-left: 6vw; margin-bottom: 42px;}
 	.vidsbids { justify-content: center; align-items: center;}
@@ -170,28 +209,39 @@ export async function getVideos(){
 	.l1{ height: 100vh; justify-content: center;}
 	.l2 { width: 100%; flex-wrap: wrap; gap: 4em;}
 	.l5 { width: 100%; align-items: space-between; padding-left: 0 !important; padding-right: 0 !important;}
+	.course-box {
+		width: 30%;
+	}
+	.courses-row {
+		justify-content: space-between;
+	}
 }
 
 @media screen and (max-width: 899px) and (min-width: 768px) {
 
-	.l22 { justify-content: flex-start;}
+	.l22 { justify-content: flex-end; flex-wrap: wrap;}
 
-	.l22a { gap: 20em; margin-top: -2em;}
-	.l22a p { font-weight: 400; font-size: 1.6em; margin-top: 0; border-bottom: 1px solid #d7d7d7; padding-bottom: 12px;}
-
+	.l22a { gap: 16px; margin-top: -2em; width: 100%;}
+	.l22a p { font-weight: 400; font-size: 1.12em; margin-top: 0; border-bottom: 1px solid #d7d7d7; padding-bottom: 12px;}
+  .l22arow { gap: 16px;}
 
 	.l1{ height: 100vh; justify-content: center;}
 	.l2 { width: 100%; flex-wrap: wrap; gap: 4em;}
-	.icon {object-fit: contain; width: 64px; height: 64px; margin-left: auto; }
+	.icon {object-fit: contain; width: 64px; height: 64px; margin-right: auto; }
 	.stickercol .textcol p { font-size: 1.4em;}
 	.item-row { flex-wrap: wrap; gap: 1em;}
 	.item-box { width: calc(33.33% - 1em);}
+	.the-vidboy { flex-wrap: wrap; gap: 16px;}
 	.specialtext { text-align: right;}
-
+	.course-box { width: calc(33% - 16px);}
+	.courses-row { justify-content: space-between;}
+	.the-ites { text-align: left; align-items: flex-start;}
+	.read-box h5 { margin-bottom: 4px;}
+	.read-box { margin-bottom: 12px;}
 }
 
 @media screen and (max-width: 767px) {
-	.adj { margin-bottom: 0; margin-top: 32px;}
+	.adj { margin-bottom: 0; margin-top: 64px;}
 	.l22 { flex-wrap: wrap;}
 	.l22arow { flex-wrap: wrap;}
 	.l22arow p { width: 100%; margin-top: 0; margin-bottom: 8px;}
@@ -214,7 +264,11 @@ export async function getVideos(){
 		}
 	.read-box h5 {
 		margin-top: 8px;}
+	.l22a { width: 100%;}
 	.l22a h4 { font-size: 24px;}
 	.l22a p { font-size: 16px;}
+	.courses-row { flex-wrap: wrap;}
+	.course-box { width: 100%; margin-bottom: 32px;}
+	.course-box img { height: 240px;}
 }
 </style>
