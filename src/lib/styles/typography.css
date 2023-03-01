@@ -44,7 +44,6 @@ h1 {
 
 h2 {
 	margin-top: 1em;
-	font-size: 72px;
 	font-weight: 800;
 	letter-spacing: -1px;
 	font-family: 'Newsreader',serif;
@@ -80,7 +79,17 @@ small, .text_small {font-size: 14px;}
 	color: #474747;
 }
 
-@media screen and (min-width: 768px) {
+@media screen and (min-width: 900px) {
+	h2 {
+		font-size: 56px;
+	}
+}
+
+@media screen and (max-width: 899px) and (min-width: 768px) {
+	h2 { font-size: 48px;}
+}
+
+@media screen and (min-width: 767px) {
 	.wide75 { width: 75%;}
 	h6 { font-size: 20px;}
 	.blogger p, .blogger ul li, .blogger ol li {

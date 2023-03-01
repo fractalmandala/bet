@@ -94,7 +94,7 @@ export async function getVideos(){
 
 	.item-box { width: calc(33.33% - 1em);}
 
-	.l1{ height: 100vh; justify-content: center;}
+	.l1{ min-height: 100vh; justify-content: center;}
 	.l2 { width: 100%; flex-wrap: wrap; gap: 4em;}
 
 }
