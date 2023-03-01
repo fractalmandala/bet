@@ -23,9 +23,11 @@ export async function getVideos(){
 
 
 <div class="c-c-c-c container-col istop l1">
-	<h2 class="h2type" data-textify>
+	<div class="spline">
+		<h2 data-textify>
 		The application of IKS throughout curricula is essential to the preservation of our civilizational memory.
-	</h2>	
+	</h2>
+	</div>
 	<h5>	
 	We partner with public and private institutions on IKS implementation, participate in and facilitate programs, and undertake awareness activities. We believe that the IKS (Indian Knowledge System) is critical to reimagining how multiple strands of knowledge are viewed.
 	</h5>
@@ -108,7 +110,7 @@ export async function getVideos(){
 	margin-bottom: 16px;
 }
 
-.h2type { color: #f06449;}
+
 
 @media screen and (min-width: 900px) {
 	.icon {object-fit: contain; width: 64px; height: 64px; margin-left: auto; }
@@ -134,7 +136,7 @@ export async function getVideos(){
 
 @media screen and (max-width: 899px) and (min-width: 768px) {
 	.icon {object-fit: contain; width: 64px; height: 64px; margin-left: auto; }
-	.stickercol .textcol p { font-size: 1.4em;}
+
 	.item-row { flex-wrap: wrap; gap: 1em;}
 	.item-box { width: calc(33.33% - 1em);}
 	.specialtext { text-align: right;}
@@ -147,11 +149,10 @@ export async function getVideos(){
 	.the-ites { width: 100%;}
 	.the-ites h5 { text-align: left;}	
 	.the-ites img { margin-left: 0;}
-	.stickercol .textcol p { font-size: 1.4em;}
 	.item-row { flex-wrap: wrap; gap: 2em;}
 	.item-box { width: 100%; margin-bottom: 1em; height: 240px;}
-	.specialtext { text-align: center; font-size: 1.6em;}
-	.read-box p { margin-bottom: 0; font-weight: 600; font-size: 1.4em;}
+	.specialtext { text-align: center; }
+	.read-box p { margin-bottom: 0; font-weight: 600;}
 	.l2 { flex-wrap: wrap;}
 }
 </style>

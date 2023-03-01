@@ -1,10 +1,10 @@
-
+@import url('https://fonts.googleapis.com/css2?family=Newsreader:ital,opsz,wght@0,6..72,200;0,6..72,300;0,6..72,400;0,6..72,500;0,6..72,600;0,6..72,700;0,6..72,800;1,6..72,200;1,6..72,300;1,6..72,400;1,6..72,500;1,6..72,600;1,6..72,700;1,6..72,800&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Spline+Sans:wght@300;400;500;600;700&display=swap');
 
 html {font-size: 100%;} /*16px*/
 
 body {
   background: white;
-  font-family: 'Source Serif 4', serif;
   font-weight: 400;
   line-height: 1.35;
   color: #171717;
@@ -19,21 +19,25 @@ body {
 a { text-decoration: none; transition: all 0.12s var(--cube4); color: inherit;}
 a:hover { color: var(--red);}
 
-p {margin-bottom: 1rem; font-weight: 300; font-family: 'Source Serif 4', serif; font-size: 1.12em;}
+p {margin-bottom: 1rem; font-weight: 400; font-family: 'Newsreader',serif; font-size: 20px; color: #a1a1a1;}
 
 h1, h2, h3, h4 {
   margin: 3rem 0 1rem;
   line-height: 1.15;
-	font-family: 'Source Serif 4', serif;
+	font-family: 'Newsreader',serif;
+}
+
+.spline h1, .spline h2, .spline h3, .spline h4, .spline h5, .spline h6, .spline p, .spline small {
+	font-family: 'Spline Sans', sans-serif;
 }
 
 
 h1 {
   margin-top: 0;
-  font-size: 4.8em;
+  font-size: 5.6em;
 	font-weight: 800;
 	letter-spacing: -3.2px;
-	font-family: 'Source Serif 4', serif;
+	font-family: 'Newsreader',serif;
 	text-transform: uppercase;
 
 }
@@ -43,21 +47,18 @@ h2 {
 	font-size: 72px;
 	font-weight: 800;
 	letter-spacing: -1px;
-	font-family: 'Source Serif 4', serif;
+	font-family: 'Newsreader',serif;
 	margin-bottom: 32px;
 }
 
-.h2type {
-	font-size: 48px;
-}
 
-h3 {font-size: 2.369rem; font-weight: 800;}
+h3 {font-size: 2.369rem; }
 
-h4 {font-size: 1.777rem; font-weight: 500;}
+h4 {font-size: 1.777rem; font-weight: 600;}
 
-h5 {font-size: 1.333rem;font-weight: 700; margin-top: 12px; margin-bottom: 32px;}
+h5 {font-size: 24px;font-weight: 700; margin-top: 12px; margin-bottom: 32px;}
 
-small, .text_small {font-size: 0.75rem;}
+small, .text_small {font-size: 14px;}
 
 .theblue {
 	color: #004E98;
@@ -71,8 +72,21 @@ small, .text_small {font-size: 0.75rem;}
 	color: #1B998B;
 }
 
-@media screen and (max-width: 767px) {
+.grey2 {
+	color: #a7a7a7;
+}
 
+.blk {
+	color: #474747;
+}
+
+@media screen and (min-width: 768px) {
+	.wide75 { width: 75%;}
+	h6 { font-size: 20px;}
+}
+
+@media screen and (max-width: 767px) {
+	.wide75 { width: 100%;}
 	h1{
 		font-size: 40px;
 	}
@@ -83,9 +97,15 @@ small, .text_small {font-size: 0.75rem;}
 
 	h4 { font-size: 1.28em;}
 
-	.h2type { font-size: 32px;}
+
 
 	h3 { font-size: 1.4em;}
+	h6 { font-size: 18px;}
 
 	p { font-size: 1.12em;}
 }
+
+.w300 { font-weight: 300;}
+.w400 { font-weight: 400;}
+.w600 { font-weight: 600;}
+
