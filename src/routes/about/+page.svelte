@@ -192,6 +192,8 @@ export async function getVideos(){
 	width: 100%;
 	height: 200px;
 }
+
+.vidsbids { padding-bottom: 64px;}
 @media screen and (min-width: 900px) {
 	.theh { margin-top: 120px; margin-left: 6vw; margin-bottom: 42px;}
 	.vidsbids { justify-content: center; align-items: center;}

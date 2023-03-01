@@ -1,4 +1,5 @@
 <script>
+let y = 1
 import supabase from '$lib/db'
 export async function getArticles(){
 	const { data, error } = await supabase
@@ -19,6 +20,8 @@ export async function getVideos(){
 	return data
 }
 </script>
+
+<svelte:window bind:scrollY={y}/>
 	<div class="c-c-c-c ff img1">
 	</div>
 	<div class="container-col l1 istop">
@@ -86,6 +89,9 @@ export async function getVideos(){
 				</p>
 			</div>
 		</div>
+	</div>
+	<div class="container-col lx">
+		<img src="/images/newimages/treerec.png" alt="tree" style="transform: translateY({-y/20}px)" />
 	</div>
 	<div class="container-col l4">
 		<div class="spline">
@@ -179,7 +185,15 @@ export async function getVideos(){
 	}
 	.l2 { padding-top: 2em;}
 
-
+	.lx {
+		width: 100vw;
+		height: 70vh;
+		overflow: hidden;
+	}
+	.lx img {
+		object-fit: cover;
+		height: 100vh;
+	}
 	.the-ites { width: calc(45% - 2vw); margin-right: 2vw; margin-left: 2vw; margin-bottom: 2em; align-items: flex-start;}
 	.the-ites img { margin-left: 0;}
 	.the-ites p {

@@ -6,9 +6,9 @@
 </script>
 
 
-
-<h2>{ data.title }</h2>
-<div class="c-c-c-c">
+<div class="spline">
+<h2 class="theblue">{ data.title }</h2></div>
+<div class="c-c-c-c blogger">
 <svelte:component this={data.content} />
 </div>
 
@@ -20,16 +20,16 @@
 	@media screen and (min-width: 768px) {
 
 		h2 {
-			margin-top: 4em;
-			margin-left: 6vw;
-			margin-bottom: 0;
-			color: var(--red);
+			margin-bottom: 32px;
+			margin-top: 0;
 		}
 		.c-c-c-c {
-			padding-right: 16vw;
-			padding-left: 6vw;
-			padding-top: 2em;
+			padding-right: 12vw;
 		}
 	}
+
+@media screen and (max-width: 767px) {
+	h2 { margin-bottom: 32px;}
+}
 
 </style>

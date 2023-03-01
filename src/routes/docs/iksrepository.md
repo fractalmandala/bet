@@ -7,7 +7,7 @@ The vast Indian knowledge repository includes fields as diverse as philosophy, a
 
 Further the tradition discusses 18 major vidyās theoretical disciplines and 64 kalās vocational sciences. These are classified as follows:  Four Vedas, the four subsidiary Vedas (āyurveda medicine), dhanurveda (weaponry), gaṃdharvaveda (music) and śilpa (architecture), purāṇa, nyāya, mīmāṃsā, dharmaśāstra and vedāṃga, the six auxiliary sciences, phonetics, grammar, metre, astronomy, ritual and philology.
 
-<img src="/images/vv5.png" alt="iks repository" />
+<img src="/images/newimages/iksrep.png" alt="iks repository" />
 
 We have to make use of this vast repository for an “epistemological imagination aimed at refounding the political imagination… to strengthen the social struggles against domination” (Santos, 2018). The task should be to transform Indian Knowledge Systems (IKS) from absent subjects into present subjects as a primary condition for identifying and validating knowledges capable of reinventing themselves. The IKS-based knowledge should be directed towards eliminating the epistemic violence towards Indic studies, expressed by Cesaire in the context of Caribbean: “millions of men torn from their gods, their lands, their habits, their life, from life, from the dance, from wisdom” (1995). 
 

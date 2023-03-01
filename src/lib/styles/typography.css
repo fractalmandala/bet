@@ -61,7 +61,7 @@ h5 {font-size: 24px;font-weight: 700; margin-top: 12px; margin-bottom: 32px;}
 small, .text_small {font-size: 14px;}
 
 .theblue {
-	color: #004E98;
+	color: #123773;
 }
 
 .thered {
@@ -83,6 +83,9 @@ small, .text_small {font-size: 14px;}
 @media screen and (min-width: 768px) {
 	.wide75 { width: 75%;}
 	h6 { font-size: 20px;}
+	.blogger p, .blogger ul li, .blogger ol li {
+		font-size: 20px;
+	}
 }
 
 @media screen and (max-width: 767px) {
@@ -103,9 +106,20 @@ small, .text_small {font-size: 14px;}
 	h6 { font-size: 18px;}
 
 	p { font-size: 1.12em;}
+	.blogger p, .blogger ul li, .blogger ol li  { font-size: 18px;}
 }
 
 .w300 { font-weight: 300;}
 .w400 { font-weight: 400;}
 .w600 { font-weight: 600;}
+
+.blogger h2, .blogger h4 {
+	font-family: 'Spline Sans',sans-serif;
+}
+
+.blogger p, .blogger ul li, .blogger ol li  {
+	color: #474747;
+}
+
+
 

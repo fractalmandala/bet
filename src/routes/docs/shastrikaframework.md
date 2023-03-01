@@ -13,7 +13,7 @@ Their work now stands marginalized as Indian sociology curricula is increasingly
 
 <h5 class="hindi">सम्बन्ध-निरूपणं शास्त्रस्य कार्यम</h5>
 
-<img src="/images/vv4.png" alt="sambandha" />
+<img class="four" src="/images/newimages/purushartha.png" alt="sambandha" />
 
 The objective of developing an Indic methods of analysis is to propose a new set of instruments that are not ascertained by any other means of cognition (pramāṇa), to obtain results that are not achievable from any other source and which are agreeable to a large set of societal facts. This is especially important because the Indian way of thinking was always concerned about लोकहित, not merely मनुष्यहित (anthropocentric). Also, theory-making within the Indian traditions followed the अनुबंध-चतुष्टय, which includes विषय, फल: (प्रयोजन;), अधिकारी and संबंध:। How can this be integrated into mainstream academia? 
 

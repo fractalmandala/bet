@@ -13,6 +13,8 @@ With the National Education Policy (NEP) being implemented and the work on the N
 
 The IKS division at AICTE accepted thirteen proposals to establish IKS centres and 21 proposals to rejuvenate IKS research. The centres would receive 40 lakh rupees over a two-year period. The committee selected funded proposals in six disciplines: Mathematics and Astronomy, Metallurgy and Material Science and Technology, Chemical Science and Technology, Health, Wellness, and Consciousness Studies; Political and Economic Thought, Economics and Foreign Policy, and the Arts and Culture. In addition, seven IKS research proposals were selected from the centres' applications. The research proposals would receive Rs 20 lakhs over two years.
 
+<img src="/images/newimages/aicte.png" alt="aicte"/>
+
 Among the selected institutions are JAIN University, Bengaluru, Trinity College of Engineering, Thiruvananthapuram, IIT-BHU, IIT Madras, Bharatiya Darshan Kavikulaguru Kalidas Sanskrit University, Amrita Vishwa Vidyapeetham; and Sampurnanand Sanskrit University, to name a few.
 
 There have been some fantastic efforts from non-state actors to popularize the IKS. Prominent among them is the commendable work done by D.K. Hari and D.K. Hema Hari, a husband-wife duo of Management and IT professionals, are the founders of Bharath Gyan, a civilizational study initiative to compile and present the knowledge of India, its traditions, its culture, its global ties – in short, its ethos, from an Indian perspective. 
