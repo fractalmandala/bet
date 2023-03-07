@@ -1,5 +1,5 @@
 <div class="footer" data-scroll-section>
-	<div class="footer-col">
+	<div class="footer-col spline">
 		<small>
 			All rights reserved 2023. Bṛhat Education Trust.<br><a href="https://brhat.in" target="_blank" rel="noreferrer">Bṛhat.</a> ©
 		</small>

@@ -43,7 +43,7 @@ export async function getVideos(){
 
 <div class="c-c-c-c container-col istop l1">
 	<div class="spline">
-	<h2 class="h2type" data-textify>
+	<h2 class="h2type">
 		The application of IKS throughout curricula is essential to the preservation of our civilizational memory.
 	</h2></div>
 	<p class="wide75">	
@@ -52,7 +52,7 @@ export async function getVideos(){
 </div>
 <div class="spline">
 <h2 class="adj grey2">Focus Areas</h2></div>
-<div class="container-row l2" data-textify>
+<div class="container-row l2">
 			<div class="c-c-c-c the-ites ite1">
 				<img class="icon" src="/images/icon-curr.png" alt="icon" />
 				<div class="spline">
@@ -140,7 +140,7 @@ export async function getVideos(){
 			{:then data}
 			<div class="r-r-r-r textcol spline item-row">
 				{#each data as item}
-				<div class="c-c-c-c read-box" data-textify>
+				<div class="c-c-c-c read-box">
 					<h5><a href={item.link}>{item.name}</a></h5>
 					<small class="grey2">{item.author}</small>
 				</div>

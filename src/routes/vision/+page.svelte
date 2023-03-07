@@ -34,15 +34,15 @@ export async function getVideos(){
 	<div class="spline">
 	<h2 class="grey2">Our Vision</h2></div>
 	<div class="r-r-r-r spline l2a">
-		<div class="c-c-c-c l2aleft" data-textify>
-			<h3 data-textify>The IKS Framework</h3>
+		<div class="c-c-c-c l2aleft">
+			<h3>The IKS Framework</h3>
 			<h5 class="grey2 w600"><a href="/docs/vastuandvaastu">Vastu and Vāstu</a></h5>
 			<h5 class="grey2 w600"><a href="/docs/shastrikaframework">The Śāstrika Framework</a></h5>
 			<h5 class="grey2 w600"><a href="/docs/iksrepository">The Indian Knowledge Repository</a></h5>
 			<h5 class="grey2 w600"><a href="/docs/reversingthegaze">Reversing the Gaze</a></h5>
 		</div>
-		<div class="c-c-c-c l2aright" data-textify>
-			<h3 data-textify>Education and NEP</h3>
+		<div class="c-c-c-c l2aright">
+			<h3>Education and NEP</h3>
 			<h5 class="grey2 w600"><a href="/docs/educationasaportal">Education as a Portal</a></h5>
 			<h5 class="grey2 w600"><a href="/docs/educationrooted">Education Rooted in Episteme</a></h5>
 			<h5 class="grey2 w600"><a href="/docs/nepimplementation">NEP Implementation</a></h5>

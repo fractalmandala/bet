@@ -9,8 +9,8 @@ function toggleMenu() {
 
 </script>
 
-<div class="c-c-c-c l1">
-<div class="r-r-r-r l2">
+
+<div class="boxr l1000">
 	<div class="logoarea">
 		<a href="/">
 			<p>B<span class="isred">ṛ</span>hat Education</p>
@@ -20,48 +20,45 @@ function toggleMenu() {
 		<nav>
 			<a href="/vision">Our Gaze</a>
 			<a href="/about">Our Work</a>
+			<a href="/engage">Engage</a>
 			<a href="/sponsor">Support Us</a>
 		</nav>
 	</div>
-<div class="navmobile">
-	<div class="icon" on:click={toggleMenu} on:keydown={toggleMenu}>
-		<img src="/images/hamburger-white.png" alt="icon" />
-	</div>
-	{#if isToggle}
-	<div class="fs-menu"
+	<div class="navmobile">
+		<div class="icon" on:click={toggleMenu} on:keydown={toggleMenu}>
+			<img src="/images/hamburger-white.png" alt="icon" />
+		</div>
+		{#if isToggle}
+		<div class="fs-menu"
 		in:fly="{{duration: 200, y: -800, x:0, easing: quintIn}}"
 		out:fly="{{duration: 300, y: -800, x: 0, easing: quintIn}}"
-	>
+		>
 		<div class="min-row" on:click={toggleMenu} on:keydown={toggleMenu}>
 			<img src="/images/hamburger-close.png" alt="icon" />
 		</div>
 		<a href="/vision" on:click={toggleMenu}>Our Gaze</a>
 		<a href="/about" on:click={toggleMenu}>Our Work</a>
+			<a href="/engage" on:click={toggleMenu}>Engage</a>
 		<a href="/sponsor" on:click={toggleMenu}>Support Us</a>
+		</div>
+		{/if}
 	</div>
-	{/if}
 </div>
-</div>
-</div>
+
 
 <style>
-.l1 {
-	transition: all 0.13s var(--cube1); 
-	border: 1px solid transparent; 
-	background: linear-gradient(90deg, rgba(6,9,7,0.7) 0%, rgba(39,39,39,0.9) 100%);
-	width: 100vw; 
-	z-index: 900; position: fixed; 
-	top: 0; 
-	left: 0; 
-	align-items: center; 
-	justify-content: flex-end;
-	position: fixed;
-}
 
-.l2 {
-	height: 100%;
+
+.l1000 {
+	height: 64px;
 	width: 100%;
 	transition: all 0.13s var(--cube1);
+	background: linear-gradient(90deg, rgba(6,9,7,0.7) 0%, rgba(39,39,39,0.9) 100%);
+	justify-content: space-between;
+	position: fixed;
+	top: 0;
+	left: 0;
+	z-index: 1000;
 }
 
 .logoarea { display: flex; flex-direction: row; align-items: center; justify-content: flex-start; height: 56px;}
@@ -74,7 +71,7 @@ a { text-decoration: none;}
 	text-transform: capitalize;
 	font-weight: 700;
 	color: white;
-	font-size: 40px;
+	font-size: 32px;
 }
 
 .min-row {
@@ -103,11 +100,12 @@ a { text-decoration: none;}
 }
 
 .navarea a {
-	font-weight: 300;
-	font-size: 1.12em;
+	font-weight: 400;
+	font-size: 14px;
 	color: white;
 	padding-left: 40px;
 	text-transform: uppercase;
+	font-family: 'Spline Sans',sans-serif;
 
 }
 
@@ -127,11 +125,12 @@ a { text-decoration: none;}
 		width: 24px;
 		height: 24px;
 	}
-	.l1 { height: 80px; margin-bottom: -80px;}
-	.l2 { padding-left: 40px; padding-right: 40px; justify-content: space-between; width: 100%; align-items: center;}
-	.navarea a { margin-left: 20px;}
+
+
 	.logoarea p {
-		font-size: 32px;
+		font-size: 24px;
+		font-weight: 600;
+		letter-spacing: 0px;
 	}
 	.navmobile {
 		display: none;
@@ -141,7 +140,10 @@ a { text-decoration: none;}
 		flex-direction: row;
 		justify-content: flex-end;
 		text-align: right;
+		align-items: center;
 	}
+
+	.l1000 { padding: 0 40px; align-items: center;}
 	}
 
 @media screen and (max-width: 767px) {
@@ -150,11 +152,13 @@ a { text-decoration: none;}
 		width: 24px;
 		height: 24px;
 	}
-
-	.l2 { padding-left: 16px; padding-right: 16px; justify-content: space-between; width: 100%; align-items: center;}
+	.l1000 { align-items: center; padding: 0 24px;}
+	
 	.navarea { display: none;}
 	.logoarea p {
 		font-size: 24px;
+font-weight: 600;
+		letter-spacing: 0px;
 	}
 	.navmobile {
 		display: flex;

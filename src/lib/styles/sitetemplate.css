@@ -24,6 +24,8 @@
 
 @media screen and (min-width: 768px) {
 
+	.traypad { padding-left: 64px; padding-right: 64px; padding-top: 24px; padding-bottom: 24px;}
+
 	.istop { padding-top: 6em;}
 	.isbot { padding-bottom: 6em;}
 
@@ -47,6 +49,8 @@
 
 @media screen and (max-width: 767px) {
 
+	.traypad { padding: 24px;}
+
 	.ff {
 		width: 100vw;
 		height: 100vh;
@@ -66,4 +70,28 @@
 	}
 
 	.adj { margin-left: 4vw;}
+}
+
+@media screen and (min-width: 900px ) {
+	.padstd {
+		padding-left: 128px;
+		padding-right: 128px
+	}
+	.wd75 { width: 75%;}
+}
+
+@media screen and (max-width: 899px) and (min-width: 768px) {
+	.padstd {
+		padding-left: 64px;
+		padding-right: 64px
+	}
+	.wd75 { width: 85%;}
+}
+
+@media screen and (max-width: 767px) {
+	.padstd {
+		padding-left: 24px;
+		padding-right: 24px
+	}
+	.wd75 { width: 100%;}
 }

@@ -11,8 +11,8 @@ body, html {
 }
 
 .bdr { border: 1px solid red;}
-.blue { color: #F06449;}
-.colorange { color: #ff3d00;}
+
+.orange { color: #ff3d00;}
 .bold { font-weight: 900;}
 .hindi { font-family: 'Halant', sans-serif;}
 
@@ -26,6 +26,7 @@ body, html {
  	--cube3: cubic-bezier(0.320, 0.760, 0.875, 0.490);
  	--cube4: cubic-bezier(0.000, 1.240, 0.875, 0.490);
  	--snap: cubic-bezier(0.925, 0.235, 1.000, -0.065);
+	--bounce: cubic-bezier(0.720, -0.295, 1.000, -0.500);
 	--background: linear-gradient(90deg, rgba(6,29,50,1) 0%, rgba(9,37,63,1) 100%);
 	--red: #f06449;
 	--teal: #1B998B;
@@ -76,7 +77,7 @@ a:hover { color: #f06449;}
 .list-item:hover { background-color: white; box-shadow: 4px 4px 16px #e1e1e1, -4px -6px 12px #f7f7f7;}
 .label { color: #f06449; text-transform: uppercase; width: max-content; font-size: 12px; font-weight: bold;}
 
-
+.boxr { display: flex; flex-direction: row;}
 .videoframe { margin-top: 8px;}
 .navarea a { text-decoration: none; font-variant: small-caps; font-weight: bold; color: #474747;}
 .the-blue { color: #1C5D99;}
@@ -95,15 +96,19 @@ a:hover { color: #f06449;}
 	display: flex;
 }
 
+.boxc { display: inline-grid;}
+
 button {
 	background-color: var(--teal);
 	border: none;
 	color: white;
-	padding: 12px 20px;
+	padding: 8px 20px;
 	width: max-content;
-	font-size: 18px;
+	font-size: 16px;
 	transition: all 0.12s ease-in;
 	transform-origin: center center;
+	border-radius: 4px;
+	margin-top: 12px;
 }
 
 button:hover {
@@ -131,10 +136,17 @@ button a:hover { color: white;}
 	.w50 { width: 50%;}
 	.w33 { width: 33.33%;}
 	.w25 { width: 25%;}
+	.w75 { width: 75%;}
 	.video { height: 200px; border-top: 1px solid #d7d7d7;}
 	.img64 img {width: 64%; }
 	.r-r-c-c { flex-direction: row;}
 	.padsx4 { padding-left: 4vw; padding-right: 4vw;}
+
+	.card h4, .card h5 { font-family: 'Spline Sans', sans-serif; margin-bottom: 8px; font-size: 1.5rem;}
+	.card p { font-size: 1.12rem;}
+	.card small { font-size: 16px; text-align: justify; margin-bottom: 8px; line-height: 1.2;font-family: 'Spline Sans'}
+	.card img { object-fit: cover; margin-bottom: 15px; }
+	.card iframe { height: 200px;}
 }
 
 @media screen and (max-width: 899px) and (min-width: 768px) {
@@ -152,15 +164,22 @@ button a:hover { color: white;}
 	.w50 { width: 50%;}
 	.w33 { width: 33.33%;}
 	.w25 { width: 25%;}
+	.w75 { width: 90%;}
 	.video { height: 160px;}
 	.type1 { padding: 1em;}
 	.navarea a { font-size: 18px;}
 	.padsx4 { padding-left: 4vw; padding-right: 4vw;}
 	.img64 img {width: 64%; }
 	.r-r-c-c { flex-direction: row;}
+.card h4, .card h5 { font-family: 'Spline Sans', sans-serif; margin-bottom: 8px; font-size: 1.12rem;}
+	.card p { font-size: 1.12rem;}
+	.card small { font-size: 16px; text-align: justify; margin-bottom: 8px; line-height: 1.2;font-family: 'Spline Sans'}
+	.card img { object-fit: cover; margin-bottom: 15px; }
+	.card iframe { height: 200px;}
 }
 
 @media screen and (max-width: 767px) and (min-width: 576px) {
+	.w75 { width: 100%;}
 	.logoarea img { height: 48px;}
 	.header { padding-left: 32px; padding-right: 32px; justify-content: space-between; width: 100%; align-items: center; }
 	.navarea a { margin-left: 20px;}
@@ -180,9 +199,15 @@ button a:hover { color: white;}
 	.type1 { padding: 1em 0.4em;}
 	.img64 img {width: 64%; }
 .r-r-c-c { flex-direction: column;}
+.card h4, .card h5 { font-family: 'Spline Sans', sans-serif; margin-bottom: 8px; font-size: 1.12rem;}
+	.card p { font-size: 1.12rem;}
+	.card small { font-size: 16px; text-align: justify; margin-bottom: 8px; line-height: 1.2;font-family: 'Spline Sans'}
+	.card img { object-fit: cover; margin-bottom: 15px; }
+	.card iframe { height: 200px;}
 }
 
 @media screen and (max-width: 575px) {
+	.w75 { width: 100%;}
 	.logoarea img { height: 40px;}
 	.header { padding-left: 16px; padding-right: 16px; justify-content: space-between; width: 100%; align-items: center;}
 	.navarea { display: none;}
@@ -200,4 +225,14 @@ button a:hover { color: white;}
 	.type1 { padding: 0 1em 1em 1em;}
 	.img64 img {width: 32%; }
 .r-r-c-c { flex-direction: column;}
+.card h4, .card h5 { font-family: 'Spline Sans', sans-serif; margin-bottom: 8px; font-size: 1.2rem;}
+	.card p { font-size: 0.8rem; font-family: 'Spline Sans', sans-serif;}
+	.card small { font-size: 12px; text-align: justify; margin-bottom: 8px; line-height: 1.2;font-family: 'Spline Sans'}
+	.card img { object-fit: cover; margin-bottom: 15px; }
+	.card iframe { height: 200px;}
 }		
+
+
+.l1 {
+	padding-bottom: 64px;
+}
