@@ -20,9 +20,9 @@
 					Bṛhat is a nodal agency helping institutions digitize their curriculum and pedagogies, and introducing learning designs that are compatible with IKS thinking.
 				</p>
 				<p>
-					Institutions looks to design curriculum around IKS disciplines, or implementing learning design compatible with IKS-thinking, can reach out to us at the below form.
+					Institutions looks to design curriculum around IKS disciplines, or implementing learning design compatible with IKS-thinking, can reach out to us.
 				</p>
-				<button>Discuss Learning Design</button>
+			
 	</div>
   <div class="box32 card">
 						<h5>Competency Development</h5>
@@ -33,7 +33,7 @@
 				<p>
 					Explore our calendar of events to see the work we are doing in competency development and faculty training in partnerships with various institutions.
 				</p>
-				<button>Inquire FDP</button>
+	
 		
 	</div>
   <div class="box33 card">
@@ -45,7 +45,7 @@
 				<p>
 					We draw from deep research and diverse expertize to aid institutions build modern learning frameworks for IKS disciplines, rooting them in their own epistemes while engaging with the contemporary.
 				</p>
-				<button>Build a Course</button>
+	
 		
 	</div>
 	</div>	
