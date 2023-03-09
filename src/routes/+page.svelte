@@ -16,6 +16,15 @@ export async function getArticles(){
 	if (error) throw new Error(error.message)
 	return data
 }
+export async function getEvents(){
+	const { data, error } = await supabase
+	.from('brhat-bet')
+	.select()
+	.eq('type','event')
+	.order('sequence',{ascending: false})
+	if (error) throw new Error(error.message)
+	return data
+}
 export async function getVideos(){
 	const { data, error } = await supabase
 	.from('brhat-youtube')
@@ -118,6 +127,27 @@ export async function getPartners(){
   </div>
 </div>
 
+<div class="events padstd">
+  <div class="header40 spline">
+		<h2>Recent and Upcoming Events</h2>
+	</div>
+  <div class="eventsgrid">
+		{#await getEvents()}
+		<small>...</small>
+		{:then data}
+		{#each data as item}
+		<div class="card eventscard">
+			<img src={item.image} alt={item.name} />
+			<h5>{item.name}</h5>
+			<small>{item.text.slice(0,300)}...</small>
+			<button><a href={item.link} target="_blank" rel="noreferrer">Visit to Know More</a></button>
+		</div>
+		{/each}
+		{:catch error}
+		<pre>{error}</pre>
+		{/await}
+	</div>
+</div>
 
 <div class="focusareas padstd">
   <div class="header-2 spline">
@@ -231,6 +261,34 @@ export async function getPartners(){
 
 
 <style>
+
+.events {  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: auto 1fr;
+  gap: 0px 0px;
+  grid-auto-flow: row;
+  grid-template-areas:
+    "header40"
+    "eventsgrid";
+}
+
+.eventscard img { object-fit: cover; width: 100%; height: 240px; object-position: center center;}
+
+.header40 { grid-area: header40;margin-top: 64px; }
+
+.eventsgrid {  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-template-rows: 1fr;
+  gap: 32px 32px;
+  grid-auto-flow: row;
+  grid-template-areas:
+    ". . .";
+  grid-area: eventsgrid;
+}
+
+
+
+.events h5 { text-transform: capitalize;}
 
 .leftcol a:hover, .midcol a:hover, .rightcol a:hover { color: white;}
 
@@ -372,9 +430,6 @@ export async function getPartners(){
 
 .header-std { grid-area: header-std;margin-top: 64px; }
 
-
-
-
 .ourvision {  display: grid;
   grid-template-columns: 0.9fr 1.1fr;
   grid-template-rows: 1fr;
@@ -460,6 +515,8 @@ export async function getPartners(){
     "vidsgrid";
 }
 
+
+
 .header4 { grid-area: header4;margin-top: 64; }
 
 
@@ -496,7 +553,7 @@ export async function getPartners(){
   grid-area: vidsgrid;
 }
 
-.partners img { margin: auto; object-fit: contain; height: 100%;}
+.partners img { margin: auto; object-fit: contain; height: 160px; width: 100%;}
 
 @media screen and (max-width: 767px) {
 
@@ -707,6 +764,32 @@ export async function getPartners(){
 		". .";
   grid-area: vidsgrid;
 }
+
+.events {  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: auto auto;
+  gap: 0px 0px;
+  grid-auto-flow: row;
+  grid-template-areas:
+    "header40"
+    "eventsgrid";
+}
+
+.eventscard img { object-fit: cover; width: 100%; height: 200px; object-position: center center;}
+
+.header40 { grid-area: header40;margin-top: 32px; }
+
+.eventsgrid {  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: auto auto auto;
+  gap: 32px 0px;
+  grid-auto-flow: row;
+  grid-template-areas:
+    "." "." ".";
+  grid-area: eventsgrid;
+}
+
+.events h5 { text-transform: capitalize;}
 
 
 	
