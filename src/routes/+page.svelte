@@ -75,9 +75,10 @@ export async function getPartners(){
 <div class="introtowork padstd spline">
   <div class="header-std wd75">
 		<h5>At Bṛhat, we conceptualize IKS as a universal episteme, which is rooted in and derived from our millennia-long civilizational knowledge and values.</h5>
-		<h5 class="isred">Explore our framework and models here:</h5>
 	</div>
 </div>
+
+<div class="image-box padstd" style="background-image: url('/images/newimages/brhatactions.png')"></div>
 
 <div class="container-grid padstd spline" on:mouseenter={toggleBlank} on:mouseleave={toggleBlank}>
   <div class="leftcol">
@@ -262,6 +263,34 @@ export async function getPartners(){
 
 <style>
 
+.image-box { height: 60vh; width: 80%; background-repeat: no-repeat; background-position: center center; background-size: cover; justify-self: center; place-self: center; margin-left: 64px; }
+
+.chinmaya { height: 100vh; background-repeat: no-repeat; background-position: center center; background-size: cover; display: flex; flex-direction: column; align-items: center; justify-content: flex-end; padding-bottom: 80px;}
+.chinmaya h2, .chinmaya h4 { margin: 0;}
+
+.chinmaya h2 {
+	text-align: center;
+	background-color: rgba(0,0,0,0.8);
+	padding: 8px 16px;
+	color: white;
+	text-transform: uppercase;
+}
+.chinmaya h4 {
+		text-align: center;
+	background-color: rgba(0,0,0,0.8);
+	color: white;
+padding: 0px 16px 8px 16px;
+}
+.chinmaya h5 {
+	background: #E4A503;
+	color: white;
+	padding: 4px 16px;
+	text-transform: uppercase;
+	margin: 0;
+	font-size: 2rem;
+	text-align: center;
+}
+
 .events {  display: grid;
   grid-template-columns: 1fr;
   grid-template-rows: auto 1fr;
@@ -299,7 +328,7 @@ export async function getPartners(){
 	width: 120px;
 }
 
-.container-grid {  display: grid;
+.container-grid {  display: none;
   grid-template-columns: 0.7fr 1.6fr 0.7fr;
   grid-template-rows: 1fr 1fr 1fr;
   gap: 0px 0px;
@@ -533,13 +562,12 @@ export async function getPartners(){
 .header5 { grid-area: header5;margin-top: 64; }
 
 .partners {  display: grid;
-  grid-template-columns: 1fr 1fr 1fr 1fr;
-  grid-template-rows: 1fr 1fr;
+  grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+  grid-template-rows: auto;
   gap: 0px 0px;
   grid-auto-flow: row;
   grid-template-areas:
-    ". . . ."
-    ". . . .";
+    ". . . . .";
   grid-area: partners;
 }
 .vidsgrid {  display: grid;
@@ -740,11 +768,10 @@ export async function getPartners(){
 } 
 .partners {  display: grid;
   grid-template-columns: 1fr 1fr;
-  grid-template-rows:auto auto;
+  grid-template-rows:auto;
   gap: 0px 0px;
   grid-auto-flow: row;
   grid-template-areas:
-    ". ."
     ". .";
   grid-area: partners;
 	justify-content: stretch;
