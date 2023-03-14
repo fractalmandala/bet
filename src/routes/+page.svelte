@@ -128,6 +128,19 @@ export async function getPartners(){
   </div>
 </div>
 
+<!--
+<div class="chinmaya spline" style="background-image: url('/images/policywall.webp')">
+	<a href="/bootcamp">
+	<h2>Public Policy</h2> 
+	<h4>
+	Bootcamp 2023</h4>
+	<h5>
+		11 - 14 May
+	</h5></a>
+</div>
+-->
+
+
 <div class="events padstd">
   <div class="header40 spline">
 		<h2>Recent and Upcoming Events</h2>

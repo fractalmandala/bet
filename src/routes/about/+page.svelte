@@ -7,7 +7,7 @@ export async function getCourses(){
 	.select()
 	.eq('type','overview')
 	.order('id')
-	.limit(3)
+	.limit(4)
 	if (error) throw new Error(error.message)
 	return data
 }
@@ -229,7 +229,7 @@ export async function getVideos(){
 	.l2 { width: 100%; flex-wrap: wrap; gap: 4em;}
 	.l5 { width: 100%; align-items: space-between; padding-left: 0 !important; padding-right: 0 !important;}
 	.course-box {
-		width: 30%;
+		width: 23%;
 	}
 	.courses-row {
 		justify-content: space-between;
