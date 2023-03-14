@@ -22,6 +22,7 @@ export async function getEvents(){
 	.select()
 	.eq('type','event')
 	.order('sequence',{ascending: false})
+	.limit(4)
 	if (error) throw new Error(error.message)
 	return data
 }
@@ -78,7 +79,9 @@ export async function getPartners(){
 	</div>
 </div>
 
-<div class="image-box padstd" style="background-image: url('/images/newimages/brhatactions.png')"></div>
+<div class="image-box padstd">
+	<img src="/images/newimages/brhatactions.png" alt="title" />
+</div>
 
 <div class="container-grid padstd spline" on:mouseenter={toggleBlank} on:mouseleave={toggleBlank}>
   <div class="leftcol">
@@ -276,8 +279,11 @@ export async function getPartners(){
 
 <style>
 
-.image-box { height: 60vh; width: 80%; background-repeat: no-repeat; background-position: center center; background-size: cover; justify-self: center; place-self: center; margin-left: 64px; }
-
+.image-box { height: 60vh; width: 100%; background-repeat: no-repeat; background-position: center center; background-size: cover; justify-self: center; place-self: center; margin-left: 64px; }
+.image-box img {
+	object-fit: contain;
+	height: 100%;
+}
 .chinmaya { height: 100vh; background-repeat: no-repeat; background-position: center center; background-size: cover; display: flex; flex-direction: column; align-items: center; justify-content: flex-end; padding-bottom: 80px;}
 .chinmaya h2, .chinmaya h4 { margin: 0;}
 
@@ -319,12 +325,13 @@ padding: 0px 16px 8px 16px;
 .header40 { grid-area: header40;margin-top: 64px; }
 
 .eventsgrid {  display: grid;
-  grid-template-columns: 1fr 1fr 1fr;
-  grid-template-rows: 1fr;
-  gap: 32px 32px;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: auto auto;
+  gap: 64px 64px;
   grid-auto-flow: row;
   grid-template-areas:
-    ". . .";
+    ". ."
+		". .";
   grid-area: eventsgrid;
 }
 

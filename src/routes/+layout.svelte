@@ -28,5 +28,3 @@ onMount(() => {
 <slot></slot>
 <Footer></Footer>
 
-
-

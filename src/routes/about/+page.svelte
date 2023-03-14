@@ -101,7 +101,7 @@ export async function getVideos(){
 		{#each data as item}
 		<div class="c-c-c-c course-box">
 			<img src={item.image} alt={item.id} />
-			<h5>{item.name}</h5>
+			<h5><a href="/drashta/{item.course}">{item.name}</a></h5>
 			<small class="grey2">{item.content.slice(0,250)}...</small>
 		</div>
 		{/each}
