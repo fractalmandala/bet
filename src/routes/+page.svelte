@@ -48,7 +48,7 @@ export async function getPartners(){
 </script>
 
 <svelte:window bind:scrollY={y}/>
-<div class="c-c-c-c ff img1">
+<div class="boxc ff img1">
 </div>
 
 <!-- introduction, our vision, image of students-->
@@ -60,7 +60,7 @@ export async function getPartners(){
 	<div class="spline grey2">
 		<h4>OUR VISION</h4>
 	</div>
-	<h1 class="isred">
+	<h1 class="isred serif">
 			Within the next 15 years,
 	</h1>
 	<div class="spline">
@@ -73,16 +73,17 @@ export async function getPartners(){
 
 
 <!-- introductory links and subsections-->
-<div class="introtowork padstd spline">
+<div class="introtowork padstd spline bdr">
   <div class="header-std wd75">
-		<h5>At Bṛhat, we conceptualize IKS as a universal episteme, which is rooted in and derived from our millennia-long civilizational knowledge and values.</h5>
+		<h3>At Bṛhat, we conceptualize IKS as a universal episteme, which is rooted in and derived from our millennia-long civilizational knowledge and values.</h3>
 	</div>
 </div>
 
-<div class="image-box padstd">
+<div class="image-box actionsimage padstd">
 	<img src="/images/newimages/brhatactions.png" alt="title" />
 </div>
 
+<!--
 <div class="container-grid padstd spline" on:mouseenter={toggleBlank} on:mouseleave={toggleBlank}>
   <div class="leftcol">
     <div class="dharma">
@@ -130,8 +131,6 @@ export async function getPartners(){
 		</div>
   </div>
 </div>
-
-<!--
 <div class="chinmaya spline" style="background-image: url('/images/policywall.webp')">
 	<a href="/bootcamp">
 	<h2>Public Policy</h2> 
@@ -153,7 +152,7 @@ export async function getPartners(){
 		<small>...</small>
 		{:then data}
 		{#each data as item}
-		<div class="card eventscard">
+		<div class="card eventscard flex">
 			<img src={item.image} alt={item.name} />
 			<h5>{item.name}</h5>
 			<small>{item.text.slice(0,300)}...</small>
@@ -170,7 +169,7 @@ export async function getPartners(){
   <div class="header-2 spline">
 		<h2>Focus Areas</h2>
 	</div>
-  <div class="squaregrid">
+  <div class="squaregrid flex">
 		<div class="box1 card">
 			<img class="icon" src="/images/icon-curr.png" alt="icon" />
 			<div class="spline">
@@ -280,6 +279,17 @@ export async function getPartners(){
 <style>
 
 .image-box { height: 60vh; width: 100%; background-repeat: no-repeat; background-position: center center; background-size: cover; justify-self: center; place-self: center; margin-left: 64px; }
+@media screen and (max-width: 1023px) {
+	.image-box {
+		padding: 0;
+		margin-left: 0;
+		height: 40vh;
+	}
+	.image-box img {
+		width: 100%;
+	}
+}
+
 .image-box img {
 	object-fit: contain;
 	height: 100%;
@@ -341,11 +351,11 @@ padding: 0px 16px 8px 16px;
 
 .leftcol a:hover, .midcol a:hover, .rightcol a:hover { color: white;}
 
-.img1 { z-index: 999; background-image: url('/images/about-parambika.png')}
+.img1 { z-index: 999; background-image: url('/images/about-parambika.png'); height: 100vh; background-size: cover; background-position: center center; background-repeat: no-repeat;}
 .motif img { object-fit: contain; width: 160px; height: 160px;}
 .partnersbox img {
 	object-fit: contain;
-	width: 120px;
+	width: 90px;
 }
 
 .container-grid {  display: none;
@@ -468,16 +478,16 @@ padding: 0px 16px 8px 16px;
 
 .introtowork {  display: grid;
   grid-template-columns: 1fr;
-  grid-template-rows: auto 1fr;
+  grid-template-rows: auto;
   gap: 0px 0px;
   grid-auto-flow: row;
   grid-template-areas:
-    "header-std"
-    "body-std";
-	padding-top: 64px;
+    "header-std";
+	align-items: start;
+	align-content: start;
 }
 
-.header-std { grid-area: header-std;margin-top: 64px; }
+.header-std { grid-area: header-std;}
 
 .ourvision {  display: grid;
   grid-template-columns: 0.9fr 1.1fr;
@@ -617,18 +627,6 @@ padding: 0px 16px 8px 16px;
 		padding-bottom: 32px;
 	}
 
-	.introtowork {  display: grid;
-  	grid-template-columns: 1fr;
-  	grid-template-rows: auto auto;
-  	gap: 0px 0px;
-  	grid-auto-flow: row;
-  	grid-template-areas:
-  	  "header-std"
-  	  "body-std";
-		padding-top: 64px;
-}
-
-.header-std { grid-area: header-std;margin-top: 64px; }
 
 
 .container-grid {  display: grid;

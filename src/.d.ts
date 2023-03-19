@@ -1,1 +1,1 @@
-declare module 'locomotive-scroll';
+declare module 'svelte-table'

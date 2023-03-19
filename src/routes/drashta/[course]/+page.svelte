@@ -1,274 +1,51 @@
 <script lang="ts">
 import { onMount } from 'svelte'
 import { fly } from 'svelte/transition'
-import supabase from '$lib/db'
+import { courseContents, courseDetails, courseTakeaways, courseInstructor } from '$lib/utils/supapulls'
 import { page } from '$app/stores'
+let dynamizer = ''
+let coursecontents:any
+let coursedetails:any
+let coursetakeaways:any
+let courseinstructor:any
+let selectedLabel:boolean[] = [false, false, false, false, false]
+
+function toggleLabel(index:number) {
+	selectedLabel[index] = selectedLabel[index]
+	for ( let i = 0; i < selectedLabel.length; i++ ) {
+		if ( i !== index && selectedLabel[i] == true ) {
+			selectedLabel[i] = false
+		}
+	}
+}
+
 export let data:any
-let mobilesidebar:boolean = false
 let x:any
-let items:any = []
-let contents:any = []
-let takeaways:any = []
-let instructors:any = []
-let showPart:boolean[] = [false, false, false, false, false]
-let panel1:boolean = true
-let panel2:boolean = false
-let panel3:boolean = false
-let panel4:boolean = false
-let panel5:boolean = false
-
-function mobileStrip(){
-	mobilesidebar = !mobilesidebar
-}
-
-function closeStrip(){
-	mobilesidebar = false
-}
-	
-	function toggle1(){
-		if (!panel1) {
-			panel1 = true
-			if (panel2) {
-				panel2 = false
-			}
-			if (panel3) {
-				panel3 = false
-			}
-			if (panel4) {
-				panel4 = false
-			}
-			if (panel5) {
-				panel5 = !panel5
-			}
-		}
-	}
-	
-	function toggle2(){
-		if (!panel2) {
-			panel2 = true
-			if (panel1) {
-				panel1 = false
-			}
-			if (panel3) {
-				panel3 = false
-			}
-			if (panel4) {
-				panel4 = false
-			}
-			if (panel5) {
-				panel5 = !panel5
-			}
-		}
-	}
-	
-	function toggle3(){
-		if (!panel3) {
-			panel3 = true
-			if (panel2) {
-				panel2 = false
-			}
-			if (panel1) {
-				panel1 = false
-			}
-			if (panel4) {
-				panel4 = false
-			}
-			if (panel5) {
-				panel5 = !panel5
-			}
-		}
-	}
-	
-	function toggle4(){
-		if (!panel4) {
-			panel4 = true
-			if (panel2) {
-				panel2 = false
-			}
-			if (panel3) {
-				panel3 = false
-			}
-			if (panel1) {
-				panel1 = false
-			}
-			if (panel5) {
-				panel5 = !panel5
-			}
-		}
-	}
-
-	function toggle5(){
-		if (!panel5) {
-			panel5 = true
-			if (panel2) {
-				panel2 = false
-			}
-			if (panel3) {
-				panel3 = false
-			}
-			if (panel1) {
-				panel1 = false
-			}
-			if (panel4) {
-				panel4 = !panel4
-			}
-		}
-	}
-
-function togglePart(index:number) {
-	showPart[index] = showPart[index]
-	for ( let i = 0; i < showPart.length; i++ ) {
-		if ( i !== index && showPart[i] === true ) {
-			showPart[i] = false
-		}
-	}
-}
-
-const courseDetails = async() => {
-	const { data, error } = await supabase
-		.from('brhat-drashta2')
-		.select()
-		.eq('type','course details')
-		.eq('dynamizer',x)
-		.order('id', {ascending: false})
-		.limit(3)
-  if (error) throw new Error(error.message)
-  return data
-}
-
-const courseContent = async() => {
-	const { data, error } = await supabase
-		.from('brhat-drashta2')
-		.select()
-		.eq('type','course content')
-		.eq('dynamizer',x)
-		.order('id')
-  if (error) throw new Error(error.message)
-  return data
-}
-
-const courseTake = async() => {
-	const { data, error } = await supabase
-		.from('brhat-drashta2')
-		.select()
-		.eq('type','takeaway')
-		.eq('dynamizer',x)
-		.order('id')
-  if (error) throw new Error(error.message)
-  return data
-}
-
-
-const Instructor = async() => {
-	const { data, error } = await supabase
-		.from('brhat-drashta2')
-		.select()
-		.eq('type','facilitator')
-		.eq('dynamizer',x)
-		.order('id')
-  if (error) throw new Error(error.message)
-  return data
-}
 
 
 onMount(async() => {
 	x = $page.url.pathname.substr(9,40)
-	items = await courseDetails()
-	contents = await courseContent()
-	takeaways = await courseTake()
-	instructors = await Instructor()
+	coursedetails = await courseDetails(dynamizer)
+	coursecontents = await courseContents(dynamizer)
+	coursetakeaways = await courseTakeaways(dynamizer)
+	courseinstructor = await courseInstructor(dynamizer)
 })
 </script>
 
 <div class="coursebox">
   <div class="coursetitle padstd">
-		<div class="titlesection">
-			<h1>{data.name}</h1>
+		<div class="titlesection flex">
+			<h1 class="capitalize">{data.name}</h1>
+			<div class="boxr uppercase">
+				<p>{data.datefrom}</p>
+				<p>{data.status}</p>
+			</div>
 		</div>
 		<div class="imagesection">
-			<div class="pureimage">
-				<img src={data.image} alt={data.name} />
-			</div>
-			<div class="overview spline">
-				<p>{data.content.slice(0,400)}...<span style="color: #F2AF29"><b>Read More Below</b></span></p>
-				<h5>Course Status: <span style="color: #F2AF29">{data.status}</span></h5>
-				<h5 class="grey">Instructor: {data.ins}</h5>
-			</div>
+			<img src={data.image} alt={data.name} />
 		</div>
 	</div>
   <div class="coursebody">
-    <div class="coursenav spline" class:mobilesidebar={mobilesidebar}>
-			<h5 class:panel1={panel1} on:click={toggle1} on:keydown={toggle1} on:click={mobileStrip} on:keydown={mobileStrip}>Overview</h5>
-			<h5 class:panel2={panel2} on:click={toggle2} on:keydown={toggle2} on:click={mobileStrip} on:keydown={mobileStrip}>Course Contents</h5>
-			<h5 class:panel2={panel3} on:click={toggle3} on:keydown={toggle3} on:click={mobileStrip} on:keydown={mobileStrip}>Learner Takeaways</h5>
-			<h5 class:panel2={panel4} on:click={toggle4} on:keydown={toggle4} on:click={mobileStrip} on:keydown={mobileStrip}>Instructor</h5>
-			<h5>All Courses:</h5>
-				<p class="courselinker">
-					<a href="/drashta/valmikiramayana">Vālmīki Rāmāyaṇa</a>
-				</p>
-				<p class="courselinker">
-					<a href="/drashta/hinduiconography">Hindu Iconography</a>
-				</p>
-				<p class="courselinker">
-					<a href="/drashta/sitaramgoel">Sita Ram Goel</a>
-				</p>
-				<p class="courselinker">
-					<a href="/drashta/shriramswarup">Shri Ram Swarup</a>
-				</p>
-			<div class="expandup" on:click={mobileStrip} on:keydown={mobileStrip}>
-				<svg width="32" height="32" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
-					<path id="upexpand" d="M32 14.9676L28.2383 18.4916L15.992 7.03554L3.74576 18.4916L2.03109e-07 14.9676L16 1.90798e-07L32 14.9652L32 14.9676ZM32 28.4785L28.2383 32L15.992 20.5438L3.7644 32L4.19935e-08 28.4785L16 13.5082L32 28.476L32 28.4785Z" fill="white"/>
-				</svg>
-			</div>
-		</div>
-    <div class="coursesection spline">
-			{#if panel2}
-					<div class="contentscontainer partbox" in:fly={{ delay: 100}} out:fly={{ duration: 100}}>
-						{#each contents as content}
-							<div class="boxc">
-							<p>{content.name}</p>
-							{#if content.content && content.content.length>0}
-							<p class="corcontent">{content.content}</p>
-							{/if}
-							{#if content.books && content.books.length>0}
-							<small>{content.books}</small>
-							{/if}
-							</div>
-						{/each}
-					</div>
-			{/if}
-			{#if panel3}
-					<div class="partbox takes boxr" in:fly={{ delay: 100}} out:fly={{ duration: 100}}>
-				{#each takeaways as takeaway}
-					<div class="boxc simple">
-					<p>{takeaway.name}</p>
-					<small>{takeaway.content}</small>
-					</div>
-				{/each}
-				</div>
-			{/if}
-			{#if panel4}
-				<div class="partbox teach" in:fly={{ delay: 100}} out:fly={{ duration: 100}}>
-				{#each instructors as instructor}
-					<div class="boxr instruct">
-					<img src={instructor.image} alt={instructor.name} />
-					<p>{instructor.content}</p>
-					</div>
-				{/each}
-				</div>
-			{/if}
-			{#if panel1}
-				<div class="boxr icons partbox" in:fly={{ delay: 100}} out:fly={{ duration: 100}}>
-				{#each items as item}
-					<div class="boxc">
-						<img src={item.image} alt={item.title} />
-						<small>{item.content}</small>
-					</div>
-				{/each}
-				</div>
-				<pre>{data.content}</pre>
-			{/if}
-		</div>
   </div>
 </div>
 
@@ -311,7 +88,6 @@ onMount(async() => {
 	p
 		font-weight: bold
 		margin: 0 0 12px 0
-		text-transform: capitalize
 	small
 		font-size: 12px
 		color: #878787
@@ -364,41 +140,33 @@ onMount(async() => {
 	gap: 0px 0px 
 	grid-auto-flow: row 
 	grid-template-areas: "coursetitle" "coursebody" 
+
 .coursetitle 
 	grid-area: coursetitle
-	display: flex
-	flex-direction: column
-	justify-content: center
-	img
-		object-fit: contain
-		width: 100%
+	grid-auto-flow: row
+	display: grid
+	grid-template-columns: 1fr 0.8fr
+	grid-template-rows: auto
+	align-items: center
+	grid-template-areas: "titlesection imagesection"
+	gap: 0px 32px
 	height: 100vh
 	.titlesection
+		grid-area: titlesection
 		h1
 			font-size: 4.8rem
-			letter-spacing: -3px
 			line-height: 1.1 
+			border-bottom: 1px solid #d7d7d7
+			padding-bottom: 16px
 	.imagesection
+		grid-area: imagesection
 		display: flex
 		flex-direction: row
-		gap: 32px
-		background: linear-gradient(to right, #4CA1AF, #2C3E50)
-		padding: 32px
-		border-radius: 4px
-		box-shadow: 4px 5px 11px #c1c1c1
-		.pureimage
-			width: 40%
-		.overview
-			width: calc(60% - 32px)
-			p
-				font-size: 16px
-				line-height: 1.6
-				color: white
-			h5
-				margin: 0
-				text-transform: uppercase
-				color: white
-				font-size: 1.2rem
+		align-items: center
+		img
+			object-fit: cover
+			width: 100%
+			height: 100%
 		
 .coursebody 
 	display: grid 

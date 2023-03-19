@@ -1,0 +1,123 @@
+body, html 
+	margin: 0 
+	box-sizing: border-box 
+	background-color: #ffffff 
+
+*
+	box-sizing: border-box
+
+.bdr 
+	border: 1px solid red 
+
+.orange 
+	color: #ff3d00 
+.bold 
+	font-weight: 900 
+
+.hindi 
+	font-family: 'Halant', sans-serif 
+
+*, :root 
+	box-sizing: border-box 
+
+pre 
+	overflow-x: auto 
+	box-sizing: border-box 
+	white-space: pre-wrap 
+	white-space: -moz-pre-wrap 
+	white-space: -pre-wrap 
+	white-space: -o-pre-wrap 
+	word-wrap: break-word 
+	word-break: break-word 
+
+a 
+	text-decoration: none 
+	color: inherit 
+	&:hover 
+		color: inherit 
+
+.headerbox 
+	display: flex 
+	flex-direction: column 
+	height: 80px 
+	width: 100vw 
+	margin-bottom: -80px 
+	z-index: 900 
+	position: fixed 
+	top: 0 
+	left: 0 
+	align-items: center 
+	justify-content: flex-end 
+
+.header 
+	display: flex 
+	flex-direction: row 
+	background-color: white 
+	height: 80px 
+	transition: all 0.13s var(--cube1) 
+	border: 1px solid transparent 
+	background: linear-gradient(90deg, rgba(6,9,7,0.9) 0%, rgba(39,39,39,1) 100%) 
+	padding-left: 32px 
+	padding-right: 32px 
+	justify-content: space-between 
+	width: 100% 
+	align-items: center 
+	@media screen and (max-width: 899px)
+		padding-left: 16px 
+		padding-right: 16px 
+		justify-content: space-between 
+		width: 100% 
+		align-items: center 
+		&:hover 
+			box-shadow: 0px 0px 0px #c1c1c1 
+
+.logoarea 
+	display: flex 
+	flex-direction: row 
+	align-items: center 
+	justify-content: flex-start 
+	height: 56px 
+	img 
+		object-fit: contain 
+		margin-bottom: -4px 
+		height: 48px 
+		height: 40px 
+
+.imagecontainer-hero 
+	display: flex 
+	flex-direction: column 
+	background-size: cover 
+	background-position: center center 
+	background-repeat: no-repeat 
+	width: 100vw 
+	height: 100vh 
+
+.boxr 
+	display: flex 
+	flex-direction: row 
+
+.boxc
+	display: flex
+	flex-direction: column
+
+.padstd
+	@media screen and (min-width: 900px)
+		padding-left: 10vw
+		padding-right: 10vw
+	@media screen and (max-width: 899px)
+		padding-left: 8vw
+		padding-right: 8vw
+	@media screen and (max-width: 767px)
+		padding-left: 5vw
+		padding-right: 5vw
+	@media screen and (max-width: 575px)
+		padding-left: 4vw
+		padding-right: 4vw
+
+.wide75
+	@media screen and (min-width: 1024px)
+		width: 75%
+	@media screen and (max-width: 1023px)
+		width: 85%
+	@media screen and (max-width: 899px)
+		width: 100%

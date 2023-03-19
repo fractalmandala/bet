@@ -96,12 +96,12 @@ a:hover { color: inherit;}
 .navarea a { text-decoration: none; font-variant: small-caps; font-weight: bold; color: #474747;}
 .the-blue { color: #1C5D99;}
 
-.c-c-c-c {
+.c-c-c-c, .boxc {
 	display: flex;
 	flex-direction: column;
 }
 
-.r-r-r-r {
+.r-r-r-r, .boxr {
 	display: flex;
 	flex-direction: row;
 }

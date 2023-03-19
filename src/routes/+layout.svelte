@@ -4,9 +4,9 @@ import Animations from "textify.js";
 import AOS from 'aos';
 import '$lib/styles/textify.css'
 import 'aos/dist/aos.css';
-import '$lib/styles/typography.css'
-import '$lib/styles/sitetemplate.css'
-import '$lib/styles/global.css'
+import '$lib/styles/alltext.sass'
+import '$lib/styles/alltokens.sass'
+import '$lib/styles/global.sass'
 import Header from '$lib/components/globals/Header.svelte'
 import Footer from '$lib/components/globals/Footer.svelte'
 
