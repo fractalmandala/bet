@@ -1,4 +1,4 @@
-<div class="c-c-c-c sidebr spline">
+<div class="boxc">
 	<div class="sidesection s1 c-c-c-c">
 		<h6 class="theblue sidebutton">IKS Framework</h6>
 		<p><a href="/docs/vastuandvaastu">Vastu and Vāstu</a></p>
@@ -13,42 +13,32 @@
 	</div>
 </div>
 
-<style>
+<style lang="sass">
 
-.sidesection h6 {
-		text-transform: uppercase;
-		margin-bottom: 24px;
-		font-size: 18px;
-	}
+.boxc h6
+	text-transform: uppercase
+	margin-bottom: 24px
+	font-size: 18px
+	text-align: right
 
-.sidesection p {
-	margin-top: 4px;
-	border-bottom: 1px solid #d7d7d7;
-	padding-bottom: 16px;	
-	font-size: 16px;	
-}
+.boxc p
+	margin-top: 4px
+	border-bottom: 1px solid #d7d7d7
+	padding-bottom: 16px
+	font-size: 16px
+	text-align: right
 
-@media screen and (min-width: 768px) {
-	.sidebr {
-		width: 20vw;
-		display: flex;
-		flex-direction: column;
-		margin-left: 40px;
-		height: 100vh;
-		position: sticky;
-		top: 0;
-		left: 0;
-		padding-top: 120px;
-	}
-	.sidesection { margin-bottom: 24px;}
-}
+.boxc a
+	&:hover
+		color: var(--blueb)
 
-@media screen and (max-width: 767px) {
-	.sidebr {
-		display: none;
-		flex-direction: column;
-		width: 100vw;
-		height: 100%;
-	}
-}
+
+@media screen and (min-width: 900px)
+	.boxc
+		position: sticky
+		top: 0
+		left: 0
+		padding-top: 128px
+
+
 </style>

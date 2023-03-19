@@ -1,0 +1,260 @@
+.containerwithtwocolumns 
+	display: grid 
+	grid-template-columns: 1fr 1fr 
+	grid-template-rows: 1fr 
+	gap: 0px 40px 
+	grid-auto-flow: row 
+	grid-template-areas: "columnleft columnright" 
+	padding-bottom: 48px
+	.columnleft 
+		grid-area: columnleft 
+	.columnright 
+		grid-area: columnright 
+	@media screen and (max-width: 1023px)
+		grid-template-columns: 1fr
+		grid-template-rows: auto auto
+		grid-template-areas: "columnleft" "columnright"
+		gap: 24px 0px
+
+.containerwithtwocolumns.aligncenter, .containerwithwidecolumn.aligncenter
+	@media screen and (min-width: 1024px)
+		align-items: center
+
+.containerwithwidecolumn
+	display: grid 
+	grid-template-columns: 1fr 0.7fr 
+	grid-template-rows: 1fr 
+	gap: 0px 40px 
+	grid-auto-flow: row 
+	grid-template-areas: "columnleft columnright" 
+	padding-bottom: 48px
+	.columnleft 
+		grid-area: columnleft 
+	.columnright 
+		grid-area: columnright 
+	@media screen and (max-width: 1023px)
+		grid-template-columns: 1fr
+		grid-template-rows: auto auto
+		grid-template-areas: "columnleft" "columnright"
+		gap: 24px 0px
+
+.containerwithtitle 
+	display: grid 
+	grid-template-columns: 1fr 
+	grid-template-rows: auto auto
+	gap: 0px 0px 
+	grid-auto-flow: row 
+	grid-template-areas: "titlearea" "bodyarea" 
+	.titlearea 
+		grid-area: titlearea 
+	.bodyarea 
+		grid-area: bodyarea 
+
+
+.containerwithtitleand3grid 
+	display: grid 
+	grid-template-columns: 1fr 
+	grid-template-rows: auto auto 
+	gap: 16px 0px 
+	grid-auto-flow: row 
+	grid-template-areas: "titleof3grid" "boxof3grid" 
+	.titleof3grid 
+		grid-area: titleof3grid 
+	.boxof3grid 
+		display: grid 
+		grid-template-columns: 1fr 1fr 1fr 
+		grid-template-rows: auto
+		gap: 0px 32px 
+		grid-auto-flow: row 
+		grid-template-areas: "grid3one grid3two grid3three" 
+		grid-area: boxof3grid 
+		.grid3one 
+			grid-area: grid3one 
+		.grid3two 
+			grid-area: grid3two 
+		.grid3three 
+			grid-area: grid3three 
+	@media screen and (max-width: 767px)
+		.boxof3grid
+			grid-template-columns: 1fr
+			grid-template-rows: auto auto auto
+			grid-template-areas: "grid3one" "grid3two" "grid3three"
+			gap: 32px 0
+
+
+.containerwithtitleand4grid 
+	display: grid 
+	grid-template-columns: 1fr 
+	grid-template-rows: auto auto 
+	gap: 16px 0px 
+	grid-auto-flow: row 
+	grid-template-areas: "titleof4grid" "boxof4grid" 
+	.titleof4grid 
+		grid-area: titleof4grid 
+	.boxof4grid 
+		display: grid 
+		grid-template-columns: 1fr 1fr 1fr 1fr 
+		grid-template-rows: auto
+		gap: 0px 32px 
+		grid-auto-flow: row 
+		grid-template-areas: "grid4one grid4two grid4three grid4four" 
+		grid-area: boxof4grid 
+		.grid4one 
+			grid-area: grid4one 
+		.grid4two 
+			grid-area: grid4two 
+		.grid4three 
+			grid-area: grid4three 
+		.grid4four 
+			grid-area: grid4four 
+	@media screen and (max-width: 1023px)
+		.boxof4grid
+			grid-template-columns: 1fr 1fr
+			grid-template-rows: auto auto
+			grid-template-areas: "grid4one grid4two" "grid4three grid4four"
+			gap: 24px 24px
+	@media screen and (max-width: 767px)
+		.boxof4grid
+			grid-template-columns: 1fr
+			grid-template-rows: auto auto auto auto
+			grid-template-areas: "grid4one" "grid4two" "grid4three" "grid4four"
+			gap: 32px 0
+
+
+.dynamicwithtitleand4grid 
+	display: grid 
+	grid-template-columns: 1fr 
+	grid-template-rows: auto auto 
+	gap: 32px 0px 
+	grid-auto-flow: row 
+	grid-template-areas: "titleof4dyn" "boxof4dyn" 
+	padding-bottom: 48px
+	.titleof4dyn 
+		grid-area: titleof4dyn
+	.boxof4dyn 
+		display: grid 
+		grid-template-columns: 1fr 1fr 1fr 1fr 
+		grid-template-rows: 1fr
+		gap: 0px 32px 
+		grid-auto-flow: row 
+		grid-template-areas: ". . . ."
+		grid-area: boxof4dyn
+		align-items: stretch
+		align-content: stretch
+	@media screen and (max-width: 1023px)
+		.boxof4dyn
+			grid-template-columns: 1fr 1fr
+			grid-template-rows: auto auto
+			grid-template-areas: ". ." ". ."
+			gap: 24px 24px
+	@media screen and (max-width: 767px)
+		.boxof4dyn
+			grid-template-columns: 1fr
+			grid-template-rows: auto auto auto auto
+			grid-template-areas: "." "." "." "."
+			gap: 32px 0
+
+
+.containerof2by2withtitle 
+	display: grid 
+	grid-template-columns: 1fr 
+	grid-template-rows: auto auto
+	gap: 32px 0px 
+	grid-auto-flow: row 
+	grid-template-areas: "titleof2by2" "boxof2by2" 
+	padding-bottom: 48px
+	.titleof2by2 
+		grid-area: titleof2by2 
+	.boxof2by2 
+		display: grid 
+		grid-template-columns: 1fr 1fr 
+		grid-template-rows: auto auto
+		gap: 32px 48px 
+		grid-auto-flow: row 
+		grid-template-areas: "boxof2by2one boxof2by2two" "boxof2by2three boxof2by2four" 
+		grid-area: boxof2by2 
+		.boxof2by2one 
+			grid-area: boxof2by2one 
+		.boxof2by2two 
+			grid-area: boxof2by2two 
+		.boxof2by2three 
+			grid-area: boxof2by2three 
+		.boxof2by2four 
+			grid-area: boxof2by2four 
+	@media screen and (max-width: 767px)
+		.boxof2by2
+			grid-template-columns: 1fr
+			grid-template-rows: auto auto auto auto
+			grid-template-areas: "boxof2by2one" "boxof2by2two" "boxof2by2three" "boxof2by2four" 
+			gap: 24px 0
+		
+
+
+.dynamicwithtitleand3by2 
+	display: grid 
+	grid-template-columns: 1fr 
+	grid-template-rows: auto auto 
+	gap: 32px 0px 
+	grid-auto-flow: row 
+	grid-template-areas: "titleof3by2dyn" "boxof3by2dyn" 
+	padding-bottom: 48px
+	.titleof3by2dyn 
+		grid-area: titleof3by2dyn
+	.boxof3by2dyn 
+		display: grid 
+		grid-template-columns: 1fr 1fr 1fr
+		grid-template-rows: auto auto
+		gap: 24px 32px 
+		grid-auto-flow: row 
+		grid-template-areas: ". . ." ". . ."
+		grid-area: boxof3by2dyn
+		align-items: stretch
+		align-content: stretch
+	@media screen and (max-width: 767px)
+		.boxof3by2dyn
+			grid-template-columns: 1fr 1fr
+			grid-template-rows: auto auto auto
+			grid-template-areas: ". ." ". ." ". ."
+			gap: 24px 24px
+	@media screen and (max-width: 575px)
+		.boxof3by2dyn
+			grid-template-columns: 1fr
+			grid-template-rows: auto auto auto auto auto auto
+			grid-template-areas: "." "." "." "." "." "."
+			gap: 32px 0
+
+.containerwithtitleandunknown
+	display: grid 
+	grid-template-columns: 1fr 
+	grid-template-rows: auto auto 
+	gap: 32px 0px 
+	grid-auto-flow: row 
+	grid-template-areas: "titleofunknown" "unknown"
+	padding-bottom: 48px
+	.titleofunknown
+		grid-area: titleofunknown
+	.unknown
+		grid-area: unknown
+		display: grid
+		grid-template-columns: 1fr 1fr 1fr 1fr
+		grid-template-rows: auto
+		grid-template-areas: auto
+		gap: 24px 48px
+		@media screen and (max-width: 767px)	
+			gap: 24px 24px
+		@media screen and (max-width: 575px)
+			gap: 0 0
+
+
+.containerwithtitleandcolumn
+	display: grid 
+	grid-template-columns: 1fr 
+	grid-template-rows: auto auto 
+	gap: 32px 0px 
+	grid-auto-flow: row 
+	grid-template-areas: "titleofunknown" "boxc"
+	padding-bottom: 48px
+	.titleofunknown
+		grid-area: titleofunknown
+	.boxc
+		grid-area: boxc

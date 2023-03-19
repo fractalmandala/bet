@@ -7,6 +7,7 @@ import 'aos/dist/aos.css';
 import '$lib/styles/alltext.sass'
 import '$lib/styles/alltokens.sass'
 import '$lib/styles/global.sass'
+import '$lib/styles/containers.sass'
 import Header from '$lib/components/globals/Header.svelte'
 import Footer from '$lib/components/globals/Footer.svelte'
 

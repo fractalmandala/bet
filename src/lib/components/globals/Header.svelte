@@ -25,8 +25,8 @@ function toggleMenu() {
 		</nav>
 	</div>
 	<div class="navmobile">
-		<div class="icon" on:click={toggleMenu} on:keydown={toggleMenu}>
-			<img src="/images/hamburger-white.png" alt="icon" />
+		<div on:click={toggleMenu} on:keydown={toggleMenu}>
+			<img class="menuicon" src="/images/hamburger-white.png" alt="icon" />
 		</div>
 		{#if isToggle}
 		<div class="fs-menu"
@@ -47,7 +47,9 @@ function toggleMenu() {
 
 
 <style>
-
+.menuicon {
+	cursor: pointer;
+}
 
 .l1000 {
 	height: 64px;
@@ -120,11 +122,6 @@ a { text-decoration: none;}
 	.logoarea:hover {
 		transform: scale(0.95);
 	}
-.icon img, .min-row img {
-		object-fit: contain;
-		width: 24px;
-		height: 24px;
-	}
 
 
 	.logoarea p {
@@ -146,8 +143,13 @@ a { text-decoration: none;}
 	.l1000 { padding: 0 40px; align-items: center;}
 	}
 
+
+
 @media screen and (max-width: 767px) {
-.icon img, .min-row img {
+	.boxr {
+		align-items: center
+	}
+	.menuicon {
 		object-fit: contain;
 		width: 24px;
 		height: 24px;

@@ -2,45 +2,40 @@
 import Sidebar from '$lib/components/globals/Sidebar.svelte'
 </script>
 
-<div class="doc-container">
-<Sidebar></Sidebar>
-	<div class="c-c-c-c other isbot">
+<div class="containerwithsidebar">
+	<div class="containersidebar">
+		<Sidebar></Sidebar>
+	</div>
+	<div class="containermain">
 		<slot></slot>
 	</div>
 </div>
 
-<style>
+<style lang="sass">
 
-@media screen and (min-width: 768px) {
-	.doc-container {
-		display: flex;
-		flex-direction: row;
+.containerwithsidebar
+	display: grid
+	grid-auto-flow: row
+	grid-template-columns: 1fr 320px
+	grid-template-rows: auto
+	grid-template-areas: "containermain containersidebar"
+	gap: 0px 48px
+	padding-left: 48px
+	padding-right: 48px
+	.containersidebar
+		grid-area: containersidebar
+		width: 320px
+	.containermain
+		grid-area: containermain
+	@media screen and (max-width: 899px)
+		grid-template-columns: 1fr
+		grid-template-rows: auto auto
+		grid-template-areas: "containermain" "containersidebar"
+		padding-left: 6vw
+		padding-right: 6vw
+		gap: 0 0
+		.containersidebar
+			width: 100%
 
-		height: 100%;
-	}
-	.other {
-		display: flex;
-		flex-direction: column;
-		width: 76vw;
-		padding-bottom: 8em;
-		padding-left: 120px;
-		padding-right: 4vw;
-		padding-top: 120px;
-	}
 
-}
-
-@media screen and (max-width: 767px) {
-	.other {
-		width: 100%;
-		padding-left: 4vw;
-		padding-right: 4vw;
-	}
-	.doc-container {
-	display: flex;
-	flex-direction: column;
-	height: 100%;
-	padding-top: 80px;
-	}
-}
 </style>

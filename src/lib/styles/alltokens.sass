@@ -19,7 +19,6 @@
 	--mild: #4f6d7a
 	--red: #f06449
 	--teal: #1B998B
-	--blue: #004e98
 	--grey: #878787
 	--red: #f06449
 	--teal: #1B998B
@@ -27,11 +26,38 @@
 	--grey: #878787
 	color: #373737
 
+.mild
+	color: var(--mild)
+
+.pb16
+	padding-bottom: 16px
+
 .grey 
 	color: var(--grey) 
 
 .isred 
 	color: #f06449 
+
+.cardimage
+	object-fit: cover
+	object-position: center center
+	@media screen and (min-width: 1024px)
+		width: 100%
+		height: 160px
+	@media screen and (max-width: 1023px)
+		height: 200px
+		object-position: top center
+
+.icon
+	width: 48px
+	height: 48px
+	object-fit: contain
+
+.fiticon
+	img
+		object-fit: contain
+		height: 48px
+		width: 48px
 
 .uppercase
 	text-transform: uppercase
@@ -43,6 +69,23 @@
 	h1, h2, h3, h4, h5, h6, p, pre, small, cite, caption, ul li, ol li
 		text-transform: capitalize
 
+.fit
+	img
+		object-fit: cover
+		width: 100%
+	a img
+		object-fit: cover
+		width: 100%
+
+.brandlogo
+	height: 100px !important
+	object-fit: contain !important
+
+
+.topbox
+	@media screen and (max-width: 1023px)
+		margin-top: 88px
+
 .flex
 	font-family: 'Roboto Flex', sans-serif
 
@@ -53,15 +96,24 @@
 		font-weight: bold
 
 .serif
-	font-family: 'Roboto Serif', serif
+	font-family: 'Playfair Display', serif
 
 .serif
 	h1, h2, h3, h4, h5, h6, p, pre, small, cite, caption, blockquote, ul li, ol li
-		font-family: 'Roboto Serif', serif
+		font-family: 'Playfair Display', serif
 
 .slab
-	font-family: 'Roboto Slab', serif
+	font-family: 'Playfair Display', serif
 
 .slab
 	h1, h2, h3, h4, h5, h6, p, pre, small, cite, caption, blockquote, ul li, ol li
-		font-family: 'Roboto Slab', serif
+		font-family: 'Playfair Display', serif
+
+.blogger img
+	object-fit: contain
+	width: 400px
+	margin-left: auto
+	margin-right: auto
+
+.blogger p, .blogger ol li, .blogger ul li, .blogger h5, .blogger h4
+	font-family: 'Playfair Display', serif

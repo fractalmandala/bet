@@ -6,30 +6,27 @@
 </script>
 
 
-<div class="spline">
-<h2 class="theblue">{ data.title }</h2></div>
-<div class="c-c-c-c blogger">
-<svelte:component this={data.content} />
+<div class="topbox">
+	<div class="typ">
+		<h2 class="titleis">{ data.title }</h2>
+	</div>
+	<div class="boxc blogger">
+		<svelte:component this={data.content} />
+	</div>
 </div>
 
 
+<style lang="sass">
 
-<style>
+.topbox
+	padding-top: 128px
+	@media screen and (min-width: 1024px)
+		padding-left: 8vw
+		padding-right: 8vw
+	@media screen and (max-width: 899px)
+		padding-left: 0vw
+		padding-right: 0vw
+		padding-top: 40px
 
-
-	@media screen and (min-width: 768px) {
-
-		h2 {
-			margin-bottom: 32px;
-			margin-top: 0;
-		}
-		.c-c-c-c {
-			padding-right: 12vw;
-		}
-	}
-
-@media screen and (max-width: 767px) {
-	h2 { margin-bottom: 32px;}
-}
 
 </style>
