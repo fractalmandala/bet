@@ -189,7 +189,6 @@
 			gap: 24px 0
 		
 
-
 .dynamicwithtitleand3by2 
 	display: grid 
 	grid-template-columns: 1fr 
@@ -258,3 +257,81 @@
 		grid-area: titleofunknown
 	.boxc
 		grid-area: boxc
+
+
+.containerasbackgroundwitharea
+	display: grid
+	grid-auto-flow: row
+	grid-template-rows: auto
+	grid-template-columns: 1fr
+	grid-template-areas: "imagechild"
+	background-position: center center
+	background-size: cover
+	background-repeat: no-repeat
+	.imagechild
+		grid-area: imagechild
+		display: flex
+		flex-direction: column
+
+
+.simplecontainer
+	display: grid
+	grid-auto-flow: row
+	grid-template-rows: auto
+	grid-template-columns: 1fr
+	grid-template-areas: "."
+	gap: 0 0
+
+.dynamicgridof3
+	display: grid
+	grid-auto-flow: row
+	grid-template-columns: 1fr 1fr 1fr
+	grid-template-rows: 1fr
+	grid-template-areas: ". . ."
+
+.containertopgridof3 
+	display: grid 
+	grid-template-columns: 1fr 
+	grid-template-rows: 1fr 1fr 
+	gap: 0px 0px 
+	grid-auto-flow: row 
+	grid-template-areas: "topgridof3" "containerbottom" 
+	.topgridof3 
+		display: grid 
+		grid-template-columns: 1fr 1fr 1fr 
+		grid-template-rows: 1fr 
+		gap: 0px 0px 
+		grid-auto-flow: row 
+		grid-template-areas: "topgridof3one topgridof3two topgridof3three" 
+		grid-area: topgridof3 
+		.topgridof3one 
+			grid-area: topgridof3one 
+		.topgridof3two 
+			grid-area: topgridof3two 
+		.topgridof3three 
+			grid-area: topgridof3three 
+	.containerbottom 
+		grid-area: containerbottom 
+	
+
+.dynamictopgridof3 
+	display: grid 
+	grid-template-columns: 1fr 
+	grid-template-rows: auto 1fr
+	gap: 0px 0px 
+	grid-auto-flow: row 
+	grid-template-areas: "dyngridof3" "dynbottom" 
+	padding-bottom: 48px
+	.dyngridof3 
+		display: grid 
+		grid-template-columns: 1fr 1fr 1fr 
+		grid-template-rows: auto
+		gap: 0px 0px 
+		grid-auto-flow: row 
+		grid-template-areas: ". . ." 
+		grid-area: dyngridof3 
+		justify-content: center
+		justify-items: center
+	.dynbottom 
+		grid-area: dynbottom 
+	

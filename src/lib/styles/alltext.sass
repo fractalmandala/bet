@@ -25,10 +25,23 @@ p
 		color: var(--blueb)
 
 .typ
+	.cutmargins
+		p, small
+			margin: 0
+		small
+			font-size: 12px
+			font-weight: bold
+			padding-top: 8px
+		p
+			background: var(--blueb)
+			color: white
+			padding: 2px 8px
+			width: max-content
 	h1
 		font-size: 5.6rem
-		line-height: 1.1
+		line-height: 1.0
 		margin: 0
+		letter-spacing: -2px
 		@media screen and (max-width: 767px)
 			font-size: 4rem
 			padding-top: 8px
@@ -50,17 +63,21 @@ p
 			left: -24px
 			height: 2.8rem
 			width: 8px
-			background: var(--mild)
+			background: var(--bluea)
 		@media screen and (max-width: 767px)
 			font-size: 2rem
 			&::after
 				height: 2rem
+	h3
+		font-size: 2rem
+		margin: 0
 	h4
 		font-size: 1.6rem
 		margin: 0
 	h5
 		font-size: 1.25rem
 		margin: 16px 0 0 0
+		letter-spacing: 0.3px
 		&:hover
 			a
 				color: var(--blueb)
@@ -74,12 +91,27 @@ p
 	p
 		font-size: 14px
 		color: #878787
+	p.bluea
+		color: var(--bluea)
+	.typ2 p
+		font-size: 20px
+		margin: 24px 0 8px 0
+		font-weight: bold
+		color: #373737
+		@media screen and (max-width: 899px)
+			font-size: 18px
+	.typ3 p
+		@media screen and (max-width: 899px)
+			font-size: 12px
 	small
 		margin: 0
 		padding-top: 16px
 		color: #878787
+	.typ2 small
+		padding: 0
+		margin: 0
 	button
-		background: var(--mild)
+		background: var(--bluea)
 		border: none
 		color: white
 		padding: 6px 24px
@@ -91,3 +123,11 @@ p
 		&:hover
 			transform: scale(0.9)
 			background: var(--blueb)
+
+.label
+	font-size: 27px
+	text-transform: uppercase
+	padding-top: 8px
+	padding-bottom: 8px
+	@media screen and (max-width: 899px)
+		font-size: 18px
