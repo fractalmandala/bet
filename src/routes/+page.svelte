@@ -81,17 +81,18 @@ onMount(async() => {
   </div>
 </div>
 
+<!--
 <div class="simplecontainer padstd box7 typ">
 	<div class="boxc nitividhana background" style="background-image: url('/images/policywall.webp')">
 		<div class="textofniti boxc">
+			<a href="/bootcamp" target="_self">
 			<h1>Nītividhāna</h1>
 			<h3>Public Policy Bootcamp</h3>
-			<h4>11th May - 14th May</h4>
+			<h4>11th May - 14th May</h4></a>
 		</div>
 	</div>
 </div>
-
-
+-->
 
 <div class="containerof2by2withtitle padstd box4 typ lineit">
   <div class="titleof2by2">
@@ -196,6 +197,9 @@ onMount(async() => {
 		text-align: center
 		width: 60%
 		padding: 16px 0
+	@media screen and (max-width: 899px)
+		.textofniti
+			width: 90%
 
 .scrollsnapper
 	scroll-snap-type: y mandatory

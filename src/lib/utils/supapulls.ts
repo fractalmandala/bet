@@ -105,3 +105,89 @@ export async function getIKSEvents(){
 	if (error) throw new Error(error.message)
 	return data
 }
+
+export async function nitividhanaOverview(){
+	const { data, error } = await supabase
+	.from('brhat-nitividhana')
+	.select()
+	.eq('type','overview')
+	.order('id')
+	if(error) throw new Error(error.message)
+	return data
+}
+
+export async function nitividhanaTopics(){
+	const { data, error } = await supabase
+	.from('brhat-nitividhana')
+	.select()
+	.eq('type','topics')
+	.order('id')
+	.limit(4)
+	if(error) throw new Error(error.message)
+	return data
+}
+
+export async function nitividhanaTopicsOverview(){
+	const { data, error } = await supabase
+	.from('brhat-nitividhana')
+	.select()
+	.eq('type','topics')
+	.order('id', {ascending: false})
+	.limit(1)
+	if(error) throw new Error(error.message)
+	return data
+}
+
+export async function nitividhanaQual(){
+	const { data, error } = await supabase
+	.from('brhat-nitividhana')
+	.select()
+	.eq('type','qualifications')
+	.order('id')
+	if(error) throw new Error(error.message)
+	return data
+}
+
+export async function nitiDay1(){
+	const { data, error } = await supabase
+	.from('brhat-nitividhana')
+	.select()
+	.eq('type','schedule')
+	.eq('day','1 - 11th May')
+	.order('id')
+	if(error) throw new Error(error.message)
+	return data
+}
+
+export async function nitiDay2(){
+	const { data, error } = await supabase
+	.from('brhat-nitividhana')
+	.select()
+	.eq('type','schedule')
+	.eq('day','2 - 12th May')
+	.order('id')
+	if(error) throw new Error(error.message)
+	return data
+}
+
+export async function nitiDay3(){
+	const { data, error } = await supabase
+	.from('brhat-nitividhana')
+	.select()
+	.eq('type','schedule')
+	.eq('day','3 - 13th May')
+	.order('id')
+	if(error) throw new Error(error.message)
+	return data
+}
+
+export async function nitiDay4(){
+	const { data, error } = await supabase
+	.from('brhat-nitividhana')
+	.select()
+	.eq('type','schedule')
+	.eq('day','4 - 14th May')
+	.order('id')
+	if(error) throw new Error(error.message)
+	return data
+}
