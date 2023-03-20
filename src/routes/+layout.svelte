@@ -1,5 +1,6 @@
 <script lang="ts">
 import { onMount } from 'svelte'
+import Analytics from '$lib/components/globals/Analytics.svelte'
 import Animations from "textify.js";
 import AOS from 'aos';
 import '$lib/styles/textify.css'
@@ -24,7 +25,7 @@ onMount(() => {
 }) 
 </script>
 
-
+<Analytics></Analytics>
 <Header></Header>
 <slot></slot>
 <Footer></Footer>
