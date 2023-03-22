@@ -3,6 +3,26 @@ body, html
 	box-sizing: border-box 
 	background-color: #ffffff 
 
+.midbox
+	display: flex
+	flex-direction: column
+	height: 2px
+	width: 100%
+	align-items: center
+
+.midway
+	height: 2px
+	background: #d7d7d7
+	place-self: center
+	align-self: center
+	justify-self: center
+	display: flex
+	border-left: 8px solid var(--bluea)
+	border-right: 8px solid var(--bluea)
+
+.toppad
+	padding-top: 48px
+
 *
 	box-sizing: border-box
 
@@ -12,7 +32,13 @@ body, html
 .orange 
 	color: #ff3d00 
 .bold 
-	font-weight: 900 
+	font-weight: bold
+
+.forback
+	background: var(--bluea)
+	color: white
+	padding: 8px 8px 12px 8px
+	margin: 0
 
 .background
 	background-position: center center
@@ -108,16 +134,28 @@ a
 	display: flex
 	flex-direction: column
 
+.centercalib
+	display: flex
+	flex-direction: column
+	align-items: center
+	text-align: center
+
+
+iframe
+	@media screen and (max-width: 767px)
+		height: 240px
+
+
 .padstd
 	@media screen and (min-width: 900px)
-		padding-left: 10vw
-		padding-right: 10vw
+		padding-left: 8vw
+		padding-right: 8vw
 	@media screen and (max-width: 899px)
 		padding-left: 8vw
 		padding-right: 8vw
 	@media screen and (max-width: 767px)
-		padding-left: 6vw
-		padding-right: 6vw
+		padding-left: 8vw
+		padding-right: 8vw
 
 .wide75
 	@media screen and (min-width: 1024px)

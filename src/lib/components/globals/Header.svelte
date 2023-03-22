@@ -61,6 +61,9 @@ function toggleMenu() {
 	top: 0;
 	left: 0;
 	z-index: 1000;
+	padding: 0;
+	max-width: 100vw;
+	overflow-x: hidden;
 }
 
 .logoarea { display: flex; flex-direction: row; align-items: center; justify-content: flex-start; height: 56px;}
@@ -140,7 +143,7 @@ a { text-decoration: none;}
 		align-items: center;
 	}
 
-	.l1000 { padding: 0 40px; align-items: center;}
+	.l1000 { align-items: center;}
 	}
 
 

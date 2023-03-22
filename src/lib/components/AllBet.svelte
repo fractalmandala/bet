@@ -178,8 +178,6 @@
 	grid-auto-flow: row 
 	grid-template-areas: "colleft colmid colright" 
 	height: 70vh
-	h5
-		font-size: 1rem
 		margin: 0
 	.colleft 
 		display: grid 

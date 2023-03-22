@@ -8,20 +8,19 @@ onMount(async() => {
 })
 </script>
 
-<div class="containerwithwidecolumn padstd box1 aligncenter typ topbox">
-	<div class="columnleft">
-		<h2 class="mild">
+<div class="simplecontainer padstd box1 aligncenter fluid topbox">
+
+		<h2 class="serif bluea wide75">
 			Knowledge has always been primal to Indian civilization. But there are fundamental differences between Western episteme and Indian civilizational knowledge. 
 		</h2>
-	</div>
-	<div class="columnright">
-		<h5 class="w400">
+		<h6 class="w400 grey wide75">
 			परमाणु is not atom, history is not इतिहास. Similarly, many works have tried to incorporate concepts like कर्म as action, प्रत्यक्ष as perception, or साक्षी as witness. Such imprecise translations do not do justice to the profound significance of these concepts within the Indian Knowledge System. To establish IKS as a universal episteme, we have to use models of thoughts that are derived from our śāstras. Both वस्तु (content) and वास्तु (form) need to emerge from there. 
-		</h5>
-	</div>
+		</h6>
+
+
 </div>
 
-<div class="containerwithtitleandcolumn padstd box2 typ">
+<div class="containerwithtitleandcolumn padstd box2 fluid lineit">
 	<div class="titleofunknown">
 		<h2 class="titleis">
 				Our Vision
@@ -52,7 +51,7 @@ onMount(async() => {
 	</div>
 </div>
 
-<div class="dynamicwithtitleand3by2 padstd box5 typ lineit">
+<div class="dynamicwithtitleand3by2 padstd box5 fluid lineit">
 	<div class="titleof3by2dyn">
 		<h2 class="titleis">
 			IKS Roadmap and Strategy
@@ -73,7 +72,11 @@ onMount(async() => {
 <style lang="sass">
 
 .box1
+	h2
+		border-top: 1px solid #d7d7d7
+		padding-top: 32px
 	@media screen and (min-width: 1024px)
 		height: 100vh
+		align-content: center
 
 </style>

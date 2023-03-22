@@ -1,16 +1,10 @@
-@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,500;0,600;0,700;0,800;0,900;1,400;1,500;1,600;1,700;1,800;1,900&display=swap')
-@import url('https://fonts.googleapis.com/css2?family=Roboto+Flex:wght@100;200;300;400;500;600;700;800;900;1000&family=Roboto+Serif:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Roboto+Slab:wght@100;200;300;400;500;600;700;800;900&display=swap')
-
-p 
-	margin-bottom: 1rem 
-	font-weight: 400 
-	font-size: 20px 
-	color: #474747 
-	font-size: 1.12em 
+@import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400;1,500;1,600;1,700&family=Plus+Jakarta+Sans:ital,wght@0,200;0,300;0,400;0,500;0,600;0,700;0,800;1,200;1,300;1,400;1,500;1,600;1,700;1,800&display=swap')
 
 
-.spline h1, .spline h2, .spline h3, .spline h4, .spline h5, .spline h6, .spline p, .spline small 
-	font-family: 'Roboto Flex', sans-serif 
+
+
+.jak h1, .jak h2, .jak h3, .jak h4, .jak h5, .jak h6, .jak p, .jak small 
+	font-family: 'Plus Jakarta Sans', sans-serif
 
 .hreflink
 	text-transform: uppercase
@@ -24,108 +18,8 @@ p
 		border-bottom: 1px solid #d7d7d7
 		color: var(--blueb)
 
-.typ
-	.cutmargins
-		p, small
-			margin: 0
-		small
-			font-size: 12px
-			font-weight: bold
-			padding-top: 8px
-		p
-			background: var(--blueb)
-			color: white
-			padding: 2px 8px
-			width: max-content
-	h1
-		font-size: 5.6rem
-		line-height: 1.0
-		margin: 0
-		letter-spacing: -2px
-		@media screen and (max-width: 767px)
-			font-size: 4rem
-			padding-top: 8px
-	h2
-		font-size: 2.8rem
-		margin: 0
-		@media screen and (max-width: 767px)
-			font-size: 2rem
-	h2.titleis
-		text-transform: uppercase
-		border-top: 1px solid #f1f1f1
-		margin: 0
-		padding-top: 32px
-		position: relative
-		&::after
-			position: absolute
-			content: ''
-			top: 36px
-			left: -24px
-			height: 2.8rem
-			width: 8px
-			background: var(--bluea)
-		@media screen and (max-width: 767px)
-			font-size: 2rem
-			&::after
-				height: 2rem
-	h3
-		font-size: 2rem
-		margin: 0
-	h4
-		font-size: 1.6rem
-		margin: 0
-	h5
-		font-size: 1.25rem
-		margin: 16px 0 0 0
-		letter-spacing: 0.3px
-		&:hover
-			a
-				color: var(--blueb)
-	h5.w400
-		font-weight: 400
-	h6
-		font-size: 14px
-		font-weight: 600
-		color: #878787
-		margin: 0
-	p
-		font-size: 14px
-		color: #878787
-	p.bluea
-		color: var(--bluea)
-	.typ2 p
-		font-size: 20px
-		margin: 24px 0 8px 0
-		font-weight: bold
-		color: #373737
-	.typ2 p.bluea
-		color: var(--bluea)
-		margin: 0
-		@media screen and (max-width: 899px)
-			font-size: 18px
-	.typ3 p
-		@media screen and (max-width: 899px)
-			font-size: 12px
-	small
-		margin: 0
-		padding-top: 16px
-		color: #878787
-	.typ2 small
-		padding: 0
-		margin: 0
-	button
-		background: var(--bluea)
-		border: none
-		color: white
-		padding: 6px 24px
-		width: max-content
-		place-self: start
-		cursor: pointer
-		transition: all 0.06s ease
-		transform-origin: center center
-		&:hover
-			transform: scale(0.9)
-			background: var(--blueb)
+img, iframe
+	margin-bottom: 16px
 
 .label
 	font-size: 27px
@@ -134,3 +28,117 @@ p
 	padding-bottom: 8px
 	@media screen and (max-width: 899px)
 		font-size: 18px
+
+
+.fluid
+	p, h5, h6, h4, h3, h2, h1
+		margin-top: 0
+		margin-bottom: 16px
+	h1
+		line-height: 1.1 !important
+	p.grey
+		color: #878787
+	small.grey
+		color: #878787
+	h2.titleis
+		text-transform: uppercase
+		border-bottom: 1px solid #d7d7d7
+		padding-bottom: 8px
+	h6.w400
+		font-weight: 400
+		line-height: 1.5
+	h2
+		line-height: 1.1
+	@media screen and (max-width: 575px)
+		small
+			font-size: 14px !important 
+		p
+			font-size: 3vw !important
+		h6
+			font-size: 3vw !important
+		h5
+			font-size: 4vw !important
+		h4
+			font-size: 6.5vw
+		h3
+			font-size: 7.8vw
+		h2
+			font-size: 7vw !important
+		h1
+			font-size: 15vw !important
+	@media screen and (max-width: 899px)
+		small
+			font-size: 12px
+		p
+			font-size: 1.2vw
+		h6
+			font-size: 1.32vw
+		h5
+			font-size: 1.6vw
+		h4
+			font-size: 4.5vw
+		h3
+			font-size: 6vw
+		h2
+			font-size: 4.5vw
+		h1
+			font-size: 7.6vw
+	@media screen and (min-width: 900px)	
+		p
+			font-size: 1.05vw
+		small
+			font-size: 1vw
+		h6
+			font-size: 1.2vw
+		h5
+			font-size: 1.5vw
+		h4
+			font-size: 4.5vw
+		h3
+			font-size: 6vw
+		h2
+			font-size: 3vw
+		h1
+			font-size: 8vw
+		
+
+.btn1
+	padding: 6px 25px 
+	font-weight: 500 
+	background: transparent 
+	outline: none !important 
+	cursor: pointer 
+	transition: all 0.3s ease 
+	position: relative 
+	display: inline-block 
+	text-transform: capitalize 
+	border-radius: 2px 
+	transform-origin: center center 
+	font-size: 18px
+	&:hover 
+		transform: scale(0.9) 
+	@media screen and (max-width: 767px)
+		padding: 4px 20px
+
+.btn01 
+	border: 2px solid #1a659e
+	color: #1a659e
+	&:after 
+		position: absolute 
+		content: "" 
+		width: 0 
+		height: 100% 
+		top: 0 
+		left: 0 
+		direction: rtl 
+		z-index: -1 
+		background: #1a659e
+		transition: all 0.3s ease 
+	&:hover 
+		color: white 
+		&:after 
+			left: auto 
+			right: 0 
+			width: 100% 
+	&:active 
+		top: 2px 

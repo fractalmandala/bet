@@ -38,6 +38,24 @@
 		grid-template-areas: "columnleft" "columnright"
 		gap: 24px 0px
 
+.containerwithrightcolumn
+	display: grid 
+	grid-template-columns: 0.7fr 1fr 
+	grid-template-rows: auto 
+	gap: 0px 40px 
+	grid-auto-flow: row 
+	grid-template-areas: "columnleft columnright" 
+	padding-bottom: 48px
+	.columnleft 
+		grid-area: columnleft 
+	.columnright 
+		grid-area: columnright 
+	@media screen and (max-width: 1023px)
+		grid-template-columns: 1fr
+		grid-template-rows: auto auto
+		grid-template-areas: "columnleft" "columnright"
+		gap: 24px 0px
+
 .containerwithtitle 
 	display: grid 
 	grid-template-columns: 1fr 
@@ -81,6 +99,24 @@
 			grid-template-areas: "grid3one" "grid3two" "grid3three"
 			gap: 32px 0
 
+.boxof3grid
+	display: grid 
+	grid-template-columns: 1fr 1fr 1fr 
+	grid-template-rows: auto
+	gap: 0px 32px 
+	grid-auto-flow: row 
+	grid-template-areas: "grid3one grid3two grid3three" 
+	.grid3one 
+		grid-area: grid3one 
+	.grid3two 
+		grid-area: grid3two 
+	.grid3three 
+		grid-area: grid3three 
+	@media screen and (max-width: 899px)
+		grid-template-columns: 1fr
+		grid-template-rows: auto auto auto
+		grid-template-areas: "grid3one" "grid3two" "grid3three"
+	
 
 .containerwithtitleand4grid 
 	display: grid 
@@ -135,7 +171,7 @@
 		display: grid 
 		grid-template-columns: 1fr 1fr 1fr 1fr 
 		grid-template-rows: 1fr
-		gap: 0px 32px 
+		gap: 0px 48px 
 		grid-auto-flow: row 
 		grid-template-areas: ". . . ."
 		grid-area: boxof4dyn
@@ -147,12 +183,12 @@
 			grid-template-rows: auto auto
 			grid-template-areas: ". ." ". ."
 			gap: 24px 24px
-	@media screen and (max-width: 767px)
+	@media screen and (max-width: 899px)
 		.boxof4dyn
 			grid-template-columns: 1fr
 			grid-template-rows: auto auto auto auto
 			grid-template-areas: "." "." "." "."
-			gap: 32px 0
+			gap: 48px 0
 
 
 .containerof2by2withtitle 
@@ -181,7 +217,7 @@
 			grid-area: boxof2by2three 
 		.boxof2by2four 
 			grid-area: boxof2by2four 
-	@media screen and (max-width: 767px)
+	@media screen and (max-width: 899px)
 		.boxof2by2
 			grid-template-columns: 1fr
 			grid-template-rows: auto auto auto auto
@@ -196,7 +232,7 @@
 	gap: 32px 0px 
 	grid-auto-flow: row 
 	grid-template-areas: "titleof3by2dyn" "boxof3by2dyn" 
-	padding-bottom: 48px
+	padding-bottom: 64px
 	.titleof3by2dyn 
 		grid-area: titleof3by2dyn
 	.boxof3by2dyn 
@@ -233,12 +269,12 @@
 	grid-area: boxof3by2dyn
 	align-items: stretch
 	align-content: stretch
-	@media screen and (max-width: 767px)
+	@media screen and (max-width: 1023px)
 		grid-template-columns: 1fr 1fr
 		grid-template-rows: auto auto auto
 		grid-template-areas: ". ." ". ." ". ."
 		gap: 24px 24px
-	@media screen and (max-width: 575px)
+	@media screen and (max-width: 899px)
 		grid-template-columns: 1fr
 		grid-template-rows: auto auto auto auto auto auto
 		grid-template-areas: "." "." "." "." "." "."
