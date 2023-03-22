@@ -70,7 +70,7 @@ onMount(async() => {
 			11 - 14th May, 2023
 		</h5>
 		<h6 class="w400">
-			<span class="bluea"><b>Venue:</b></span><br>
+			<span class="nita"><b>Venue:</b></span><br>
 			Chinmaya International Foundation, Adi Sankara Nilayam, Adi Sankara Marg, Veliyanad, Ernakulam, Kerala, 682313
 		</h6>
 		<div class="boxr">
@@ -141,12 +141,12 @@ onMount(async() => {
 			<p>Click on any day to expand details</p>
 			{#if day1items && day1items.length > 0}
 				<div class="typ">
-					<h5 class="bluea pb16 pointer" on:click={() => toggleDay(1)} on:keydown={() => toggleDay(1)} in:fly={{ duration: 100, x: 0, y: 48, delay: 0}}>Day 1</h5>
+					<h5 class="nita pb16 pointer" on:click={() => toggleDay(1)} on:keydown={() => toggleDay(1)} in:fly={{ duration: 100, x: 0, y: 48, delay: 0}}>Day 1</h5>
 				</div>
 				{#if selectedDay[1]}
 				{#each day1items as item, i}
 					<div class="boxc sched typ2" in:fly={{ duration: 100, x: 0, y: 48, delay: i * 50}}>
-						<div class="bluea">{item.time}</div>
+						<div class="nita">{item.time}</div>
 						<p>{item.sessionorname}</p>
 						<small>Key Dimensions: {item.keydimensions}</small>
 						<small>Speaker(s): {item.speakers}</small>
@@ -156,12 +156,12 @@ onMount(async() => {
 			{/if}
 			{#if day2items && day2items.length > 0}
 				<div class="typ">
-					<h5 class="bluea pb16 pointer" on:click={() => toggleDay(2)} on:keydown={() => toggleDay(2)} in:fly={{ duration: 100, x: 0, y: 48, delay: 50}}>Day 2</h5>
+					<h5 class="nita pb16 pointer" on:click={() => toggleDay(2)} on:keydown={() => toggleDay(2)} in:fly={{ duration: 100, x: 0, y: 48, delay: 50}}>Day 2</h5>
 				</div>
 				{#if selectedDay[2]}
 				{#each day2items as item, i}
 					<div class="boxc sched typ2" in:fly={{ duration: 100, x: 0, y: 48, delay: i * 50}}>
-						<div class="bluea">{item.time}</div>
+						<div class="nita">{item.time}</div>
 						<p>{item.sessionorname}</p>
 						<small>Key Dimensions: {item.keydimensions}</small>
 						<small>Speaker(s): {item.speakers}</small>
@@ -171,12 +171,12 @@ onMount(async() => {
 			{/if}
 			{#if day3items && day3items.length > 0}
 				<div class="typ">
-					<h5 class="bluea pb16 pointer" on:click={() => toggleDay(3)} on:keydown={() => toggleDay(3)} in:fly={{ duration: 100, x: 0, y: 48, delay: 100}}>Day 3</h5>
+					<h5 class="nita pb16 pointer" on:click={() => toggleDay(3)} on:keydown={() => toggleDay(3)} in:fly={{ duration: 100, x: 0, y: 48, delay: 100}}>Day 3</h5>
 				</div>
 				{#if selectedDay[3]}
 				{#each day3items as item, i}
 					<div class="boxc sched typ2" in:fly={{ duration: 100, x: 0, y: 48, delay: i * 50}}>
-						<div class="bluea">{item.time}</div>
+						<div class="nita">{item.time}</div>
 						<p>{item.sessionorname}</p>
 						<small>Key Dimensions: {item.keydimensions}</small>
 						<small>Speaker(s): {item.speakers}</small>
@@ -186,12 +186,12 @@ onMount(async() => {
 			{/if}
 			{#if day4items && day4items.length > 0}
 				<div class="typ">
-					<h5 class="bluea pb16 pointer" on:click={() => toggleDay(4)} on:keydown={() => toggleDay(4)} in:fly={{ duration: 100, x: 0, y: 48, delay: 150}}>Day 4</h5>
+					<h5 class="nita pb16 pointer" on:click={() => toggleDay(4)} on:keydown={() => toggleDay(4)} in:fly={{ duration: 100, x: 0, y: 48, delay: 150}}>Day 4</h5>
 				</div>
 				{#if selectedDay[4]}
 				{#each day4items as item, i}
 					<div class="boxc sched typ2" in:fly={{ duration: 100, x: 0, y: 48, delay: i * 50}}>
-						<div class="bluea">{item.time}</div>
+						<div class="nita">{item.time}</div>
 						<p>{item.sessionorname}</p>
 						<small>Key Dimensions: {item.keydimensions}</small>
 						<small>Speaker(s): {item.speakers}</small>
@@ -226,7 +226,7 @@ onMount(async() => {
 	padding-top: 16px
 
 .selectedlabelname
-	background: var(--bluea)
+	background: var(--nita)
 	color: white
 
 .sched
@@ -236,11 +236,11 @@ onMount(async() => {
 	small, p
 		margin: 0
 		padding: 0
-	.bluea
+	.nita
 		font-size: 12px
 
 .typ
-	.bluea.pb16
+	.nita.pb16
 		border-top: 1px solid #d7d7d7
 		padding-top: 16px
 
@@ -310,22 +310,22 @@ onMount(async() => {
 		justify-content: start
 		gap: 48px
 		@media screen and (max-width: 1023px)
-			gap: 16px
+			gap: 4px
 		.label
 			transition: all 0.08s var(--cubec)
-			padding-left: 8px
-			padding-right: 8px
+			padding-left: 2px
+			padding-right: 2px
 			cursor: pointer
 			transform-origin: center center
 			text-align: center
 			&:hover
-				background: var(--blueb)
+				background: var(--nita)
 				color: white
 				transform: scale(0.9)
 		.label2
 			transition: all 0.08s var(--cubec)
-			padding-left: 8px
-			padding-right: 8px
+			padding-left: 2px
+			padding-right: 2px
 			cursor: pointer
 			transform-origin: center center
 			text-align: center

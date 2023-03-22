@@ -38,7 +38,7 @@
 <div on:click|stopPropagation on:keydown|stopPropagation class="searchbackdrop" in:fly={{ duration: 500, x: 0, y: 300, easing: quintOut }} out:scale={{ duration: 400, easing: quintIn}}>
 		{#if showForm}
 			<h6>Namaste, thank you for your interest in Nītividhāna.</h6>
-			<p>Please fill the below details to access the payment link.<br>We request that you enter the same name, email and phone number<br>that are linked to the payment source you will pay from. </p>
+			<p>Please fill the below details to access the payment information.<br>We request that you enter the same name, email and phone number<br>that are linked to the payment source you will pay from. </p>
 			<form class="boxc" on:submit|preventDefault={handleSubmit}>
   			<label for="name">Name:</label>
   			<input type="text" id="name" bind:value={fullname} placeholder="Full Name" required />
@@ -56,10 +56,17 @@
 		{/if}
 		{#if showQRCode}
 		<div transition:fly>
- 		<h5>Thank you, your details were successfully submitted.<br>Please click on below button to proceed to payment.</h5>
-  	<div class="qrimage" on:click={() => dialog.close()} on:keydown={() => dialog.close()}>
-    	<form><script src="https://checkout.razorpay.com/v1/payment-button.js" data-payment_button_id="pl_LUYUZ39WWoJJsB" async> </script> </form>
-  	</div>
+ 		<h5>Thank you, your details were successfully submitted.<br>This is the bank account information for Nītividhāna fees payment:</h5>
+		<p>
+			Bank: ICICI<br>
+			Account Number: 004005027806<br>
+			Name : Brhat Educational Trust<br>
+			IFSC: ICIC0000040<br>
+			Account Type: Current<br>
+		</p>
+		<h5>
+			Please pay a total no more than ₹10,030 (₹8500 + GST) to the above account.<br> You will receive a welcome and confirmation mail within 24 hours of successful payment. 
+		</h5>
 		</div>
 		{/if}
 	<button class="btn1-g btn01-g greybutton" on:click={() => dialog.close()} on:keydown={() => dialog.close()}>CLOSE</button>
