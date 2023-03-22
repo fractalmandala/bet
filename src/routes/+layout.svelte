@@ -71,7 +71,7 @@ function toggleMobile(){
 {#if showMobile}
 	<div class="boxc fluid mobilemenu" in:fly={{ duration: 350, delay: 30, x: 400, y: 0}} out:fly={{ duration: 300, delay: 0, x: 400, y: 0}} on:click={toggleMobile} on:keydown={toggleMobile}>
 		<h3><a href="/vision">Our Gaze</a></h3>
-		<h3><a href="/work">Our Work</a></h3>
+		<h3><a href="/about">Our Work</a></h3>
 		<h3><a href="/engage">Engage</a></h3>
 		<h3><a href="/sponsor">Support</a></h3>
 	</div>

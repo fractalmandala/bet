@@ -56,13 +56,13 @@
 		{/if}
 		{#if showQRCode}
 		<div transition:fly>
- 		<h5>Thank you, your details were successfully submitted.<br>Please proceed to scan the below QR code and make the fee payment.</h5>
-  	<div class="qrimage">
-    	<img src="https://rnfvzaelmwbbvfbsppir.supabase.co/storage/v1/object/public/brhatwebsite/04corpimages/qrcode.png" alt="QR code" />
+ 		<h5>Thank you, your details were successfully submitted.<br>Please click on below button to proceed to payment.</h5>
+  	<div class="qrimage" on:click={() => dialog.close()} on:keydown={() => dialog.close()}>
+    	<form><script src="https://checkout.razorpay.com/v1/payment-button.js" data-payment_button_id="pl_LUYUZ39WWoJJsB" async> </script> </form>
   	</div>
 		</div>
 		{/if}
-	<button class="btn1-g btn01-g greybutton" on:click={() => dialog.close()} on:keydown={() => dialog.close()} on:click={() => (showQRCode = false)} on:keydown={() => (showQRCode = false)}>CLOSE</button>
+	<button class="btn1-g btn01-g greybutton" on:click={() => dialog.close()} on:keydown={() => dialog.close()}>CLOSE</button>
 </div>
 </dialog>
 
