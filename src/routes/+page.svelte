@@ -49,6 +49,13 @@ onMount(async() => {
 	</div>
 </div>
 
+
+<div class="simplecontainer padstd box20 fluid lineit" style="background-image: url('https://rnfvzaelmwbbvfbsppir.supabase.co/storage/v1/object/public/brhatwebsite/06drashta/policywall.webp')">
+	<h1 class="serif"><a href="/nitividhana">Nītividhāna</a></h1>
+	<h5>Civilizational Public Policy - 11 to 14 May 2023</h5>
+</div>
+
+
 <!-- introductory links and subsections-->
 
 
@@ -74,10 +81,6 @@ onMount(async() => {
   </div>
 </div>
 
-<div class="simplecontainer padstd box20 fluid lineit" style="background-image: url('https://rnfvzaelmwbbvfbsppir.supabase.co/storage/v1/object/public/brhatwebsite/06drashta/policywall.webp')">
-	<h1 class="serif"><a href="/nitividhana">Nītividhāna</a></h1>
-	<h5>Civilizational Public Policy - 11 to 14 May 2023</h5>
-</div>
 
 
 <div class="containerof2by2withtitle padstd box4 fluid lineit">
