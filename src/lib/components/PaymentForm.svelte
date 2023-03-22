@@ -80,6 +80,8 @@
 
 .searchbackdrop
 	padding: 48px
+	@media screen and (max-width: 899px)
+		padding: 32px
 
 .boxc
 	label

@@ -106,6 +106,7 @@ onMount(async() => {
 		<div class="label {selectedLabel[3] ? selectedlabelname : nonselected}" on:click={() => toggleLabel(3)} on:keydown={() => toggleLabel(3)}>
 			Schedule
 		</div>
+		<div class="label2 {selectedLabel[5] ? selectedlabelname : nonselected}" on:click={() => (showModal = true)} on:keydown={() => (showModal = true)}>Register</div>
 	</div>
 	<div class="selectedcontent">
 		{#if selectedLabel[1]}	
@@ -320,6 +321,19 @@ onMount(async() => {
 			&:hover
 				background: var(--blueb)
 				color: white
+				transform: scale(0.9)
+		.label2
+			transition: all 0.08s var(--cubec)
+			padding-left: 8px
+			padding-right: 8px
+			cursor: pointer
+			transform-origin: center center
+			text-align: center
+			background: var(--niti)
+			color: white
+			&:hover
+				background: white
+				color: var(--niti)
 				transform: scale(0.9)
 	.selectedcontent
 		grid-area: selectedcontent
