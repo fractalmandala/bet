@@ -1,6 +1,7 @@
 <script lang="ts">
 import { onMount } from 'svelte'
 import { fly } from 'svelte/transition'
+import PaymentForm from '$lib/components/PaymentForm.svelte'
 import { nitividhanaOverview, nitividhanaTopics, nitividhanaQual, nitividhanaTopicsOverview, nitiDay1, nitiDay2, nitiDay3, nitiDay4, nitividhanaWhoFor } from '$lib/utils/supapulls'
 let overviews:any
 let topics:any
@@ -16,7 +17,7 @@ selectedLabel[1] = true
 let selectedDay:boolean[] = [false, false, false, false]
 let selectedlabelname:any = 'selectedlabelname'
 let nonselected:any = 'nonselected'
-
+let showModal:boolean = false
 function toggleLabel(index:number) {
 	selectedLabel[index] = !selectedLabel[index]
 	for ( let i = 0; i < selectedLabel.length; i++ ) {
@@ -61,7 +62,9 @@ onMount(async() => {
 		<h2 class="serif">
 			In partnership with Chinmaya International Foundation, a four-day residential immersion program in the essentials of today's burning policy issues.
 		</h2>
+		<button class="btn1 btn01" on:click={() => (showModal = true)} on:keydown={() => (showModal = true)}>Register Now</button>
 	</div>
+	<PaymentForm bind:showModal></PaymentForm>
 	<div class="columnright">
 		<h5>
 			11 - 14th May, 2023
@@ -249,7 +252,7 @@ onMount(async() => {
 		width: 60%
 		padding: 16px 0
 		h1
-			background: var(--bluea)
+			background: #DE8634
 			color: white
 			padding: 8px
 			font-size: 48px
@@ -272,7 +275,7 @@ onMount(async() => {
 
 .box3
 	.columnright h5
-		background: var(--blueb)
+		background: #DE8634
 		color: white
 		padding: 4px 8px
 	.columnright
