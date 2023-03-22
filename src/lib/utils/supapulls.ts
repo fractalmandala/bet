@@ -116,6 +116,16 @@ export async function nitividhanaOverview(){
 	return data
 }
 
+export async function nitividhanaWhoFor(){
+	const { data, error } = await supabase
+	.from('brhat-nitividhana')
+	.select()
+	.eq('type','whofor')
+	.order('id')
+	if(error) throw new Error(error.message)
+	return data
+}
+
 export async function nitividhanaTopics(){
 	const { data, error } = await supabase
 	.from('brhat-nitividhana')
