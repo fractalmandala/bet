@@ -156,7 +156,7 @@
 	font-family: 'Cormorant Garamond', serif
 
 .btn1
-	padding: 8px 25px 
+	padding: 4px 25px 
 	font-weight: 500 
 	background: transparent 
 	outline: none !important 
@@ -167,14 +167,15 @@
 	text-transform: capitalize 
 	border-radius: 2px 
 	transform-origin: center center 
+	font-size: 14px
 	&:hover
 		transform: scale(0.9) 
 	@media screen and (max-width: 767px)
 		padding: 4px 20px
 .btn01 
-	border: 2px solid #DE8634
+	border: 2px solid var(--bluea)
 	z-index: 1 
-	color: #DE8634
+	color: var(--bluea)
 	&:after 
 		position: absolute 
 		content: "" 
@@ -184,7 +185,7 @@
 		left: 0 
 		direction: rtl 
 		z-index: -1 
-		background: #DE8634
+		background: var(--bluea)
 		transition: all 0.3s ease 
 	&:hover 
 		color: white 

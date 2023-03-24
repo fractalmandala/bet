@@ -121,10 +121,10 @@ function toggleMobile(){
 		flex-direction: row
 	.namearea p
 		font-weight: 600
-		font-size: 28px
+		font-size: 20px
 		margin: 0
 		color: white
-		letter-spacing: 1px
+		letter-spacing: 0px
 	.navarea
 		align-items: center
 		display: flex
@@ -133,7 +133,8 @@ function toggleMobile(){
 		a
 			color: white
 			text-transform: uppercase
-			font-weight: bold
+			font-weight: 600
+			font-size: 12px
 			&:hover
 				color: #5B92BD
 				transform: scale(0.9)

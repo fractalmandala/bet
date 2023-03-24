@@ -1,5 +1,16 @@
 import supabase from '$lib/db'
 
+export async function homeVideos(limit:number){
+	const { data, error } = await supabase
+	.from('brhat-bet')
+	.select()
+	.eq('type','Video')
+	.order('id', {ascending: false})
+	.limit(limit)
+	if (error) throw new Error(error.message)
+	return data
+}
+
 export async function getCourses(){
 	const { data, error } = await supabase
 	.from('brhat-drashta2')
