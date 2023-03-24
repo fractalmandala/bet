@@ -1,5 +1,5 @@
 @import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400;1,500;1,600;1,700&family=Plus+Jakarta+Sans:ital,wght@0,200;0,300;0,400;0,500;0,600;0,700;0,800;1,200;1,300;1,400;1,500;1,600;1,700;1,800&display=swap')
-@import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400;1,500;1,600;1,700&family=Playfair+Display:wght@700;800&display=swap')
+@import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400;1,500;1,600;1,700&family=Playfair+Display:ital,wght@0,400;0,500;0,600;0,700;0,800;1,400;1,500;1,600&display=swap')
 
 .typ3
 	pre
@@ -36,11 +36,203 @@ img, iframe
 		font-size: 14px
 		font-weight: 500
 
+.fluid
+	.blockquote
+		pre, small
+			margin: 0
+		pre
+			font-family: 'Playfair Display', serif
 
 .fluid
+	.content
+		pre
+			font-family: 'Plus Jakarta Sans', sans-serif
+			margin: 0
+		.smallest
+			pre
+				margin: 0
+
+.fluid
+	.blockquote
+		pre
+			font-size: 4.5vw
+		small
+			font-size: 10px
+			line-height: 1
+			margin: 0
+			padding: 0
+	.content
+		h6
+			font-size: 3.5vw
+		.smallest
+			pre
+				font-size: 3.25vw
+		h5
+			font-size: 5vw
+			padding-bottom: 16px
+		h4
+			font-size: 6vw
+		small
+			line-height: 1.1
+		h2
+			font-size: 7vw
+		p
+			font-size: 3vw
+	small
+		font-size: 12px
+		line-height: 1.1
+	p
+		font-size: 3vw
+	h6
+		font-size: 3.5vw
+	h5
+		font-size: 6vw
+	h4
+		font-size: 5vw
+	h3
+		font-size: 7.8vw
+	h2
+		font-size: 7vw
+	h1
+		font-size: 10vw
+
+.fluid
+	@media screen and (min-width: 576px)
+		.blockquote
+			pre
+				font-size: 2.5vw
+			small
+				font-size: 12px
+		.content
+			.smallest
+				pre
+					font-size: 2vw
+			h6
+				font-size: 2vw
+			h4
+				font-size: 4.5vw
+			h5
+				font-size: 3vw
+				padding-bottom: 16px
+			h2
+				font-size: 5vw
+			p
+				font-size: 1.75vw
+		small
+			font-size: 12px
+		p
+			font-size: 1.2vw
+		h6
+			font-size: 1.32vw
+		h5
+			font-size: 1.6vw
+		h4
+			font-size: 4vw
+		h3
+			font-size: 6vw
+		h2
+			font-size: 4.5vw
+		h1
+			font-size: 7.6vw
+
+.fluid
+	@media screen and (min-width: 768px)
+		.blockquote
+			pre
+				font-size: 2.2vw
+			small
+				font-size: 12px
+		.content
+			.smallest
+				pre
+					font-size: 1.8vw
+			h6
+				font-size: 1.8vw
+			h5
+				font-size: 2.4vw
+			h4
+				font-size: 3vw
+			h2
+				font-size: 4vw
+			p
+				font-size: 1.75vw
+		p
+			font-size: 1.05vw
+		small
+			font-size: 0.8vw
+		h6
+			font-size: 1.2vw
+		h5
+			font-size: 1.5vw
+		h4
+			font-size: 3vw
+		h3
+			font-size: 6vw
+		h2
+			font-size: 3.5vw
+		h2.uppercase
+			font-size: 3.5vw
+			text-transform: uppercase
+		h1
+			font-size: 6vw
+
+.fluid
+	@media screen and (min-width: 900px)
+		.blockquote
+			pre
+				font-size: 1.8vw
+			small
+				font-size: 12px
+		.content
+			.smallest
+				pre
+					font-size: 1.35vw
+			h6
+				font-size: 1.5vw
+			h5
+				font-size: 2vw
+			h4
+				font-size: 3vw
+			h2
+				font-size: 4vw
+			p
+				font-size: 1.35vw
+		h1
+			font-size: 5vw
+
+.fluid
+	@media screen and (min-width: 1024px)
+		.blockquote
+			pre
+				font-size: 1.5vw
+			small
+				font-size: 12px
+		.content
+			h6
+				font-size: 1.15vw
+			.smallest
+				pre
+					font-size: 1vw
+			h4
+				font-size: 2.5vw
+			h5
+				font-size: 1.3vw
+			h2
+				font-size: 3vw
+			p
+				font-size: 1.2vw
+
+.fluid
+	pre.blockquote
+		font-family: 'Playfair Display', serif
+		line-height: 1.15
+	pre.regsmall
+		font-family: 'Plus Jakarta Sans', sans-serif
 	p, h5, h6, h4, h3, h2, h1
 		margin-top: 0
-		margin-bottom: 16px
+		margin-bottom: 8px
+	small
+		margin: 0
 	h1
 		line-height: 1.1 !important
 	p.grey
@@ -56,57 +248,13 @@ img, iframe
 		line-height: 1.5
 	h2
 		line-height: 1.1
-	@media screen and (max-width: 575px)
-		small
-			font-size: 14px !important 
-		p
-			font-size: 3vw !important
-		h6
-			font-size: 3vw !important
-		h5
-			font-size: 4vw !important
-		h4
-			font-size: 6.5vw
-		h3
-			font-size: 7.8vw
-		h2
-			font-size: 7vw !important
-		h1
-			font-size: 15vw !important
-	@media screen and (max-width: 899px)
-		small
-			font-size: 12px
-		p
-			font-size: 1.2vw
-		h6
-			font-size: 1.32vw
-		h5
-			font-size: 1.6vw
-		h4
-			font-size: 4.5vw
-		h3
-			font-size: 6vw
-		h2
-			font-size: 4.5vw
-		h1
-			font-size: 7.6vw
-	@media screen and (min-width: 900px)	
-		p
-			font-size: 1.05vw
-		small
-			font-size: 1vw
-		h6
-			font-size: 1.2vw
-		h5
-			font-size: 1.5vw
-		h4
-			font-size: 4.5vw
-		h3
-			font-size: 6vw
-		h2
-			font-size: 3vw
-		h1
-			font-size: 6vw
+	small.pro
+		font-weight: 400 !important
+	p.uppercase
+		text-transform: uppercase
+		margin-bottom: 4px
+		letter-spacing: 0.4px
+		font-weight: 500
 		
 
 .btn1

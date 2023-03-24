@@ -280,3 +280,63 @@ export async function bolAryans(){
 	if (error) throw new Error(error.message)
 	return data
 }
+
+export async function samikshanaSections(){
+	const { data, error } = await supabase
+	.from('brhat-samikshana')
+	.select()
+	.eq('type','section')
+	.order('sequence')
+	if (error) throw new Error(error.message)
+	return data
+}
+
+export async function samikshanaIntro(){
+	const { data, error } = await supabase
+	.from('brhat-samikshana')
+	.select()
+	.eq('type','intro')
+	.order('sequence')
+	if (error) throw new Error(error.message)
+	return data
+}
+
+export async function samikshanaQuotes1(){
+	const { data, error } = await supabase
+	.from('brhat-samikshana')
+	.select()
+	.eq('type','quote')
+	.eq('sequence',1)
+	if (error) throw new Error(error.message)
+	return data
+}
+
+export async function samikshanaQuotes2(){
+	const { data, error } = await supabase
+	.from('brhat-samikshana')
+	.select()
+	.eq('type','quote')
+	.eq('sequence',2)
+	if (error) throw new Error(error.message)
+	return data
+}
+
+export async function samikshanaDetails(){
+	const { data, error } = await supabase
+	.from('brhat-samikshana')
+	.select()
+	.eq('type','details')
+	.order('sequence')
+	if (error) throw new Error(error.message)
+	return data
+}
+
+export async function samikshanaFaculty(){
+	const { data, error } = await supabase
+	.from('brhat-samikshana')
+	.select()
+	.eq('type','facultydetails')
+	.order('sequence')
+	if (error) throw new Error(error.message)
+	return data
+}
