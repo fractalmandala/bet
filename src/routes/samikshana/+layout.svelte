@@ -19,7 +19,7 @@
 	<div class="container-sidebar" class:Opened={mobileNav}>
 			<h5 class="bluea"><a href="/samikshana">Samīkṣaṇā</a></h5>
 			<h5 class="just"><a href="/samikshana/program">Program Details</a></h5>
-			<h5 class="just"><a href="/samikshana/faculty">Faculty</a></h5>
+			<h5 class="just"><a href="/samikshana/faculty">Schedule</a></h5>
 		{#if sections && sections.length > 0}
 			<h5>Sections:</h5>
 			{#each sections as section}

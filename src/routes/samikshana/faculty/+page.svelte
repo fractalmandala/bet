@@ -12,7 +12,7 @@
 
 <div class="page-container fluid">
 	<div class="titleplace">
-		<h2>Faculty</h2>
+		<h2>Schedule</h2>
 	</div>
 	<div class="quotesplacegrid content">
 		{#if details && details.length > 0}
