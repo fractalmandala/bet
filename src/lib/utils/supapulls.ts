@@ -212,3 +212,71 @@ export async function nitiDay4(){
 	if(error) throw new Error(error.message)
 	return data
 }
+
+export async function bolAll(){
+	const { data, error } = await supabase
+	.from('brhat-openlibrary')
+	.select()
+	.order('id', {ascending: false})
+	if (error) throw new Error(error.message)
+	return data
+}
+
+export async function bolEssentials(){
+	const { data, error } = await supabase
+	.from('brhat-openlibrary')
+	.select()
+	.eq('Type', 'Essentials')
+	.order('id', {ascending: false})
+	if (error) throw new Error(error.message)
+	return data
+}
+
+export async function bolIKS(){
+	const { data, error } = await supabase
+	.from('brhat-openlibrary')
+	.select()
+	.eq('Type', 'IKS')
+	.order('id', {ascending: false})
+	if (error) throw new Error(error.message)
+	return data
+}
+
+export async function bolBodhas(){
+	const { data, error } = await supabase
+	.from('brhat-openlibrary')
+	.select()
+	.eq('Type', 'Bodhas')
+	.order('id', {ascending: false})
+	if (error) throw new Error(error.message)
+	return data
+}
+
+export async function bolROS(){
+	const { data, error } = await supabase
+	.from('brhat-openlibrary')
+	.select()
+	.eq('Type', 'Repository of Scripture')
+	.order('id', {ascending: false})
+	if (error) throw new Error(error.message)
+	return data
+}
+
+export async function bolRest(){
+	const { data, error } = await supabase
+	.from('brhat-openlibrary')
+	.select()
+	.or('Type.eq.History,Type.eq.Sanskrit')
+	.order('id', {ascending: false})
+	if (error) throw new Error(error.message)
+	return data
+}
+
+export async function bolAryans(){
+	const { data, error} = await supabase
+	.from('brhat-aryanissue')
+	.select()
+	.order('id',{ascending: false})
+	if (error) throw new Error(error.message)
+	return data
+}
