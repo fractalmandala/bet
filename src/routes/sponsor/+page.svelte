@@ -4,9 +4,16 @@
 			Sponsor Bṛhat's Dhārmika Culture Engine
 		</h2>
 		<h5>
-			To support our work and help keep the engine running, you can contribute directly by sending funds on this QR code below:
+			To support our work and help keep the engine running, you can contribute directly by sending funds on our UPI ID: brhat@icici
 		</h5>
-		<img class="qrcode" src="/images/qrcode.png" alt="qrcode" />
+		<h5>Alternately, you can transfer to our bank account:</h5>
+		<p>
+			Bank: ICICI<br>
+			Account Number: 004005027806<br>
+			Name : Brhat Educational Trust<br>
+			IFSC: ICIC0000040<br>
+			Account Type: Current<br>
+		</p>
 		<h5>
 			You can also read more about our work so far, planned roadmap, and contribute to the culture engine at our crowdfunding campaign live at Dharmic Crowdfunding.
 		</h5>
