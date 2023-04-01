@@ -64,7 +64,7 @@
 			IFSC: ICIC0000040<br>
 			Account Type: Current<br>
 		</p>
-		<h5>Alternately, you can pay us at our UPI ID: brhat@icici</h5>
+		<h5 class="highlight">Alternately, you can pay us at our UPI ID: brhat@icici</h5>
 		<h5>
 			Please pay a total no more than ₹10,030 (₹8500 + GST) to the above account.<br> You will receive a welcome and confirmation mail within 24 hours of successful payment. 
 		</h5>
@@ -76,6 +76,11 @@
 
 
 <style lang="sass">
+
+.highlight
+	padding: 8px
+	background: var(--nita)
+	color: white
 
 .qrimage
 	img
