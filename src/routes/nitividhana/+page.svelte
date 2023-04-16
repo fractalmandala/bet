@@ -166,9 +166,13 @@ onMount(async() => {
 				{#each day2items as item, i}
 					<div class="boxc sched typ2" in:fly={{ duration: 100, x: 0, y: 48, delay: i * 50}}>
 						<div class="nita">{item.time}</div>
+						{#if item.sessionorname.length > 0 && item.sessionorname === 'Break'}
+							<p>{item.sessionorname}</p>
+						{:else}
 						<p>{item.sessionorname}</p>
 						<small>Key Dimensions: {item.keydimensions}</small>
 						<small>Speaker(s): {item.speakers}</small>
+						{/if}
 					</div>
 				{/each}
 				{/if}
@@ -181,9 +185,13 @@ onMount(async() => {
 				{#each day3items as item, i}
 					<div class="boxc sched typ2" in:fly={{ duration: 100, x: 0, y: 48, delay: i * 50}}>
 						<div class="nita">{item.time}</div>
+						{#if item.sessionorname.length > 0 && item.sessionorname === 'Break'}
+							<p>{item.sessionorname}</p>
+						{:else}
 						<p>{item.sessionorname}</p>
 						<small>Key Dimensions: {item.keydimensions}</small>
 						<small>Speaker(s): {item.speakers}</small>
+						{/if}
 					</div>
 				{/each}
 				{/if}
@@ -196,9 +204,13 @@ onMount(async() => {
 				{#each day4items as item, i}
 					<div class="boxc sched typ2" in:fly={{ duration: 100, x: 0, y: 48, delay: i * 50}}>
 						<div class="nita">{item.time}</div>
+						{#if item.sessionorname.length > 0 && item.sessionorname === 'Break'}
+							<p>{item.sessionorname}</p>
+						{:else}
 						<p>{item.sessionorname}</p>
 						<small>Key Dimensions: {item.keydimensions}</small>
 						<small>Speaker(s): {item.speakers}</small>
+						{/if}
 					</div>
 				{/each}
 				{/if}
