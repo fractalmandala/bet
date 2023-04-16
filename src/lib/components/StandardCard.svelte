@@ -6,7 +6,7 @@
 		<div class="text">
 			<slot name="text"></slot>
 		</div>
-		<div class="button">
+		<div class="button" style="margin-top: 16px">
 			<slot name="button"></slot>
 		</div>
 	</div>

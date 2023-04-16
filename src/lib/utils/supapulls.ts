@@ -340,3 +340,15 @@ export async function samikshanaFaculty(){
 	if (error) throw new Error(error.message)
 	return data
 }
+
+
+export async function bulletin(value:any){
+	const { data, error } = await supabase
+	.from('brhat-bet')
+	.select()
+	.textSearch('type',value)
+	.neq('type','event')
+	.order('sequence',{ascending: false})
+	if (error) throw new Error(error.message)
+	return data	
+}

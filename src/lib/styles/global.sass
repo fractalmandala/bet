@@ -10,6 +10,37 @@ body, html
 	width: 100%
 	align-items: center
 
+.standardlarger
+	display: flex
+	flex-direction: row
+	.image
+		object-fit: cover
+		height: 100%
+		object-position: center center
+	@media screen and (min-width: 1024px)
+		gap: 24px
+		.image
+			height: 240px
+		.image
+			width: 35%
+		.text
+			width: calc(65% - 24px)
+	@media screen and (max-width: 1023px)
+		gap: 24px
+		.image
+			height: 120px
+		.image
+			width: 35%
+		.text
+			width: calc(65% - 24px)
+	@media screen and (max-width: 899px)
+		.image
+			height: 120px
+	@media screen and (max-width: 767px)
+		.image
+			height: 120px
+	
+
 .standardcard
 	.image
 		img
@@ -20,7 +51,6 @@ body, html
 	@media screen and (min-width: 1024px)
 		.image
 			height: 120px
-			img
 	@media screen and (max-width: 1023px)
 		.image
 			height: 96px

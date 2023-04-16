@@ -2,18 +2,25 @@
 import { onMount, afterUpdate } from 'svelte'
 import { reveal, setDefaultOptions } from 'svelte-reveal'
 import { fly } from 'svelte/transition'
-import { getRecent, getArticles, getYoutube, getPartners, homeVideos } from '$lib/utils/supapulls'
+import { getRecent, getArticles, getYoutube, getPartners, homeVideos, bulletin } from '$lib/utils/supapulls'
 import AllBet from '$lib/components/AllBet.svelte'
 import StandardCard from '$lib/components/StandardCard.svelte'
 let y = 1
 let blank = true
+let fake = false
 let recents:any 
 let articles:any
 let videos:any
 let partners: any
 let homes:any
+let value:any = 'Books'
 let limit:number = 3
 let isFocus:boolean[] = [false, false, false, false]
+let bullets:any
+
+function fauxfake(){
+	fake = !fake
+}
 
 function showFocus(index:number){
 	isFocus[index] = !isFocus[index]
@@ -30,6 +37,16 @@ async function loadMoreVideos(){
 	} catch (error) {
 		console.error('failed', error)
 	}
+}
+
+function setFilter(newFilter:any) {
+	value = newFilter
+}
+
+$: if (value) {
+	(async() => {
+		bullets = await bulletin(value)
+	})()
 }
 
 function loadMore(){
@@ -51,6 +68,7 @@ onMount(async() => {
 	videos = await getYoutube()
 	partners = await getPartners()
 	homes = await homeVideos(limit)
+	bullets = await bulletin(value)
 })
 </script>
 
@@ -81,7 +99,34 @@ onMount(async() => {
 	<h5>Civilizational Public Policy - 11 to 14 May 2023</h5>
 </div>
 
-<!-- introductory links and subsections-->
+<!--
+<div class="dynamicwithtitle padstd box10 fluid lineit">
+	<div class="titlearea centercalib">
+		<h2 class="titleis" use:reveal>IKS Bulletin</h2>
+		<div class="boxr bulletinfilters" style="gap: 24px">
+			<p on:click={() => setFilter('Conferences')} on:keydown={fauxfake} class="onefilter {value === 'Conferences' ? 'selectedfilter' : ''}">Conferences</p>
+			<p on:click={() => setFilter('Careers')} on:keydown={fauxfake} class="onefilter {value === 'Careers' ? 'selectedfilter' : ''}">Careers</p>
+			<p on:click={() => setFilter('Courses')} on:keydown={fauxfake} class="onefilter {value === 'Courses' ? 'selectedfilter' : ''}">Courses</p>
+			<p on:click={() => setFilter('Books')} on:keydown={fauxfake} class="onefilter {value === 'Books' ? 'selectedfilter' : ''}">Books</p>
+			<p on:click={() => setFilter('Events')} on:keydown={fauxfake} class="onefilter {value === 'Events' ? 'selectedfilter' : ''}">Events</p>
+		</div>
+	</div>
+	<div class="bodyarea">
+		{#if bullets && bullets.length > 0}
+			{#each bullets as item, i}
+					<div class="standardlarger" use:reveal={{ delay: i*20 }} in:fly={{ duration: 200, delay: i * 50}} out:fly={{ delay: 0, duration: 100}}>
+						<img class="image" src={item.image} alt={item.name} />
+						<div class="text">
+							<h5>{item.name}</h5>
+							<p>{item.text}</p>
+							<button class="btn1 btn01"><a href={item.link} target="_blank" rel="noreferrer">Visit</a></button>
+						</div>
+					</div>
+			{/each}
+		{/if}
+	</div>
+</div>
+-->
 
 <div class="dynamicwithtitleand2by2grid padstd box3 fluid lineit">
   <div class="titleof2by2dyn centercalib">
@@ -218,6 +263,31 @@ onMount(async() => {
 
 <style lang="sass">
 
+.box10
+	.bodyarea
+		padding-top: 32px
+		padding-bottom: 32px
+		display: flex
+		flex-direction: column
+		row-gap: 32px
+		p
+			color: #878787
+
+.bulletinfilters p
+	text-transform: uppercase
+	padding: 3px 9px
+	cursor: pointer
+	&:hover
+		background: var(--bluea)
+		color: white
+
+.bulletinfilters p.selectedfilter
+	background: var(--blueb)
+	color: white
+	&:hover
+		background: #676767
+		cursor: none
+
 .a-vid
 	@media screen and (min-width: 1024px)
 		height: 280px
@@ -246,19 +316,6 @@ onMount(async() => {
 	@media screen and (max-width: 575px)
 		height: 60vh
 
-.nitividhana
-	align-items: center
-	justify-content: flex-end
-	padding-bottom: 64px
-	.textofniti
-		background: var(--bluea)
-		color: white
-		text-align: center
-		width: 60%
-		padding: 16px 0
-	@media screen and (max-width: 899px)
-		.textofniti
-			width: 90%
 
 .scrollsnapper
 	scroll-snap-type: y mandatory
@@ -285,13 +342,6 @@ onMount(async() => {
 			height: 280px
 			width: 100%
 
-.box2
-	min-height: 100vh
-	.titlearea
-		h4
-			text-align: center
-	@media screen and (min-width: 1024px)
-		padding-bottom: 4rem
 
 .box3
 	.boxof2by2dyn
@@ -328,8 +378,5 @@ onMount(async() => {
 			width: 100%
 			iframe
 				width: 100%
-
-.box7, .box8
-	height: 100vh
 
 </style>
