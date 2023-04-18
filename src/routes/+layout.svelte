@@ -102,6 +102,8 @@ function toggleMobile(){
 	grid-auto-flow: row 
 	grid-template-areas: "appheader" "appbox" "appfooter" 
 	position: relative
+	width: 100vw
+	overflow-x: hidden
 .appheader 
 	grid-area: appheader 
 	height: 64px 
