@@ -99,11 +99,10 @@ onMount(async() => {
 	<h5>Civilizational Public Policy - 11 to 14 May 2023</h5>
 </div>
 
-<!--
-<div class="dynamicwithtitle padstd box10 fluid lineit">
+<div class="dynamicwithtitle box10 fluid lineit">
 	<div class="titlearea centercalib">
 		<h2 class="titleis" use:reveal>IKS Bulletin</h2>
-		<div class="boxr bulletinfilters" style="gap: 24px">
+		<div class="boxr bulletinfilters">
 			<p on:click={() => setFilter('Conferences')} on:keydown={fauxfake} class="onefilter {value === 'Conferences' ? 'selectedfilter' : ''}">Conferences</p>
 			<p on:click={() => setFilter('Careers')} on:keydown={fauxfake} class="onefilter {value === 'Careers' ? 'selectedfilter' : ''}">Careers</p>
 			<p on:click={() => setFilter('Courses')} on:keydown={fauxfake} class="onefilter {value === 'Courses' ? 'selectedfilter' : ''}">Courses</p>
@@ -114,41 +113,20 @@ onMount(async() => {
 	<div class="bodyarea">
 		{#if bullets && bullets.length > 0}
 			{#each bullets as item, i}
-					<div class="standardlarger" use:reveal={{ delay: i*20 }} in:fly={{ duration: 200, delay: i * 50}} out:fly={{ delay: 0, duration: 100}}>
+				<div class="standardlarger" use:reveal={{ delay: i*20 }} in:fly={{ duration: 200, delay: i * 50}} out:fly={{ delay: 0, duration: 100}}>
 						<img class="image" src={item.image} alt={item.name} />
 						<div class="text">
 							<h5>{item.name}</h5>
 							<p>{item.text}</p>
 							<button class="btn1 btn01"><a href={item.link} target="_blank" rel="noreferrer">Visit</a></button>
 						</div>
-					</div>
-			{/each}
-		{/if}
-	</div>
-</div>
--->
-
-<div class="dynamicwithtitleand2by2grid padstd box3 fluid lineit">
-  <div class="titleof2by2dyn centercalib">
-		<h2 class="titleis" use:reveal>Recent and Upcoming</h2>
-	</div>
-  <div class="boxof2by2dyn">
-		{#if recents && recents.length > 0}
-			{#each recents as item, i}
-			<div use:reveal={{ delay: i*100 }}>
-			<StandardCard>
-				<img slot="image" src={item.image} alt={item.name} />
-				<div slot="text">
-					<h5>{item.name}</h5>
-					<p class="grey">{item.text.slice(0,250)}...</p>
 				</div>
-				<button slot="button" class="btn1 btn01"><a href={item.link} target="_blank" rel="noreferrer">Visit</a></button>
-			</StandardCard>
-			</div>
 			{/each}
 		{/if}
-  </div>
+	</div>
+
 </div>
+
 
 <div class="containerof2by2withtitle padstd box4 fluid lineit">
   <div class="titleof2by2">
@@ -280,6 +258,10 @@ onMount(async() => {
 	&:hover
 		background: var(--bluea)
 		color: white
+
+.bulletinfilters
+	@media screen and (max-width: 1023px)
+		justify-content: center
 
 .bulletinfilters p.selectedfilter
 	background: var(--blueb)
