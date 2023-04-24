@@ -2,27 +2,39 @@
 import { onMount } from 'svelte'
 import { fly } from 'svelte/transition'
 import PaymentForm from '$lib/components/PaymentForm.svelte'
-import { nitividhanaOverview, nitividhanaTopics, nitividhanaQual, nitividhanaTopicsOverview, nitiDay1, nitiDay2, nitiDay3, nitiDay4, nitividhanaWhoFor } from '$lib/utils/supapulls'
+import { nitividhanaOverview, nitividhanaTopics, nitividhanaQual, nitividhanaTopicsOverview, nitiDay1, nitiDay2, nitiDay3, nitiDay4, nitividhanaWhoFor, nitividhanaFAQ } from '$lib/utils/supapulls'
 let overviews:any
 let topics:any
 let quals:any
 let whos:any
+let faqs:any
 let topicsover:any
 let day1items:any
 let day2items:any
 let day3items:any
 let day4items:any
 let selectedLabel:boolean[] =Array(3).fill(false)
+let openFaq:boolean[] =Array(20).fill(false)
 selectedLabel[1] = true
 let selectedDay:boolean[] = [false, false, false, false]
 let selectedlabelname:any = 'selectedlabelname'
 let nonselected:any = 'nonselected'
 let showModal:boolean = false
+
 function toggleLabel(index:number) {
 	selectedLabel[index] = !selectedLabel[index]
 	for ( let i = 0; i < selectedLabel.length; i++ ) {
 		if ( i !== index && selectedLabel[i] == true ) {
 			selectedLabel[i] = false
+		}
+	}
+}
+
+function toggleFAQ(index:number) {
+	openFaq[index] = !openFaq[index]
+	for ( let i = 0; i < openFaq.length; i++ ) {
+		if ( i !== index && openFaq[i] == true ) {
+			openFaq[i] = false
 		}
 	}
 }
@@ -46,6 +58,7 @@ onMount(async() => {
 	day2items = await nitiDay2()
 	day3items = await nitiDay3()
 	day4items = await nitiDay4()
+	faqs = await nitividhanaFAQ()
 })
 </script>
 
@@ -93,7 +106,7 @@ onMount(async() => {
 </div>
 
 <div class="simplecontainer padstd box4 fluid">
-	<div class="selectionstrip boxr">
+	<div class="selectionstrip">
 		<div class="label {selectedLabel[1] ? selectedlabelname : nonselected}" on:click={() => toggleLabel(1)} on:keydown={() => toggleLabel(1)}>
 			Topics
 		</div>
@@ -106,6 +119,9 @@ onMount(async() => {
 		<div class="label {selectedLabel[3] ? selectedlabelname : nonselected}" on:click={() => toggleLabel(3)} on:keydown={() => toggleLabel(3)}>
 			Schedule
 		</div>
+		<div class="label {selectedLabel[3] ? selectedlabelname : nonselected}" on:click={() => toggleLabel(6)} on:keydown={() => toggleLabel(6)}>
+			FAQs
+		</div>		
 		<div class="label2 {selectedLabel[5] ? selectedlabelname : nonselected}" on:click={() => (showModal = true)} on:keydown={() => (showModal = true)}>Register</div>
 	</div>
 	<div class="selectedcontent">
@@ -231,6 +247,18 @@ onMount(async() => {
 				</div>
 			{/if}
 		{/if}
+		{#if selectedLabel[6]}
+			{#if faqs && faqs.length > 0}
+				{#each faqs as item, i}
+					<div class="boxc" style="border-bottom: 1px solid #ececec" on:click={() => toggleFAQ(i)} on:keydown={() => toggleFAQ(i)}>
+						<h6>{item.sessionorname}</h6>
+						{#if openFaq[i]}
+						<pre>{item.keydimensions}</pre>
+						{/if}
+					</div>
+				{/each}
+			{/if}
+		{/if}
 	</div>
 </div>
 
@@ -325,12 +353,15 @@ onMount(async() => {
 		border-bottom: 1px solid #f1f1f1
 		justify-content: start
 		gap: 48px
+		display: flex
+		flex-direction: row
 		@media screen and (max-width: 1023px)
 			gap: 4px
+			flex-direction: column
 		.label
 			transition: all 0.08s var(--cubec)
-			padding-left: 2px
-			padding-right: 2px
+			padding-left: 8px
+			padding-right: 8px
 			cursor: pointer
 			transform-origin: center center
 			text-align: center
@@ -340,8 +371,8 @@ onMount(async() => {
 				transform: scale(0.9)
 		.label2
 			transition: all 0.08s var(--cubec)
-			padding-left: 2px
-			padding-right: 2px
+			padding-left: 8px
+			padding-right: 8px
 			cursor: pointer
 			transform-origin: center center
 			text-align: center
@@ -377,5 +408,23 @@ onMount(async() => {
 				padding-top: 16px
 			p
 				color: #878787
+
+.boxc
+	h6
+		cursor: pointer
+	pre
+		color: #878787
+		margin: 0
+		padding-bottom: 16px
+	@media screen and (max-width: 1023px)
+		.boxc
+			gap: 0
+		h6
+			font-size: 16px
+			padding: 5px 0
+			margin: 0
+		pre
+			margin: 0
+			padding-bottom: 8px
 
 </style>

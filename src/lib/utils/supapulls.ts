@@ -169,6 +169,16 @@ export async function nitividhanaQual(){
 	return data
 }
 
+export async function nitividhanaFAQ(){
+	const { data, error } = await supabase
+	.from('brhat-nitividhana')
+	.select()
+	.eq('type','faq')
+	.order('id')
+	if(error) throw new Error(error.message)
+	return data
+}
+
 export async function nitiDay1(){
 	const { data, error } = await supabase
 	.from('brhat-nitividhana')

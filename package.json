@@ -37,6 +37,7 @@
 	"dependencies": {
 		"@supabase/supabase-js": "^2.7.1",
 		"@sveltejs/svelte-scroller": "^2.0.7",
+		"@vercel/analytics": "^1.0.0",
 		"aos": "^3.0.0-beta.6",
 		"locomotive-scroll": "^4.1.4",
 		"muuri": "^0.9.5",
