@@ -75,9 +75,7 @@ onMount(async() => {
 		<h2 class="serif">
 			In partnership with Chinmaya International Foundation, a four-day residential immersion program in the essentials of today's burning policy issues.
 		</h2>
-		<button class="btn1 btn01" on:click={() => (showModal = true)} on:keydown={() => (showModal = true)}>Register Now</button>
 	</div>
-	<PaymentForm bind:showModal></PaymentForm>
 	<div class="columnright">
 		<h5>
 			11 - 14th May, 2023
@@ -122,7 +120,6 @@ onMount(async() => {
 		<div class="label {selectedLabel[3] ? selectedlabelname : nonselected}" on:click={() => toggleLabel(6)} on:keydown={() => toggleLabel(6)}>
 			FAQs
 		</div>		
-		<div class="label2 {selectedLabel[5] ? selectedlabelname : nonselected}" on:click={() => (showModal = true)} on:keydown={() => (showModal = true)}>Register</div>
 	</div>
 	<div class="selectedcontent">
 		{#if selectedLabel[1]}	
@@ -292,28 +289,6 @@ onMount(async() => {
 	align-items: center
 	justify-content: flex-end
 	padding-bottom: 64px
-	.textofniti
-		text-align: center
-		width: 60%
-		padding: 16px 0
-		h1
-			background: #DE8634
-			color: white
-			padding: 8px
-			font-size: 48px
-			text-transform: uppercase
-			margin: 0
-		h3
-			background: #ECA51B
-			color: white
-			text-transform: uppercase
-			padding: 6px
-		h4
-			background: #DE8634
-			color: white
-	@media screen and (max-width: 899px)
-		.textofniti
-			width: 90%
 
 .box7
 	height: 100vh
@@ -417,8 +392,6 @@ onMount(async() => {
 		margin: 0
 		padding-bottom: 16px
 	@media screen and (max-width: 1023px)
-		.boxc
-			gap: 0
 		h6
 			font-size: 16px
 			padding: 5px 0
