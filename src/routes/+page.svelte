@@ -7,6 +7,9 @@ import AllBet from '$lib/components/AllBet.svelte'
 import StandardCard from '$lib/components/StandardCard.svelte'
 let y = 1
 let blank = true
+let iW:number
+let dropDown:boolean = false
+let breakPoint:boolean
 let fake = false
 let recents:any 
 let articles:any
@@ -21,6 +24,10 @@ let bullets:any
 function fauxfake(){
 	fake = !fake
 }
+
+function toggleDropDown(){
+		dropDown = !dropDown
+	}
 
 function showFocus(index:number){
 	isFocus[index] = !isFocus[index]
@@ -62,6 +69,12 @@ setDefaultOptions({
 	blur: 0
 })
 
+$: if ( iW <= 1023 ) {
+		breakPoint = true
+	} else {
+		breakPoint = false
+	}
+
 onMount(async() => {
 	recents = await getRecent()
 	articles = await getArticles()
@@ -69,22 +82,25 @@ onMount(async() => {
 	partners = await getPartners()
 	homes = await homeVideos(limit)
 	bullets = await bulletin(value)
+	if ( iW <= 1023 ) {
+			breakPoint = true
+		}
 })
 </script>
 
-<svelte:window bind:scrollY={y}/>
+<svelte:window bind:scrollY={y} bind:innerWidth={iW}/>
 
-<div class="scrollsnapper">
+
 
 <div class="boxc ff img1">
 </div>
 
 <!-- introduction, our vision, image of students-->
-<div class="containerwithrightcolumn padstd box1 aligncenter fluid lineit topbox">
-  <div class="columnleft fit">
+<div class="rta-grid grid2 left rowgap-16 thirty is-padded colgap-32 minH aligncenter fluid lineit">
+  <div class="rta-image">
 		<img src="https://rnfvzaelmwbbvfbsppir.supabase.co/storage/v1/object/public/bet/twochildren.webp" alt="indian students studying" use:reveal />
 	</div>
-  <div class="columnright" use:reveal>
+  <div class="rta-in-col rowgap-16" use:reveal>
 		<h6 class="grey">OUR VISION</h6>
 		<h1 class="serif">Within the</h1>
 		<h1 class="serif forback">next 15 years,</h1>
@@ -96,29 +112,45 @@ onMount(async() => {
 
 <div class="simplecontainer padstd box20 fluid lineit" style="background-image: url('https://rnfvzaelmwbbvfbsppir.supabase.co/storage/v1/object/public/brhatwebsite/06drashta/policywall.webp')">
 	<h1 class="serif"><a href="/nitividhana">Nītividhāna</a></h1>
-	<h5>Civilizational Public Policy - 11 to 14 May 2023</h5>
+	<h5 class="ta-c-m">Civilizational Public Policy - 11 to 14 May 2023</h5>
 </div>
 
-<div class="dynamicwithtitle box10 fluid lineit">
-	<div class="titlearea centercalib">
+<div class="rta-column minH min is-padded rowgap-64 fluid lineit">
+	<div class="rta-in-col ta-c col-cent light rowgap-16">
 		<h2 class="titleis" use:reveal>IKS Bulletin</h2>
-		<div class="boxr bulletinfilters">
+		{#if !breakPoint}
+		<div class="rta-row bulletinfilters">
 			<p on:click={() => setFilter('Conferences')} on:keydown={fauxfake} class="onefilter {value === 'Conferences' ? 'selectedfilter' : ''}">Conferences</p>
 			<p on:click={() => setFilter('Careers')} on:keydown={fauxfake} class="onefilter {value === 'Careers' ? 'selectedfilter' : ''}">Careers</p>
 			<p on:click={() => setFilter('Courses')} on:keydown={fauxfake} class="onefilter {value === 'Courses' ? 'selectedfilter' : ''}">Courses</p>
 			<p on:click={() => setFilter('Books')} on:keydown={fauxfake} class="onefilter {value === 'Books' ? 'selectedfilter' : ''}">Books</p>
 			<p on:click={() => setFilter('Events')} on:keydown={fauxfake} class="onefilter {value === 'Events' ? 'selectedfilter' : ''}">Events</p>
 		</div>
+		{/if}
+		{#if breakPoint}
+		<button class="button blue" on:click={toggleDropDown} on:keydown={fauxfake}>Select Update Type</button>
+			{#if dropDown}
+				<div class="rta-in-col rowgap-16" id="dropdown" on:click={toggleDropDown} on:keydown={fauxfake}>
+					<h5 on:click={() => setFilter('Conferences')} on:keydown={fauxfake} class="onefilter {value === 'Conferences' ? 'selectedfilter' : ''}">Conferences</h5>
+					<h5 on:click={() => setFilter('Careers')} on:keydown={fauxfake} class="onefilter {value === 'Careers' ? 'selectedfilter' : ''}">Careers</h5>
+					<h5 on:click={() => setFilter('Courses')} on:keydown={fauxfake} class="onefilter {value === 'Courses' ? 'selectedfilter' : ''}">Courses</h5>
+					<h5 on:click={() => setFilter('Books')} on:keydown={fauxfake} class="onefilter {value === 'Books' ? 'selectedfilter' : ''}">Books</h5>
+					<h5 on:click={() => setFilter('Events')} on:keydown={fauxfake} class="onefilter {value === 'Events' ? 'selectedfilter' : ''}">Events</h5>
+				</div>
+			{/if}
+		{/if}
 	</div>
-	<div class="bodyarea">
+	<div class="rta-in-col rowgap-32">
 		{#if bullets && bullets.length > 0}
 			{#each bullets as item, i}
-				<div class="standardlarger" use:reveal={{ delay: i*20 }} in:fly={{ duration: 200, delay: i * 50}} out:fly={{ delay: 0, duration: 100}}>
-						<img class="image" src={item.image} alt={item.name} />
-						<div class="text">
-							<h5>{item.name}</h5>
+				<div class="rta-row row-col rowgap-16 colgap-24 bord-bot bot-p-16" use:reveal={{ delay: i*20 }} in:fly={{ duration: 200, delay: i * 50}} out:fly={{ delay: 0, duration: 100}}>
+					<div class="rta-image w32 height-30">
+						<img src={item.image} alt={item.name} />
+					</div>
+					<div class="rta-in-col rowgap-16 text w64 light">
+							<h5 style="color: #272727">{item.name}</h5>
 							<p>{item.text}</p>
-							<button class="btn1 btn01"><a href={item.link} target="_blank" rel="noreferrer">Visit</a></button>
+							<button class="button blue"><a href={item.link} target="_blank" rel="noreferrer">Visit</a></button>
 						</div>
 				</div>
 			{/each}
@@ -128,12 +160,12 @@ onMount(async() => {
 </div>
 
 
-<div class="containerof2by2withtitle padstd box4 fluid lineit">
-  <div class="titleof2by2">
-		<h2 class="titleis" use:reveal>Focus Areas</h2>
+<div class="rta-column is-padded minH rowgap-64 fluid lineit">
+  <div class="rta-in-col">
+		<h2 class="titleis ta-c-m" use:reveal>Focus Areas</h2>
 	</div>
-  <div class="boxof2by2">
-    <div class="boxof2by2one carded fiticon" use:reveal={{ delay: 0}} on:click={() => showFocus(1)} on:keydown={() => showFocus(1)}>
+  <div class="rta-grid grid2 rowgap-32">
+    <div class="rta-in-col col-cent-m rta-icon2" use:reveal={{ delay: 0}} on:click={() => showFocus(1)} on:keydown={() => showFocus(1)}>
 			<img src="/images/icon-curr.png" alt="icon" />
 			<h5>Curriculum Building</h5>
 			{#if isFocus[1]}
@@ -142,7 +174,7 @@ onMount(async() => {
 			</p>
 			{/if}
 		</div>
-    <div class="boxof2by2two carded fiticon" use:reveal={{ delay: 50}} on:click={() => showFocus(2)} on:keydown={() => showFocus(2)}>
+    <div class="rta-in-col col-cent-m rta-icon2" use:reveal={{ delay: 50}} on:click={() => showFocus(2)} on:keydown={() => showFocus(2)}>
 			<img src="/images/icon-nep.png" alt="icon" />
 			<h5>NEP-IKS Implementation</h5>
 			{#if isFocus[2]}
@@ -151,7 +183,7 @@ onMount(async() => {
 			</p>
 			{/if}
 		</div>
-    <div class="boxof2by2three carded fiticon" use:reveal={{ delay: 100}} on:click={() => showFocus(3)} on:keydown={() => showFocus(3)}>
+    <div class="rta-in-col col-cent-m rta-icon2" use:reveal={{ delay: 100}} on:click={() => showFocus(3)} on:keydown={() => showFocus(3)}>
 			<img src="/images/icon-nep.png" alt="icon" />
 			<h5>Competency Development</h5>
 			{#if isFocus[3]}
@@ -160,7 +192,7 @@ onMount(async() => {
 			</p>
 			{/if}
 		</div>
-    <div class="boxof2by2four carded fiticon" use:reveal={{ delay: 150}} on:click={() => showFocus(4)} on:keydown={() => showFocus(4)}>
+    <div class="rta-in-col col-cent-m rta-icon2" use:reveal={{ delay: 150}} on:click={() => showFocus(4)} on:keydown={() => showFocus(4)}>
 			<img src="/images/icon-ld.png" alt="icon" />
 			<h5>Learning Design</h5>
 			{#if isFocus[4]}
@@ -172,63 +204,63 @@ onMount(async() => {
   </div>
 </div>
 
-<div class="dynamicwithtitleand3by2double padstd box4 fluid lineit">
-	<div class="titleof3by2dyn centercalib">
-		<h2 class="titleis" use:reveal>
+<div class="rta-column is-padded minH min rowgap-64 fluid lineit">
+	<div class="rta-in-col">
+		<h2 class="titleis ta-c-m" use:reveal>
 			IKS Primers
 		</h2>
 	</div>
-	<div class="boxof3by2dynsingle">
+	<div class="rta-grid grid3 colgap-32 rowgap-32">
 		{#if articles && articles.length > 0}
 			{#each articles as item, i}
-				<div class="boxc carded" use:reveal={{ delay: i*50}}>
+				<div class="rta-in-col" use:reveal={{ delay: i*50}}>
 					<h5><a href={item.link}>{item.name}</a></h5>
 					<small class="grey">{item.author}</small>
 				</div>
 			{/each}
 		{/if}
 	</div>
-	<div class="boxof3by2dyndouble">
+	<div class="rta-grid grid3 colgap-32 rowgap-32">
 		{#if homes && homes.length > 0}
 			{#each homes as item, i}
-				<div class="boxc a-vid" use:reveal={{ delay: i*60}}>
+				<div class="rta-video" use:reveal={{ delay: i*60}}>
 					<iframe width="100%" height="100%" src="https://www.youtube.com/embed/{item.videoid}" title={item.name} frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
-					<p class="grey">{item.name}</p>	
+					<small class="grey">{item.name}</small>	
 				</div>
 			{/each}
 		{/if}
 	</div>
-	<div class="loadbutton">
-		<button class="btn1 btn01" on:click={loadMore} on:keydown={loadMore}>Load More</button>
+	<div class="loadbutton light">
+		<button class="button blue" on:click={loadMore} on:keydown={loadMore}>Load More</button>
 	</div>
 </div>
 
-<div class="dynamicwithtitleand3by2 padstd box5 fluid lineit">
-	<div class="titleof3by2dyn centercalib">
-		<h2 class="titleis" use:reveal>
+<div class="rta-column is-padded minH rowgap-64 fluid lineit">
+	<div class="rta-in-col">
+		<h2 class="titleis ta-c-m" use:reveal>
 			IKS Roadmap and Strategy
 		</h2>
 	</div>
-	<div class="boxof3by2dyn">
+	<div class="rta-grid grid3 rowgap-32 colgap-32">
 		{#if videos && videos.length > 0}
 			{#each videos as item, i}
-				<div class="boxc a-vid" use:reveal={{ delay: i*60}}>
+				<div class="rta-video" use:reveal={{ delay: i*60}}>
 					<iframe width="100%" height="100%" src="https://www.youtube.com/embed/{item.videoid}" title={item.name} frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
-					<p class="grey">{item.name}</p>	
+					<small class="grey">{item.name}</small>	
 				</div>
 			{/each}
 		{/if}
 	</div>
 </div>
 
-<div class="containerwithtitleandunknown padstd fluid box6 lineit">
-	<div class="titleofunknown centercalib">
-		<h2 class="titleis" use:reveal>Partners</h2>
+<div class="rta-column is-padded rowgap-64 fluid lineit bot-p-64">
+	<div class="rta-in-col">
+		<h2 class="titleis ta-c-m" use:reveal>Partners</h2>
 	</div>
-	<div class="unknown">
+	<div class="rta-grid grid4 rowgap-32 colgap-32">
 		{#if partners && partners.length > 0}
 			{#each partners as item}
-				<div class="boxc fit">
+				<div class="rta-image height-20">
 					<a href={item.link} target="_blank" rel="noreferrer"><img class="brandlogo" src={item.image} alt={item.name}/></a>
 				</div>
 			{/each}
@@ -236,20 +268,13 @@ onMount(async() => {
 	</div>
 </div>
 
-</div>
 
 
 <style lang="sass">
 
-.box10
-	.bodyarea
-		padding-top: 32px
-		padding-bottom: 32px
-		display: flex
-		flex-direction: column
-		row-gap: 32px
-		p
-			color: #878787
+#dropdown
+	text-align: center
+	padding-top: 16px
 
 .bulletinfilters p
 	text-transform: uppercase
@@ -259,26 +284,12 @@ onMount(async() => {
 		background: var(--bluea)
 		color: white
 
-.bulletinfilters
-	@media screen and (max-width: 1023px)
-		justify-content: center
-
 .bulletinfilters p.selectedfilter
 	background: var(--blueb)
 	color: white
 	&:hover
 		background: #676767
 		cursor: none
-
-.a-vid
-	@media screen and (min-width: 1024px)
-		height: 280px
-		iframe
-			height: 200px
-	@media screen and (max-width: 1023px)
-		height: 240px !important
-		iframe
-			height: 200px !important
 
 .box20
 	height: 100vh
@@ -298,13 +309,6 @@ onMount(async() => {
 	@media screen and (max-width: 575px)
 		height: 60vh
 
-
-.scrollsnapper
-	scroll-snap-type: y mandatory
-
-.img1, .padstd
-	scroll-snap-align: start
-
 .img1
 	background-image: url('/images/about-parambika.png')
 	height: 100vh
@@ -314,51 +318,7 @@ onMount(async() => {
 	@media screen and (max-width: 575px)
 		height: 50vh
 
-.box1
-	@media screen and (min-width: 1024px)
-		height: 100vh
-		align-items: center
-	@media screen and (max-width: 1023px)
-		img
-			object-fit: cover
-			height: 280px
-			width: 100%
-
-
-.box3
-	.boxof2by2dyn
-		width: 100%
-
-
-.box4
-	.titleof2by2	
-		text-align: center
-		display: flex
-		flex-direction: column
-		align-items: center
-		text-align: center
-	.boxof2by2
-		align-items: start
-		padding-left: 4vw
-		padding-right: 4vw
-		gap: 24px 48px
-		.carded
-			h5
-				cursor: pointer
-				&:hover
-					color: var(--niti)
-	.fiticon
-		display: flex
-		flex-direction: column
-		img
-			margin: auto
-			text-align: center
-		h5
-			text-align: center
-	@media screen and (max-width: 1024px)
-		.boxof2by2
-			width: 100%
-			iframe
-				width: 100%
+.rta-in-col p
+	line-height: 1.6
 
 </style>

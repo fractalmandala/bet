@@ -18,6 +18,7 @@ function toggleMenu() {
 	</div>
 	<div class="navarea">
 		<nav>
+			<a href="/bulletin">Bulletin</a>
 			<a href="/vision">Our Gaze</a>
 			<a href="/about">Our Work</a>
 			<a href="/engage">Engage</a>
@@ -36,6 +37,7 @@ function toggleMenu() {
 		<div class="min-row" on:click={toggleMenu} on:keydown={toggleMenu}>
 			<img src="/images/hamburger-close.png" alt="icon" />
 		</div>
+		<a href="/bulletin" on:click={toggleMenu}>Bulletin</a>
 		<a href="/vision" on:click={toggleMenu}>Our Gaze</a>
 		<a href="/about" on:click={toggleMenu}>Our Work</a>
 			<a href="/engage" on:click={toggleMenu}>Engage</a>

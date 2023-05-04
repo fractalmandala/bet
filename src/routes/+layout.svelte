@@ -6,6 +6,7 @@ import { fly } from 'svelte/transition'
 import '$lib/styles/alltext.sass'
 import '$lib/styles/alltokens.sass'
 import '$lib/styles/global.sass'
+import '$lib/styles/newmod.sass'
 import '$lib/styles/containers.sass'
 export let data
 let showMobile:boolean = false
@@ -25,6 +26,7 @@ function toggleMobile(){
 			</a>
 		</div>
 		<div class="navarea">
+			<a href="/bulletin">IKS Bulletin</a>
 			<a href="/vision">Our Gaze</a>
 			<a href="/about">Our Work</a>
 			<a href="/engage">Engage</a>
@@ -70,6 +72,7 @@ function toggleMobile(){
 </div>
 {#if showMobile}
 	<div class="boxc fluid mobilemenu" in:fly={{ duration: 350, delay: 30, x: 400, y: 0}} out:fly={{ duration: 300, delay: 0, x: 400, y: 0}} on:click={toggleMobile} on:keydown={toggleMobile}>
+		<h3><a href="/bulletin">IKS Bulletin</a></h3>
 		<h3><a href="/vision">Our Gaze</a></h3>
 		<h3><a href="/about">Our Work</a></h3>
 		<h3><a href="/engage">Engage</a></h3>
@@ -177,6 +180,8 @@ function toggleMobile(){
 				filter: saturate(1)
 .appbox 
 	grid-area: appbox 
+	box-sizing: border-box
+	padding: 0
 
 .navarea
 	@media screen and (min-width: 900px)
