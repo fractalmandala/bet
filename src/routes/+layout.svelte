@@ -17,6 +17,18 @@ function toggleMobile(){
 
 </script>
 
+<svelte:head>
+<!-- Google tag (gtag.js) -->
+	<script async src="https://www.googletagmanager.com/gtag/js?id=G-V6X96E579M"></script>
+	<script>
+  	window.dataLayer = window.dataLayer || [];
+  	function gtag(){dataLayer.push(arguments);}
+  	gtag('js', new Date());
+  	gtag('config', 'G-V6X96E579M');
+</script>
+
+</svelte:head>
+
 
 <div class="appcontainer">
   <div class="appheader">
