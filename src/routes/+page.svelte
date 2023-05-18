@@ -110,11 +110,6 @@ onMount(async() => {
 	</div>
 </div>
 
-<div class="simplecontainer padstd box20 fluid lineit" style="background-image: url('https://rnfvzaelmwbbvfbsppir.supabase.co/storage/v1/object/public/brhatwebsite/06drashta/policywall.webp')">
-	<h1 class="serif"><a href="/nitividhana">Nītividhāna</a></h1>
-	<h5 class="ta-c-m">Civilizational Public Policy - 11 to 14 May 2023</h5>
-</div>
-
 <div class="rta-column minH min is-padded rowgap-64 fluid lineit">
 	<div class="rta-in-col ta-c col-cent light rowgap-16">
 		<h2 class="titleis" use:reveal>IKS Bulletin</h2>
