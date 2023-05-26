@@ -1,5 +1,6 @@
 <script lang="ts">
 import { onMount } from 'svelte'
+import { breakZero, breakOne, breakTwo, windowWidth } from '$lib/utils/globalstores'
 import Analytics from '$lib/components/globals/Analytics.svelte'
 import PageTransitions from '$lib/components/globals/PageTransitions.svelte'
 import { fly } from 'svelte/transition'
@@ -29,8 +30,13 @@ function toggleMobile(){
 
 </svelte:head>
 
+<svelte:window bind:innerWidth={$windowWidth}/>
 
-<div class="appcontainer">
+<div class="appcontainer"
+	class:levelzero={$breakZero}
+	class:levelone={$breakOne}
+	class:leveltwo={$breakTwo}
+>
   <div class="appheader">
 		<div class="namearea">
 			<a href="/">

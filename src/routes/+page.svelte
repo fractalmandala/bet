@@ -114,7 +114,7 @@ onMount(async() => {
 	<div class="rta-in-col ta-c col-cent light rowgap-16">
 		<h2 class="titleis" use:reveal>IKS Bulletin</h2>
 		{#if !breakPoint}
-		<div class="rta-row bulletinfilters">
+		<div class="rta-row colgap-16 bulletinfilters">
 			<p on:click={() => setFilter('Conferences')} on:keydown={fauxfake} class="onefilter {value === 'Conferences' ? 'selectedfilter' : ''}">Conferences</p>
 			<p on:click={() => setFilter('Careers')} on:keydown={fauxfake} class="onefilter {value === 'Careers' ? 'selectedfilter' : ''}">Careers</p>
 			<p on:click={() => setFilter('Courses')} on:keydown={fauxfake} class="onefilter {value === 'Courses' ? 'selectedfilter' : ''}">Courses</p>
@@ -285,24 +285,6 @@ onMount(async() => {
 	&:hover
 		background: #676767
 		cursor: none
-
-.box20
-	height: 100vh
-	background-size: cover
-	background-repeat: no-repeat
-	background-position: center center
-	align-content: end
-	justify-items: center
-	h1
-		background: #602C2D
-		color: white
-		padding: 4px 32px
-	h5
-		background: var(--niti)
-		color: white
-		padding: 5px	
-	@media screen and (max-width: 575px)
-		height: 60vh
 
 .img1
 	background-image: url('/images/about-parambika.png')

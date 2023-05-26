@@ -175,6 +175,10 @@ $serif: 'STIX Two Text', serif
 .rta-row
 	display: flex
 	flex-direction: row
+	&.ycenter
+		align-items: center
+	&.between
+		justify-content: space-between
 	@media screen and (min-width: 1024px)
 		.w32
 			width: 32%
@@ -527,6 +531,7 @@ $serif: 'STIX Two Text', serif
 	border-top: none
 	cursor: pointer
 	width: max-content
+	z-index: 1
 	&::after
 		content: " "
 		width: 0%
@@ -534,6 +539,7 @@ $serif: 'STIX Two Text', serif
 		position: absolute
 		transition: all 0.4s ease-in-out
 		right: 0
+		z-index: 0
 	&:hover
 		&::after
 			right: auto
@@ -590,7 +596,7 @@ $serif: 'STIX Two Text', serif
 		height: 48px
 
 .basic-button
-	height: 24px
+	height: 28px
 	min-width: 40px
 	border-radius: 2px
 	text-transform: uppercase
@@ -598,14 +604,73 @@ $serif: 'STIX Two Text', serif
 	transition: all 0.18s ease-in-out
 	transform-origin: center center
 	width: max-content
+	background: #fe4a49
+	color: white
+	border: 1px solid $red
 	&:hover
 		transform: scale(0.88)
+		background: $white
+		color: $red
+		border: 1px solid $red
 	@medias screen and (min-width: 1024px)
 		font-size: 12px
 	@media screen and (max-width: 1023px)
 		font-size: 14px
 		height: 28px
 		min-width: 48px
+
+.out-button
+	height: 28px
+	min-width: 40px
+	border-radius: 2px
+	text-transform: uppercase
+	cursor: pointer
+	transition: all 0.18s ease-in-out
+	transform-origin: center center
+	width: max-content
+	background: $white
+	color: $red
+	border: 1px solid $red
+	&:hover
+		transform: scale(0.88)
+		background: #fe4a49
+		color: white
+		border: 1px solid $red
+	@medias screen and (min-width: 1024px)
+		font-size: 12px
+	@media screen and (max-width: 1023px)
+		font-size: 14px
+		height: 28px
+		min-width: 48px
+
+.levelzero
+	.basic-button.lg
+		font-size: 18px
+		height: 40px
+		padding-left: 16px
+		padding-right: 16px
+
+.levelone
+	.basic-button.lg
+		font-size: 18px
+		height: 40px
+		padding-left: 16px
+		padding-right: 16px
+
+.leveltwo
+	.basic-button.lg
+		font-size: 16px
+		height: 32px
+		padding-left: 16px
+		padding-right: 16px
+	.p-bot-16-m
+		padding-bottom: 16px
+
+.levelone
+	.p-bot-16-m
+		padding-bottom: 16px
+
+
 
 .light.basic-button
 	background: $white
@@ -1260,3 +1325,8 @@ $serif: 'STIX Two Text', serif
 		background: linear-gradient(90deg, transparent, #ff9966, #ff9966, #ff9966, #ff9966, transparent) 
 		animation: rotation_481 5000ms infinite linear 
 
+.blank-button
+	cursor: pointer
+	background: none
+	border: none
+	padding: 0
