@@ -1,10 +1,7 @@
 <div class="containerwithwidecolumn box1 topbox padstd fluid">
 	<div class="columnleft fit">
-		<h2 class="bluea serif">
-			Sponsor Bṛhat's Dhārmika Culture Engine
-		</h2>
 		<h5>
-			To support our work and help keep the engine running, you can contribute directly by sending funds on our UPI ID: brhat@icici
+			To support our work and help keep the culture engine running, you can contribute directly by sending funds on our UPI ID: brhat@icici
 		</h5>
 		<h5>Alternately, you can transfer to our bank account:</h5>
 		<p>
@@ -14,10 +11,6 @@
 			IFSC: ICIC0000040<br>
 			Account Type: Current<br>
 		</p>
-		<h5>
-			You can also read more about our work so far, planned roadmap, and contribute to the culture engine at our crowdfunding campaign live at Dharmic Crowdfunding.
-		</h5>
-		<button class="btn1 btn01"><a href="https://dharmiccrowdfunding.com/product/sponsor-a-dharmic-culture-engine-by-b%e1%b9%9bhat-phase-1-seed-fund/" target="_blank" rel="noreferrer">Visit DCF and Sponsor</a></button>
 	</div>
 	<div class="columnright">
 		<small class="grey">
