@@ -352,13 +352,14 @@ export async function samikshanaFaculty(){
 }
 
 
+// eslint-disable-next-line @typescript-eslint/no-explicit-any
 export async function bulletin(value:any){
 	const { data, error } = await supabase
 	.from('brhat-bet')
 	.select()
-	.textSearch('type',value)
+	.eq('type',value)
 	.neq('type','event')
-	.order('sequence',{ascending: false})
+	.order('id',{ascending: false})
 	if (error) throw new Error(error.message)
 	return data	
 }
