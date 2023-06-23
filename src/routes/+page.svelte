@@ -21,7 +21,7 @@
 	let videos: any;
 	let partners: any;
 	let homes: any;
-	let value: any = 'Books';
+	let value: string = 'Books';
 	let limit: number = 3;
 	let isFocus: boolean[] = [false, false, false, false];
 	let bullets: any;
