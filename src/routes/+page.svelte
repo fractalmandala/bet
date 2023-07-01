@@ -381,7 +381,7 @@
 	<div class="rta-in-col">
 		<h2 class="titleis ta-c-m" use:reveal>Partners</h2>
 	</div>
-	<div class="rta-grid grid4 rowgap-32 colgap-32">
+	<div class="rta-grid grid5 rowgap-32 colgap-32">
 		{#if partners && partners.length > 0}
 			{#each partners as item}
 				<div class="rta-image height-20">
