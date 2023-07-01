@@ -358,6 +358,7 @@ export async function bulletin(value:any){
 	.from('brhat-bet')
 	.select()
 	.eq('type',value)
+	.eq('bulletintag',true)
 	.neq('type','event')
 	.order('id',{ascending: false})
 	if (error) throw new Error(error.message)
