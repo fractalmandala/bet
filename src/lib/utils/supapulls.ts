@@ -16,8 +16,7 @@ export async function getCourses(){
 	.from('brhat-drashta2')
 	.select()
 	.eq('type','overview')
-	.order('id')
-	.limit(4)
+	.order('sequence',{ascending: false})
 	if (error) throw new Error(error.message)
 	return data
 }
