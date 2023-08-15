@@ -372,3 +372,12 @@ export async function samThemes(){
 	if (error) throw new Error(error.message)
 	return data	
 }
+
+export async function samSched(){
+	const { data, error } = await supabase
+	.from('bet-samikshanaschedule')
+	.select()
+	.order('id')
+	if (error) throw new Error(error.message)
+	return data	
+}

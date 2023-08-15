@@ -1,11 +1,13 @@
 <script lang="ts">
 	import { onMount } from 'svelte';
-	import { samThemes } from '$lib/utils/supapulls';
+	import { samThemes, samSched } from '$lib/utils/supapulls';
 
 	let themes: any;
+	let sched: any;
 
 	onMount(async () => {
 		themes = await samThemes();
+		sched = await samSched();
 	});
 </script>
 
@@ -118,6 +120,19 @@ Second Cut off List for Shortlisted Students:
 		</pre>
 	</div>
 </div>
+<div class="rta-column sixth fluid">
+	<h4>Course Schedule</h4>
+	{#if sched && sched.length > 0}
+		<div class="rta-grid grid2">
+			{#each sched as item}
+				<div class="rta-column">
+					<h6>{item.month}</h6>
+					<pre>{item.details}</pre>
+				</div>
+			{/each}
+		</div>
+	{/if}
+</div>
 
 <style lang="sass">
 
@@ -213,7 +228,7 @@ h4
 			margin-top: 8px
 			margin-bottom: 8px
 
-.fifth
+.fifth, .sixth
 	justify-content: flex-start
 	.rta-column
 		border-bottom: 1px solid #d7d7d7
@@ -236,6 +251,11 @@ h4
 	@media screen and (max-width: 768px)
 		padding-left: 24px
 		padding-right: 24px
+
+.sixth
+	.rta-grid
+		column-gap: 64px
+	padding-bottom: 64px
 
 .heading
 	justify-content: center
