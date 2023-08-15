@@ -363,3 +363,12 @@ export async function bulletin(value:any){
 	if (error) throw new Error(error.message)
 	return data	
 }
+
+export async function samThemes(){
+	const { data, error } = await supabase
+	.from('bet-samikshanathemes')
+	.select()
+	.order('id')
+	if (error) throw new Error(error.message)
+	return data	
+}
