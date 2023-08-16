@@ -20,10 +20,12 @@
 </div>
 <div class="rta-column minH second fluid">
 	<h5 style="font-weight: 400; line-height: 1.4">
-		Each individual life is a distinct biography. Time and again, scientists from the Orient, as
-		well as the Occident, have believed that human nature is kaleidoscopic. The study of Human
-		Evolution and Counselling is witnessing an exciting phase of growth; moving beyond the
-		Euro-American theories and thus further exploring culturally rooted perspectives. This is a
+		Each individual life is a unique and intricate tapestry, woven from the threads of biology,
+		culture, and experience. The study of human evolution and counseling is a fascinating and
+		ever-evolving field that seeks to understand the complex forces that shape our lives. For
+		centuries, scientists from the East and West have recognized the kaleidoscopic nature of human
+		nature. In recent years, there has been a growing movement to move beyond Euro-American theories
+		and explore culturally rooted perspectives on human development and well-being. This is a
 		distinctive occasion to learn from pioneering experts and secure scholarly insights into the
 		field.
 	</h5>
@@ -39,24 +41,47 @@
 		</div>
 		<div class="rta-column">
 			<img src="/images/icon-number.png" alt="number" />
-			<p>6/3 - Every Weekend</p>
+			<p>4 Sessions Every Weekend</p>
 		</div>
 		<div class="rta-column">
 			<img src="/images/icon-rupee.png" alt="fees" />
-			<p>Rs 70,000 | $1300</p>
+			<p>₹62500 | $1300</p>
+			<small>Excluding GST</small>
 		</div>
 	</div>
 </div>
-<div class="rta-column minH third fluid">
-	<h4>Adhyayana - The Study</h4>
-	<h5 style="font-weight: 400; line-height: 1.4">
-		A multidisciplinary, and innovative study integrates 20 diverse perspectives of the Orient
-		(Vedic) and the Occident (Modern) to examine the ‘HUMAN’ in its entirety. It combines
-		fundamental principles from the fields of Psychology, Philosophy, Embryology, Vedānta, Yoga,
-		Āyurveda, Political Science, Musicology, Economics, Neuroscience, Naturopathy, and other related
-		disciplines. It will also introduce you to various facets of Counselling, encompassing a broad
-		range of culturally sensitive practices that aim to enable individuals to enhance their
-		well-being, alleviate distress and improve overall functioning in life.
+<div class="rta-column third fluid">
+	<h4>Course Introduction</h4>
+	<h5 style="font-weight: 400; line-height: 1.4; margin-bottom: 24px">
+		Welcome to Samīkṣaṇā – a transformative journey into the depths of human existence,
+		consciousness, and evolution. In a world where each life story is an intricate biography, woven
+		by the threads of circumstance, choice, and opportunity, the narratives of humanity are as
+		diverse as they are boundless.
+	</h5>
+	<h5 style="font-weight: 400; line-height: 1.4; margin-bottom: 24px">
+		Embark on this remarkable exploration as we intertwine the wisdom of modern and traditional
+		epistemes, seamlessly blending the insights of different eras. Samīkṣaṇā draws from both the
+		Orient and the Occident, forging an interdisciplinary approach that casts a brilliant light on
+		the 'HUMAN' in its entirety. Central to our odyssey lies a profound curiosity about the rhythm
+		and essence of people's lives. How do we decipher the enigma of our existence? This
+		ground-breaking multidisciplinary study transcends conventional boundaries, weaving together
+		threads from psychology, philosophy, embryology, political science, musicology, economics,
+		naturopathy, Vedanta and beyond.
+	</h5>
+	<h5 style="font-weight: 400; line-height: 1.4; margin-bottom: 24px">
+		Dive into the heart of comprehending human evolution, not just as a passive observer, but as an
+		engaged participant. Samīkṣaṇā opens a window into the collective journey of the human species –
+		an invitation to explore your own path and the journeys of fellow beings. In an era where stress
+		and emotional challenges are prevalent, mental well-being often takes a back seat. This is where
+		Samīkṣaṇā steps in, emerging as a timely and essential endeavour. With a confluence of twenty
+		trans-disciplinary perspectives from both the East and the West, this course seeks to address
+		the question of 'Why Are We The Way We Are?' with profound depth and cultural sensitivity.
+	</h5>
+	<h5 style="font-weight: 400; line-height: 1.4; margin-bottom: 24px">
+		With roots in Indian Knowledge Systems (IKS) and a blend of diverse traditions Sāmikṣaṇā fuses
+		timeless wisdom with present understanding, revealing the profound tapestry of human existence.
+		Step into a realm of self-discovery, understanding, and transformation, where the mysteries of
+		evolution intertwine with clarity and connection, transcending time and traditions.
 	</h5>
 </div>
 <div class="rta-column fourth fluid">
@@ -79,14 +104,15 @@
 	<div class="rta-column">
 		<h6>Learner Takeaways:</h6>
 		<pre>
-1. Explore how thoughts, emotions, and experiences come together to define who you are.
-2. How personalities are molded by culture, experience and genetics.
-3. Empower yourself with multi-dimensional perspectives on life
-4. Enhance interpersonal skills for effective relationships with oneself and others,
-5. Acquire profound insights to excel professionally 
-6. Connect Mind, Body, and Spirit for a balanced and harmonious existence.
-7. Deepen cultural understanding and widen worldviews through interdisciplinary exploration
-8. Equip yourself to embrace leadership roles blending ancient wisdom with modern demands.
+1. Delve into the intricate elements shaping an individual's mind, understanding how thoughts, emotions, and experiences come together to define who we are.
+2. Gain insights into the holistic factors that mould our personalities, considering diverse influences such as culture, experiences, and genetics. 
+3. Discover empowering insights across all dimensions of human existence, fostering a resilient approach to life's challenges.
+4. Enhance interpersonal skills for effective relationships with oneself and others, honing abilities crucial for personal and professional success. 
+5. Acquire profound insights to excel professionally while fostering mental health, adeptly navigating diverse contexts from families to workplaces. 
+6. Uncover your role in society, forging a clear path to a meaningful and fulfilling life, guided by fundamental principles. 
+7.  Explore the intricate interplay between the physical, mental, and spiritual dimensions, fostering a balanced and harmonious existence. 
+8.  Deepen cultural understanding and widen worldviews through interdisciplinary exploration, enriching perspectives on global issues. 
+9. Equip yourself to embrace leadership roles with the ability to shoulder expectations, blending ancient wisdom with modern demands. 
 		</pre>
 	</div>
 	<div class="rta-column">
