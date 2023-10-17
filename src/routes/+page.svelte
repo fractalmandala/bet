@@ -235,6 +235,12 @@
 	</div>
 </div>
 
+<div class="rta-column rowgap-64 niti">
+	<a href="https://brhat.in/nitividhana">
+		<img src="/images/nitividhanahero.webp" alt="nitividhana" />
+	</a>
+</div>
+
 <div class="rta-column is-padded minH rowgap-64 fluid lineit">
 	<div class="rta-in-col">
 		<h2 class="titleis ta-c-m" use:reveal>Focus Areas</h2>
@@ -395,6 +401,12 @@
 </div>
 
 <style lang="sass">
+
+.niti
+	a 
+		img
+			object-fit: cover
+			width: 100%
 
 #dropdown
 	text-align: center
