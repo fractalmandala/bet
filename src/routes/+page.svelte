@@ -410,6 +410,10 @@
 	@media screen and (max-width: 768px)
 		height: 50vh
 		width: 100vw
+		img
+			height: 50vh
+			width: 100vw
+			object-fit: cover
 
 #dropdown
 	text-align: center
