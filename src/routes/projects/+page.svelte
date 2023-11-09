@@ -59,6 +59,10 @@
 
 <style lang="sass">
 
+img
+  object-fit: contain
+  width: 100%   
+
 h5
  a 
   text-decoration: underline
