@@ -60,8 +60,12 @@
 <style lang="sass">
 
 img
-  object-fit: contain
+  object-fit: cover
   width: 100%   
+  @media screen and (min-width: 769px)
+    height: 240px
+  @media screen and (max-width: 768px)
+    height: 200px
 
 h5
  a 
