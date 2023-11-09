@@ -48,6 +48,7 @@ function toggleMobile(){
 			<a href="/vision">Our Gaze</a>
 			<a href="/about">Our Work</a>
 			<a href="/engage">Engage</a>
+			<a href="/projects">Projects</a>
 			<a href="/sponsor">Support Us</a>
 			<img class="menuicon" src="/images/hamburger-white.png" alt="icon" on:click={toggleMobile} on:keydown={toggleMobile} />
 		</div>
@@ -94,6 +95,7 @@ function toggleMobile(){
 		<h3><a href="/vision">Our Gaze</a></h3>
 		<h3><a href="/about">Our Work</a></h3>
 		<h3><a href="/engage">Engage</a></h3>
+		<h3><a href="/projects">Projects</a></h3>
 		<h3><a href="/sponsor">Support</a></h3>
 	</div>
 {/if}

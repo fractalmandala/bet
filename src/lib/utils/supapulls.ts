@@ -381,3 +381,12 @@ export async function samSched(){
 	if (error) throw new Error(error.message)
 	return data	
 }
+
+export async function betProjects(){
+	const { data, error } = await supabase
+	.from('bet-projects')
+	.select()
+	.order('id')
+	if (error) throw new Error(error.message)
+	return data
+}

@@ -22,6 +22,7 @@ function toggleMenu() {
 			<a href="/vision">Our Gaze</a>
 			<a href="/about">Our Work</a>
 			<a href="/engage">Engage</a>
+			<a href="/projects">Projects</a>
 			<a href="/sponsor">Support Us</a>
 		</nav>
 	</div>
@@ -41,6 +42,7 @@ function toggleMenu() {
 		<a href="/vision" on:click={toggleMenu}>Our Gaze</a>
 		<a href="/about" on:click={toggleMenu}>Our Work</a>
 			<a href="/engage" on:click={toggleMenu}>Engage</a>
+			<a href="/projects" on:click={toggleMenu}>Projects</a>
 		<a href="/sponsor" on:click={toggleMenu}>Support Us</a>
 		</div>
 		{/if}
