@@ -1,5 +1,7 @@
 <script lang="ts">
 	import { onMount, afterUpdate } from 'svelte';
+	import { Splide, SplideSlide, SplideTrack } from '@splidejs/svelte-splide';
+	import '@splidejs/splide/css/core';
 	import { reveal, setDefaultOptions } from 'svelte-reveal';
 	import { fly } from 'svelte/transition';
 	import {
@@ -8,7 +10,8 @@
 		getYoutube,
 		getPartners,
 		homeVideos,
-		bulletin
+		bulletin,
+		betProjects
 	} from '$lib/utils/supapulls';
 	let y = 1;
 	let blank = true;
@@ -19,6 +22,7 @@
 	let recents: any;
 	let articles: any;
 	let videos: any;
+	let projects: any;
 	let partners: any;
 	let homes: any;
 	let value: string = 'Books';
@@ -85,6 +89,7 @@
 		articles = await getArticles();
 		videos = await getYoutube();
 		partners = await getPartners();
+		projects = await betProjects();
 		homes = await homeVideos(limit);
 		bullets = await bulletin(value);
 		if (iW <= 1023) {
@@ -98,7 +103,10 @@
 <div class="boxc ff img1" />
 
 <!-- introduction, our vision, image of students-->
-<div class="rta-grid grid2 left rowgap-16 thirty is-padded colgap-32 minH aligncenter fluid lineit">
+<div
+	class="rta-grid grid2 left rowgap-16 thirty is-padded colgap-32 minH aligncenter fluid lineit"
+	style="width: 100vw"
+>
 	<div class="rta-image">
 		<img
 			src="https://rnfvzaelmwbbvfbsppir.supabase.co/storage/v1/object/public/bet/twochildren.webp"
@@ -118,7 +126,104 @@
 	</div>
 </div>
 
-<div class="rta-column minH min is-padded rowgap-64 fluid lineit">
+<div class="rta-column minH min is-padded rowgap-64 fluid lineit" style="width: 100vw">
+	<div class="rta-in-col ta-c col-cent light rowgap-16">
+		<h2 class="titleis" use:reveal>Ongoing Projects</h2>
+	</div>
+	<div class="rta-in-col rowgap-32">
+		{#if projects && projects.length > 0}
+			<Splide
+				hasTrack={false}
+				options={{
+					drag: true,
+					keyboard: 'global',
+					waitForTransition: true,
+					type: 'loop',
+					gap: '20px',
+					width: '100vw',
+					wheelMinThreshold: 1.1,
+					speed: 900,
+					direction: 'ltr',
+					perPage: 1,
+					pagination: false,
+					breakpoints: {
+						1023: {
+							perPage: 1
+						},
+						768: {
+							perPage: 1
+						}
+					}
+				}}
+			>
+				<SplideTrack>
+					{#each projects as item}
+						<SplideSlide>
+							{#if item.image && item.image.length > 0}
+								<div class="withimage">
+									<img src={item.image} alt={item.project} />
+									{#if item.link && item.link.length > 0}
+										<h5><a href={item.link} target="_blank" rel="noreferrer">{item.project}</a></h5>
+									{:else}
+										<h5>{item.project}</h5>
+									{/if}
+									{#if item.overview && item.overview.length > 0}
+										<pre>{item.overview}</pre>
+									{/if}
+									{#if item.partner && item.partner.length > 0}
+										<small>Partner: {item.partner}</small>
+									{/if}
+									{#if item.brhatrole && item.brhatrole.length > 0}
+										<cite>Bṛhat Role: <span style="color: #1a659e">{item.brhatrole}</span></cite>
+									{/if}
+								</div>
+							{:else}
+								<div class="noimage">
+									{#if item.link && item.link.length > 0}
+										<h5><a href={item.link} target="_blank" rel="noreferrer">{item.project}</a></h5>
+									{:else}
+										<h5>{item.project}</h5>
+									{/if}
+									{#if item.overview && item.overview.length > 0}
+										<pre>{item.overview}</pre>
+									{/if}
+									{#if item.partner && item.partner.length > 0}
+										<small>Partner: {item.partner}</small>
+									{/if}
+									{#if item.brhatrole && item.brhatrole.length > 0}
+										<cite>Bṛhat Role: <span style="color: #1a659e">{item.brhatrole}</span></cite>
+									{/if}
+								</div>
+							{/if}
+						</SplideSlide>
+					{/each}
+				</SplideTrack>
+				<div
+					class="splide__arrows splide__arrows--ltr rta-row xcenter colgap16 ptop16 mtop16 bord-top"
+				>
+					<button
+						class="splide__arrow splide__arrow--prev button"
+						type="button"
+						aria-label="Previous slide"
+						aria-controls="splide01-track"
+					>
+						PREV
+					</button>
+					<button
+						class="splide__arrow splide__arrow--next button"
+						type="button"
+						aria-label="Next slide"
+						aria-controls="splide01-track"
+					>
+						NEXT
+					</button>
+				</div>
+			</Splide>
+		{/if}
+	</div>
+</div>
+
+<div class="rta-column minH min is-padded rowgap-64 fluid lineit" style="width: 100vw">
 	<div class="rta-in-col ta-c col-cent light rowgap-16">
 		<h2 class="titleis" use:reveal>IKS Bulletin</h2>
 		{#if !breakPoint}
@@ -212,25 +317,74 @@
 	</div>
 	<div class="rta-in-col rowgap-32">
 		{#if bullets && bullets.length > 0}
-			{#each bullets as item, i}
+			<Splide
+				hasTrack={false}
+				options={{
+					drag: true,
+					keyboard: 'global',
+					waitForTransition: true,
+					type: 'loop',
+					gap: '20px',
+					width: '100vw',
+					wheelMinThreshold: 1.1,
+					speed: 900,
+					direction: 'ltr',
+					perPage: 2,
+					pagination: false,
+					breakpoints: {
+						1023: {
+							perPage: 2
+						},
+						768: {
+							perPage: 1
+						}
+					}
+				}}
+			>
+				<SplideTrack>
+					{#each bullets as item, i}
+						<SplideSlide>
+							<div
+								class="rta-row row-col rowgap-16 colgap-24 bord-bot bot-p-16"
+								use:reveal={{ delay: i * 20 }}
+								in:fly={{ duration: 200, delay: i * 50 }}
+								out:fly={{ delay: 0, duration: 100 }}
+							>
+								<div class="rta-image w32 height-30">
+									<img src={item.image} alt={item.name} />
+								</div>
+								<div class="rta-in-col rowgap-16 text w64 light">
+									<h5 style="color: #272727">{item.name}</h5>
+									<p>{item.text}</p>
+									<button class="button blue"
+										><a href={item.link} target="_blank" rel="noreferrer">Visit</a></button
+									>
+								</div>
+							</div>
+						</SplideSlide>
+					{/each}
+				</SplideTrack>
 				<div
-					class="rta-row row-col rowgap-16 colgap-24 bord-bot bot-p-16"
-					use:reveal={{ delay: i * 20 }}
-					in:fly={{ duration: 200, delay: i * 50 }}
-					out:fly={{ delay: 0, duration: 100 }}
+					class="splide__arrows splide__arrows--ltr rta-row xcenter colgap16 ptop16 mtop16 bord-top"
 				>
-					<div class="rta-image w32 height-30">
-						<img src={item.image} alt={item.name} />
-					</div>
-					<div class="rta-in-col rowgap-16 text w64 light">
-						<h5 style="color: #272727">{item.name}</h5>
-						<p>{item.text}</p>
-						<button class="button blue"
-							><a href={item.link} target="_blank" rel="noreferrer">Visit</a></button
-						>
-					</div>
+					<button
+						class="splide__arrow splide__arrow--prev button"
+						type="button"
+						aria-label="Previous slide"
+						aria-controls="splide01-track"
+					>
+						PREV
+					</button>
+					<button
+						class="splide__arrow splide__arrow--next button"
+						type="button"
+						aria-label="Next slide"
+						aria-controls="splide01-track"
+					>
+						NEXT
+					</button>
 				</div>
-			{/each}
+			</Splide>
 		{/if}
 	</div>
 </div>
@@ -401,6 +555,29 @@
 </div>
 
 <style lang="sass">
+.splide__arrows
+	align-items: center
+	justify-content: center
+	column-gap: 8px 
+
+.withimage
+	img
+		object-fit: cover
+		width: 100%
+		height: 280px 
+
+.withimage, .noimage
+	display: flex
+	flex-direction: column
+	row-gap: 8px
+	small, cite
+		text-transform: capitalize
+		font-style: normal
+		font-size: 14px
+		border-bottom: 1px solid #e7e7e7
+		padding-bottom: 8px
+		width: max-content
+		max-width: 100%
 
 .niti
 	a 
@@ -440,6 +617,7 @@
 	background-size: cover
 	background-repeat: no-repeat
 	background-position: center center
+	width: 100vw
 	@media screen and (max-width: 575px)
 		height: 50vh
 

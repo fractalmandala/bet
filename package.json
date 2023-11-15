@@ -35,6 +35,7 @@
 	},
 	"type": "module",
 	"dependencies": {
+		"@splidejs/svelte-splide": "^0.2.9",
 		"@supabase/supabase-js": "^2.7.1",
 		"@sveltejs/svelte-scroller": "^2.0.7",
 		"@vercel/analytics": "^1.0.0",
