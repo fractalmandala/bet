@@ -558,7 +558,8 @@
 .splide__arrows
 	align-items: center
 	justify-content: center
-	column-gap: 8px 
+	column-gap: 8px
+	row-gap: 8px  
 
 .withimage
 	img
